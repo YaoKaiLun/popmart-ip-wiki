@@ -19,7 +19,7 @@ export function SectionHeading({
         className
       )}
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-brand-black">
+      <h2 className="text-3xl md:text-4xl font-bold text-white">
         {title}
       </h2>
       {subtitle && (
@@ -29,7 +29,7 @@ export function SectionHeading({
       )}
       <div
         className={cn(
-          "mt-4 h-1 w-16 rounded-full bg-brand-pink",
+          "mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-pink-500 to-purple-500",
           align === "center" && "mx-auto"
         )}
       />

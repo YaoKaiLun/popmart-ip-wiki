@@ -21,13 +21,26 @@ export function GradientAvatar({
   return (
     <div
       className={cn(
-        "rounded-full flex items-center justify-center font-bold text-white shadow-lg shrink-0",
+        "relative rounded-full flex items-center justify-center font-bold text-white shrink-0 overflow-hidden",
         sizeClasses[size],
         className
       )}
       style={{ background: gradient }}
     >
       {name.charAt(0)}
+      <div
+        className="absolute inset-0 rounded-full pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.05) 40%, transparent 70%)",
+        }}
+      />
+      <div
+        className="absolute inset-0 rounded-full pointer-events-none"
+        style={{
+          boxShadow: "inset 0 -4px 12px rgba(0,0,0,0.3), 0 4px 20px rgba(0,0,0,0.4)",
+        }}
+      />
     </div>
   );
 }

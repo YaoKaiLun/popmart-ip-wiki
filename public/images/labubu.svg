@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="labubu-body" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#15803D"/>
+    </linearGradient>
+    <linearGradient id="labubu-ear" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+    <radialGradient id="labubu-belly" cx="0.5" cy="0.4" r="0.5">
+      <stop offset="0%" stop-color="#86EFAC"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </radialGradient>
+    <radialGradient id="labubu-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#22C55E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="leaf-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16A34A"/>
+      <stop offset="100%" stop-color="#15803D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient glow -->
+  <circle cx="200" cy="230" r="180" fill="url(#labubu-glow)"/>
+
+  <!-- Decorative leaves - back -->
+  <path d="M55 340 C65 310, 80 300, 95 310 C80 315, 70 330, 55 340 Z" fill="url(#leaf-grad)" opacity="0.4"/>
+  <path d="M345 340 C335 310, 320 300, 305 310 C320 315, 330 330, 345 340 Z" fill="url(#leaf-grad)" opacity="0.4"/>
+  <path d="M40 290 C55 265, 75 260, 85 270 C72 272, 55 280, 40 290 Z" fill="#16A34A" opacity="0.3"/>
+  <path d="M360 290 C345 265, 325 260, 315 270 C328 272, 345 280, 360 290 Z" fill="#16A34A" opacity="0.3"/>
+
+  <!-- Small background leaves -->
+  <path d="M70 200 C78 185, 90 182, 95 190 C88 190, 78 194, 70 200 Z" fill="#22C55E" opacity="0.25"/>
+  <path d="M330 180 C322 165, 310 162, 305 170 C312 170, 322 174, 330 180 Z" fill="#22C55E" opacity="0.25"/>
+
+  <!-- Left Ear - pointy -->
+  <path d="M130 155 L105 60 L155 125 Z" fill="url(#labubu-ear)"/>
+  <path d="M133 148 L115 80 L150 130 Z" fill="#86EFAC" opacity="0.3"/>
+
+  <!-- Right Ear - pointy -->
+  <path d="M270 155 L295 60 L245 125 Z" fill="url(#labubu-ear)"/>
+  <path d="M267 148 L285 80 L250 130 Z" fill="#86EFAC" opacity="0.3"/>
+
+  <!-- Round Body -->
+  <ellipse cx="200" cy="260" rx="110" ry="120" fill="url(#labubu-body)"/>
+
+  <!-- Belly highlight -->
+  <ellipse cx="200" cy="275" rx="65" ry="70" fill="url(#labubu-belly)" opacity="0.4"/>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="185" rx="85" ry="75" fill="url(#labubu-body)"/>
+
+  <!-- Face highlight -->
+  <ellipse cx="200" cy="178" rx="60" ry="48" fill="#86EFAC" opacity="0.15"/>
+
+  <!-- Eyes - small and mischievous -->
+  <ellipse cx="170" cy="175" rx="11" ry="12" fill="white"/>
+  <ellipse cx="230" cy="175" rx="11" ry="12" fill="white"/>
+  <circle cx="172" cy="177" r="7" fill="#1a1a2e"/>
+  <circle cx="232" cy="177" r="7" fill="#1a1a2e"/>
+  <circle cx="175" cy="173" r="2.5" fill="white"/>
+  <circle cx="235" cy="173" r="2.5" fill="white"/>
+
+  <!-- Eyebrows - mischievous angled -->
+  <path d="M158 160 C163 155, 172 154, 180 157" stroke="#15803D" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M242 160 C237 155, 228 154, 220 157" stroke="#15803D" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- ICONIC WIDE GRIN with zigzag teeth -->
+  <path d="M145 205 C160 230, 180 240, 200 240 C220 240, 240 230, 255 205" fill="#1a1a2e"/>
+
+  <!-- Upper zigzag teeth -->
+  <path d="M148 207 L158 222 L168 207 L178 222 L188 207 L198 222 L208 207 L218 222 L228 207 L238 222 L248 207 L253 205 C240 228, 220 238, 200 238 C180 238, 160 228, 147 205 Z" fill="white"/>
+
+  <!-- Lower zigzag teeth -->
+  <path d="M160 228 L168 218 L178 228 L188 218 L198 228 L208 218 L218 228 L228 218 L238 228 C228 236, 215 240, 200 240 C185 240, 172 236, 160 228 Z" fill="white"/>
+
+  <!-- Tongue hint -->
+  <ellipse cx="200" cy="232" rx="15" ry="8" fill="#FF6B6B" opacity="0.7"/>
+
+  <!-- Nose -->
+  <ellipse cx="200" cy="195" rx="5" ry="3" fill="#15803D" opacity="0.5"/>
+
+  <!-- Blush -->
+  <ellipse cx="152" cy="205" rx="12" ry="6" fill="#FF69B4" opacity="0.2"/>
+  <ellipse cx="248" cy="205" rx="12" ry="6" fill="#FF69B4" opacity="0.2"/>
+
+  <!-- Small arms -->
+  <path d="M100 250 C85 260, 78 280, 85 295 C88 290, 92 280, 105 265 Z" fill="#16A34A"/>
+  <path d="M300 250 C315 260, 322 280, 315 295 C312 290, 308 280, 295 265 Z" fill="#16A34A"/>
+
+  <!-- Tiny hands -->
+  <circle cx="85" cy="295" r="8" fill="#16A34A"/>
+  <circle cx="315" cy="295" r="8" fill="#16A34A"/>
+
+  <!-- Feet -->
+  <ellipse cx="165" cy="375" rx="28" ry="14" fill="#15803D"/>
+  <ellipse cx="235" cy="375" rx="28" ry="14" fill="#15803D"/>
+
+  <!-- Decorative forest elements -->
+  <!-- Small mushroom left -->
+  <rect x="60" y="355" width="6" height="15" rx="2" fill="#16A34A" opacity="0.5"/>
+  <ellipse cx="63" cy="355" rx="12" ry="8" fill="#22C55E" opacity="0.5"/>
+  <circle cx="58" cy="353" r="2" fill="#86EFAC" opacity="0.5"/>
+  <circle cx="67" cy="351" r="1.5" fill="#86EFAC" opacity="0.5"/>
+
+  <!-- Small mushroom right -->
+  <rect x="330" y="360" width="5" height="12" rx="2" fill="#16A34A" opacity="0.5"/>
+  <ellipse cx="332" cy="360" rx="10" ry="7" fill="#22C55E" opacity="0.5"/>
+
+  <!-- Leaf decorations -->
+  <path d="M50 370 C60 355, 72 352, 80 358 C70 358, 58 362, 50 370 Z" fill="#22C55E" opacity="0.35"/>
+  <path d="M350 370 C340 355, 328 352, 320 358 C330 358, 342 362, 350 370 Z" fill="#22C55E" opacity="0.35"/>
+
+  <!-- Small leaves floating -->
+  <path d="M85 130 C90 120, 98 118, 100 125 C95 124, 89 126, 85 130 Z" fill="#22C55E" opacity="0.4" transform="rotate(-20, 92, 125)"/>
+  <path d="M315 120 C310 110, 302 108, 300 115 C305 114, 311 116, 315 120 Z" fill="#22C55E" opacity="0.4" transform="rotate(20, 308, 115)"/>
+
+  <!-- Sparkle dots -->
+  <circle cx="120" cy="100" r="2" fill="#86EFAC" opacity="0.6"/>
+  <circle cx="280" cy="95" r="2.5" fill="#86EFAC" opacity="0.5"/>
+  <circle cx="65" cy="250" r="2" fill="#22C55E" opacity="0.4"/>
+  <circle cx="340" cy="240" r="2" fill="#22C55E" opacity="0.4"/>
+</svg>

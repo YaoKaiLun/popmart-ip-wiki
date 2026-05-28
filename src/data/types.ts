@@ -25,6 +25,7 @@ export interface IP {
   personality: string[];
   colors: IPColors;
   stats: IPStats;
+  image: string;
 }
 
 export interface Character {

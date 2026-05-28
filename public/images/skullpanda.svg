@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="sp-face-left" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#F5F0FF"/>
+      <stop offset="100%" stop-color="#EDE9FE"/>
+    </linearGradient>
+    <linearGradient id="sp-skull-right" x1="0.5" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8E0F0"/>
+      <stop offset="100%" stop-color="#D4C8E8"/>
+    </linearGradient>
+    <linearGradient id="sp-hair" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+    <linearGradient id="sp-rose" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </linearGradient>
+    <radialGradient id="sp-moon-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#4C1D95" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="left-half">
+      <rect x="0" y="0" width="200" height="400"/>
+    </clipPath>
+    <clipPath id="right-half">
+      <rect x="200" y="0" width="200" height="400"/>
+    </clipPath>
+  </defs>
+
+  <!-- Moon crescent background -->
+  <circle cx="320" cy="80" r="45" fill="#7C3AED" opacity="0.15"/>
+  <circle cx="335" cy="70" r="38" fill="transparent"/>
+  <path d="M320 35 C350 45, 365 75, 355 110 C370 85, 365 50, 340 35 C330 30, 325 32, 320 35 Z" fill="#4C1D95" opacity="0.08"/>
+  <!-- Moon shape -->
+  <path d="M305 40 A45 45 0 1 1 305 125 A32 32 0 1 0 305 40 Z" fill="#6D28D9" opacity="0.2"/>
+
+  <!-- Ambient glow -->
+  <circle cx="200" cy="200" r="180" fill="url(#sp-moon-glow)"/>
+
+  <!-- Hair - back layer -->
+  <path d="M100 150 C90 170, 80 220, 85 280 C87 300, 95 320, 105 335 C95 310, 90 270, 95 230 C98 200, 108 175, 115 160 Z" fill="url(#sp-hair)" opacity="0.6"/>
+  <path d="M300 150 C310 170, 320 220, 315 280 C313 300, 305 320, 295 335 C305 310, 310 270, 305 230 C302 200, 292 175, 285 160 Z" fill="url(#sp-hair)" opacity="0.6"/>
+
+  <!-- Hair main -->
+  <ellipse cx="200" cy="130" rx="100" ry="65" fill="url(#sp-hair)"/>
+  <path d="M110 140 C105 180, 100 220, 108 260 C112 230, 118 195, 125 165 Z" fill="#4C1D95" opacity="0.5"/>
+  <path d="M290 140 C295 180, 300 220, 292 260 C288 230, 282 195, 275 165 Z" fill="#4C1D95" opacity="0.5"/>
+
+  <!-- Head shape - LEFT (beautiful side) -->
+  <g clip-path="url(#left-half)">
+    <ellipse cx="200" cy="200" rx="82" ry="90" fill="url(#sp-face-left)"/>
+  </g>
+
+  <!-- Head shape - RIGHT (skull side) -->
+  <g clip-path="url(#right-half)">
+    <ellipse cx="200" cy="200" rx="82" ry="90" fill="url(#sp-skull-right)"/>
+    <!-- Skull crack lines -->
+    <path d="M220 125 C225 145, 218 160, 230 175" stroke="#B8A0D0" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M230 175 L235 170" stroke="#B8A0D0" stroke-width="1" fill="none" opacity="0.4"/>
+    <path d="M250 140 C245 155, 252 168, 248 180" stroke="#B8A0D0" stroke-width="1" fill="none" opacity="0.4"/>
+  </g>
+
+  <!-- Split line down the middle -->
+  <line x1="200" y1="115" x2="200" y2="290" stroke="#6D28D9" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- LEFT EYE - Star shape (beautiful side) -->
+  <path d="M165 195 L170 180 L175 195 L190 190 L175 195 L180 210 L175 195 L160 200 Z" fill="#7C3AED"/>
+  <circle cx="172" cy="195" r="3" fill="white" opacity="0.7"/>
+
+  <!-- Left eyebrow -->
+  <path d="M148 172 C155 165, 170 163, 182 168" stroke="#4C1D95" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- LEFT side - beautiful details -->
+  <ellipse cx="150" cy="225" rx="12" ry="6" fill="#FF69B4" opacity="0.2"/>
+  <!-- Lips left half -->
+  <path d="M175 250 C182 246, 192 245, 200 247" stroke="#C084FC" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- RIGHT EYE - Hollow skull eye -->
+  <ellipse cx="232" cy="193" rx="16" ry="18" fill="#1a1a2e" opacity="0.8"/>
+  <ellipse cx="232" cy="193" rx="12" ry="14" fill="#2D1B45"/>
+  <circle cx="228" cy="189" r="3" fill="#4C1D95" opacity="0.4"/>
+
+  <!-- Right side skull nose -->
+  <path d="M208 230 L212 240 L204 240 Z" fill="#2D1B45" opacity="0.4"/>
+
+  <!-- Right side skull teeth hint -->
+  <path d="M210 254 L215 254 M220 254 L225 254 M230 254 L235 254" stroke="#B8A0D0" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Skull cheekbone line -->
+  <path d="M240 220 C250 230, 255 240, 252 250" stroke="#B8A0D0" stroke-width="1" fill="none" opacity="0.3"/>
+
+  <!-- Hair bangs -->
+  <path d="M120 145 C135 120, 160 108, 200 105 C180 115, 155 130, 140 155 Z" fill="#7C3AED"/>
+  <path d="M280 145 C265 120, 240 108, 200 105 C220 115, 245 130, 260 155 Z" fill="#6D28D9"/>
+  <path d="M130 150 C145 130, 165 118, 195 115 C175 125, 155 138, 140 155 Z" fill="#4C1D95" opacity="0.4"/>
+
+  <!-- Dark roses - left -->
+  <g transform="translate(60, 300)">
+    <circle cx="0" cy="0" r="14" fill="url(#sp-rose)"/>
+    <path d="M-5 -5 C-2 -12, 5 -12, 7 -5 C10 -8, 12 -2, 7 2 C10 5, 8 12, 2 10 C5 14, -3 14, -5 10 C-10 12, -12 6, -8 2 C-13 0, -12 -5, -5 -5 Z" fill="#6D28D9" opacity="0.6"/>
+    <circle cx="0" cy="0" r="4" fill="#4C1D95" opacity="0.5"/>
+  </g>
+
+  <!-- Dark rose - right -->
+  <g transform="translate(340, 310)">
+    <circle cx="0" cy="0" r="12" fill="url(#sp-rose)"/>
+    <path d="M-4 -4 C-2 -10, 4 -10, 6 -4 C8 -6, 10 -2, 6 1 C8 4, 6 10, 2 8 C4 11, -2 11, -4 8 C-8 10, -10 5, -6 1 C-10 0, -10 -4, -4 -4 Z" fill="#6D28D9" opacity="0.6"/>
+    <circle cx="0" cy="0" r="3" fill="#4C1D95" opacity="0.5"/>
+  </g>
+
+  <!-- Small rose bud -->
+  <g transform="translate(85, 335)">
+    <circle cx="0" cy="0" r="8" fill="#7C3AED" opacity="0.6"/>
+    <circle cx="0" cy="0" r="3" fill="#4C1D95" opacity="0.4"/>
+  </g>
+
+  <!-- Thorny stems -->
+  <path d="M60 314 C55 330, 50 350, 48 370" stroke="#15803D" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M52 340 L48 335" stroke="#15803D" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M340 322 C338 340, 342 355, 345 370" stroke="#15803D" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M342 345 L346 340" stroke="#15803D" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- Body silhouette -->
+  <path d="M150 285 C155 275, 175 268, 200 266 C225 268, 245 275, 250 285 C255 310, 258 345, 255 380 L145 380 C142 345, 145 310, 150 285 Z" fill="#4C1D95" opacity="0.15"/>
+
+  <!-- Small decorative elements -->
+  <circle cx="340" cy="155" r="2" fill="#7C3AED" opacity="0.5"/>
+  <circle cx="60" cy="170" r="2" fill="#6D28D9" opacity="0.4"/>
+  <circle cx="50" cy="260" r="1.5" fill="#7C3AED" opacity="0.3"/>
+  <circle cx="350" cy="250" r="1.5" fill="#6D28D9" opacity="0.3"/>
+
+  <!-- Tiny stars -->
+  <path d="M80 100 L82 95 L84 100 L89 98 L84 100 L86 105 L84 100 L79 102 Z" fill="#C084FC" opacity="0.5"/>
+  <path d="M350 190 L352 185 L354 190 L359 188 L354 190 L356 195 L354 190 L349 192 Z" fill="#C084FC" opacity="0.4"/>
+</svg>

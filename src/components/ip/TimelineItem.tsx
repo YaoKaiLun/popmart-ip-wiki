@@ -6,11 +6,11 @@ import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { CATEGORY_LABELS, CATEGORY_COLORS } from "@/lib/constants";
 
 const CATEGORY_BORDER_COLORS: Record<string, string> = {
-  origin: "border-amber-400",
-  collaboration: "border-blue-400",
-  release: "border-green-400",
-  milestone: "border-purple-400",
-  viral: "border-red-400",
+  origin: "border-amber-400/50",
+  collaboration: "border-blue-400/50",
+  release: "border-green-400/50",
+  milestone: "border-purple-400/50",
+  viral: "border-red-400/50",
 };
 
 const CATEGORY_DOT_COLORS: Record<string, string> = {
@@ -37,7 +37,7 @@ export function TimelineItem({
   return (
     <div className="relative flex items-start md:items-center">
       <div
-        className={`absolute left-4 md:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full ring-4 ring-white z-10 ${dotColor}`}
+        className={`absolute left-4 md:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full ring-4 ring-brand-dark z-10 ${dotColor}`}
       />
 
       <div className="hidden md:block w-1/2" />
@@ -57,14 +57,14 @@ export function TimelineItem({
         >
           <div
             className={`
-              bg-white rounded-2xl shadow-md p-5 hover:shadow-lg transition-shadow
+              glass-card rounded-2xl p-5
               ${event.highlight ? `border-l-4 ${borderColor}` : ""}
             `}
           >
             <div
               className={`flex items-center gap-2 mb-2 flex-wrap ${isLeft ? "md:justify-end" : ""}`}
             >
-              <span className="text-sm font-semibold text-gray-500">
+              <span className="text-sm font-semibold text-gray-400">
                 {event.year}
                 {event.month ? `.${String(event.month).padStart(2, "0")}` : ""}
               </span>
@@ -73,10 +73,10 @@ export function TimelineItem({
                 className={CATEGORY_COLORS[event.category]}
               />
             </div>
-            <h3 className="text-base font-bold text-gray-900 mb-1">
+            <h3 className="text-base font-bold text-white mb-1">
               {event.title}
             </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
+            <p className="text-sm text-gray-400 leading-relaxed">
               {event.description}
             </p>
           </div>

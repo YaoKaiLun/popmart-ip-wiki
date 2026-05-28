@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 
 export function IPShowcase() {
   return (
-    <section id="ip-showcase" className="py-20 px-4">
+    <section id="ip-showcase" className="py-20 px-4 bg-brand-dark noise-bg">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="热门IP图鉴"

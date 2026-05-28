@@ -15,7 +15,7 @@ export default function CharactersPage() {
   }, [activeIP]);
 
   return (
-    <div className="py-20 px-4">
+    <div className="py-20 px-4 bg-brand-dark noise-bg min-h-screen">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="角色百科"
@@ -27,7 +27,7 @@ export default function CharactersPage() {
             onFilterChange={setActiveIP}
           />
         </div>
-        <p className="text-center text-sm text-gray-400 mb-8">
+        <p className="text-center text-sm text-gray-500 mb-8">
           共 {filteredCharacters.length} 个角色
         </p>
         <CharacterGrid characters={filteredCharacters} />

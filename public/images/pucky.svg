@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="pucky-body" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="pucky-face" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFBF0"/>
+      <stop offset="100%" stop-color="#FEF3E0"/>
+    </linearGradient>
+    <linearGradient id="pucky-wing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A7F3D0" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#6EE7B7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="pucky-wing-r" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A7F3D0" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#6EE7B7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="pucky-glow" cx="0.5" cy="0.45" r="0.5">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pucky-flower1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F9A8D4"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+    <linearGradient id="pucky-flower2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C4B5FD"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="sparkle-glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ethereal ambient glow -->
+  <circle cx="200" cy="210" r="180" fill="url(#pucky-glow)"/>
+
+  <!-- Dreamy sparkle effects - background -->
+  <circle cx="80" cy="100" r="3" fill="#A7F3D0" opacity="0.5" filter="url(#sparkle-glow)"/>
+  <circle cx="320" cy="80" r="2.5" fill="#6EE7B7" opacity="0.4" filter="url(#sparkle-glow)"/>
+  <circle cx="60" cy="250" r="2" fill="#34D399" opacity="0.35" filter="url(#sparkle-glow)"/>
+  <circle cx="340" cy="220" r="2.5" fill="#A7F3D0" opacity="0.4" filter="url(#sparkle-glow)"/>
+  <circle cx="100" cy="340" r="2" fill="#6EE7B7" opacity="0.3" filter="url(#sparkle-glow)"/>
+  <circle cx="300" cy="330" r="2" fill="#34D399" opacity="0.3" filter="url(#sparkle-glow)"/>
+
+  <!-- Flowers - left cluster -->
+  <g transform="translate(55, 340)">
+    <!-- Stem -->
+    <path d="M0 20 C-2 10, -3 0, 0 -10" stroke="#10B981" stroke-width="1.5" fill="none"/>
+    <path d="M-3 5 C-10 0, -12 -5, -8 -8" stroke="#10B981" stroke-width="1" fill="none"/>
+    <!-- Petals -->
+    <circle cx="-3" cy="-15" r="6" fill="url(#pucky-flower1)" opacity="0.7"/>
+    <circle cx="3" cy="-13" r="5" fill="#F9A8D4" opacity="0.6"/>
+    <circle cx="0" cy="-10" r="3" fill="#FDE68A" opacity="0.8"/>
+  </g>
+  <g transform="translate(75, 350)">
+    <path d="M0 15 C1 8, 0 0, -2 -8" stroke="#10B981" stroke-width="1.5" fill="none"/>
+    <circle cx="-1" cy="-12" r="5" fill="url(#pucky-flower2)" opacity="0.6"/>
+    <circle cx="2" cy="-10" r="4" fill="#C4B5FD" opacity="0.5"/>
+    <circle cx="0" cy="-8" r="2.5" fill="#FDE68A" opacity="0.7"/>
+  </g>
+
+  <!-- Flowers - right cluster -->
+  <g transform="translate(335, 345)">
+    <path d="M0 18 C2 10, 1 0, -1 -8" stroke="#10B981" stroke-width="1.5" fill="none"/>
+    <circle cx="0" cy="-13" r="6" fill="url(#pucky-flower1)" opacity="0.6"/>
+    <circle cx="-4" cy="-11" r="4.5" fill="#F9A8D4" opacity="0.5"/>
+    <circle cx="0" cy="-9" r="3" fill="#FDE68A" opacity="0.7"/>
+  </g>
+  <g transform="translate(355, 355)">
+    <path d="M0 12 C-1 6, 0 0, 1 -6" stroke="#10B981" stroke-width="1.5" fill="none"/>
+    <circle cx="1" cy="-10" r="4.5" fill="url(#pucky-flower2)" opacity="0.55"/>
+    <circle cx="0" cy="-7" r="2.5" fill="#FDE68A" opacity="0.7"/>
+  </g>
+
+  <!-- === WINGS === -->
+  <!-- Left wing -->
+  <path d="M130 200 C100 170, 65 150, 50 160 C35 170, 45 195, 60 210 C70 220, 95 230, 130 225 Z" fill="url(#pucky-wing)" stroke="#A7F3D0" stroke-width="1"/>
+  <path d="M130 205 C105 185, 78 172, 65 178 C55 185, 62 202, 72 212 C80 218, 105 225, 130 222 Z" fill="#6EE7B7" opacity="0.2"/>
+  <!-- Wing veins -->
+  <path d="M125 210 C100 195, 75 185, 60 190" stroke="#A7F3D0" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M125 215 C105 205, 85 200, 70 205" stroke="#A7F3D0" stroke-width="0.8" fill="none" opacity="0.4"/>
+
+  <!-- Right wing -->
+  <path d="M270 200 C300 170, 335 150, 350 160 C365 170, 355 195, 340 210 C330 220, 305 230, 270 225 Z" fill="url(#pucky-wing-r)" stroke="#A7F3D0" stroke-width="1"/>
+  <path d="M270 205 C295 185, 322 172, 335 178 C345 185, 338 202, 328 212 C320 218, 295 225, 270 222 Z" fill="#6EE7B7" opacity="0.2"/>
+  <!-- Wing veins -->
+  <path d="M275 210 C300 195, 325 185, 340 190" stroke="#A7F3D0" stroke-width="0.8" fill="none" opacity="0.5"/>
+  <path d="M275 215 C295 205, 315 200, 330 205" stroke="#A7F3D0" stroke-width="0.8" fill="none" opacity="0.4"/>
+
+  <!-- Body -->
+  <ellipse cx="200" cy="280" rx="50" ry="65" fill="url(#pucky-body)"/>
+  <ellipse cx="200" cy="290" rx="30" ry="40" fill="#A7F3D0" opacity="0.15"/>
+
+  <!-- Head - large, rounded -->
+  <circle cx="200" cy="180" r="72" fill="url(#pucky-face)"/>
+
+  <!-- Tiny horn/crown -->
+  <path d="M190 112 L200 85 L210 112" fill="#34D399"/>
+  <path d="M194 110 L200 92 L206 110" fill="#10B981" opacity="0.5"/>
+  <circle cx="200" cy="88" r="3" fill="#FDE68A"/>
+
+  <!-- Eyes - large, dreamy -->
+  <circle cx="178" cy="178" r="14" fill="white"/>
+  <circle cx="222" cy="178" r="14" fill="white"/>
+  <circle cx="180" cy="180" r="8" fill="#047857"/>
+  <circle cx="224" cy="180" r="8" fill="#047857"/>
+  <circle cx="183" cy="175" r="3" fill="white"/>
+  <circle cx="227" cy="175" r="3" fill="white"/>
+  <circle cx="177" cy="183" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="221" cy="183" r="1.5" fill="white" opacity="0.5"/>
+
+  <!-- Sparkle in eyes -->
+  <path d="M186 173 L187 171 L188 173 L190 172 L188 173 L189 175 L188 173 L186 174 Z" fill="white" opacity="0.8"/>
+  <path d="M230 173 L231 171 L232 173 L234 172 L232 173 L233 175 L232 173 L230 174 Z" fill="white" opacity="0.8"/>
+
+  <!-- Blush -->
+  <ellipse cx="162" cy="198" rx="10" ry="5" fill="#F9A8D4" opacity="0.25"/>
+  <ellipse cx="238" cy="198" rx="10" ry="5" fill="#F9A8D4" opacity="0.25"/>
+
+  <!-- Tiny nose -->
+  <circle cx="200" cy="192" r="2.5" fill="#10B981" opacity="0.35"/>
+
+  <!-- Cute smile -->
+  <path d="M191 205 C195 210, 205 210, 209 205" stroke="#047857" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Small pointy ears -->
+  <path d="M132 165 C125 155, 128 140, 138 135 C135 148, 134 158, 136 168 Z" fill="url(#pucky-face)"/>
+  <path d="M268 165 C275 155, 272 140, 262 135 C265 148, 266 158, 264 168 Z" fill="url(#pucky-face)"/>
+  <path d="M134 162 C130 155, 131 145, 138 140 C136 150, 135 157, 137 164 Z" fill="#34D399" opacity="0.3"/>
+  <path d="M266 162 C270 155, 269 145, 262 140 C264 150, 265 157, 263 164 Z" fill="#34D399" opacity="0.3"/>
+
+  <!-- Arms -->
+  <path d="M152 275 C140 280, 130 290, 132 300" stroke="#10B981" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M248 275 C260 280, 270 290, 268 300" stroke="#10B981" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+  <!-- Feet -->
+  <ellipse cx="180" cy="342" rx="18" ry="8" fill="#047857"/>
+  <ellipse cx="220" cy="342" rx="18" ry="8" fill="#047857"/>
+
+  <!-- Butterflies -->
+  <g transform="translate(90, 140)" opacity="0.6">
+    <path d="M0 0 C-8 -8, -15 -5, -12 0 C-15 5, -8 8, 0 0 Z" fill="#F9A8D4"/>
+    <path d="M0 0 C8 -8, 15 -5, 12 0 C15 5, 8 8, 0 0 Z" fill="#FBCFE8"/>
+    <line x1="-2" y1="-3" x2="-5" y2="-8" stroke="#F9A8D4" stroke-width="0.5"/>
+    <line x1="2" y1="-3" x2="5" y2="-8" stroke="#F9A8D4" stroke-width="0.5"/>
+  </g>
+  <g transform="translate(310, 120)" opacity="0.5">
+    <path d="M0 0 C-6 -6, -12 -4, -9 0 C-12 4, -6 6, 0 0 Z" fill="#C4B5FD"/>
+    <path d="M0 0 C6 -6, 12 -4, 9 0 C12 4, 6 6, 0 0 Z" fill="#DDD6FE"/>
+    <line x1="-1" y1="-2" x2="-4" y2="-6" stroke="#C4B5FD" stroke-width="0.5"/>
+    <line x1="1" y1="-2" x2="4" y2="-6" stroke="#C4B5FD" stroke-width="0.5"/>
+  </g>
+  <g transform="translate(330, 290)" opacity="0.4">
+    <path d="M0 0 C-5 -5, -10 -3, -7 0 C-10 3, -5 5, 0 0 Z" fill="#A7F3D0"/>
+    <path d="M0 0 C5 -5, 10 -3, 7 0 C10 3, 5 5, 0 0 Z" fill="#6EE7B7"/>
+    <line x1="-1" y1="-2" x2="-3" y2="-5" stroke="#A7F3D0" stroke-width="0.5"/>
+    <line x1="1" y1="-2" x2="3" y2="-5" stroke="#A7F3D0" stroke-width="0.5"/>
+  </g>
+
+  <!-- Floating sparkle particles -->
+  <path d="M140 90 L142 85 L144 90 L149 88 L144 90 L146 95 L144 90 L139 92 Z" fill="#A7F3D0" opacity="0.6" filter="url(#sparkle-glow)"/>
+  <path d="M265 95 L267 91 L269 95 L273 93 L269 95 L271 99 L269 95 L265 97 Z" fill="#6EE7B7" opacity="0.5" filter="url(#sparkle-glow)"/>
+  <path d="M55 200 L57 196 L59 200 L63 198 L59 200 L61 204 L59 200 L55 202 Z" fill="#34D399" opacity="0.4"/>
+  <path d="M350 170 L351 167 L352 170 L355 169 L352 170 L353 173 L352 170 L349 171 Z" fill="#A7F3D0" opacity="0.4"/>
+</svg>

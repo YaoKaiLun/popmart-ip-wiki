@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="tm-grad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="tm-grad2" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="tm-grad3" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="tm-ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FED7AA"/>
+      <stop offset="50%" stop-color="#FDBA74"/>
+      <stop offset="100%" stop-color="#FED7AA"/>
+    </linearGradient>
+    <radialGradient id="tm-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#F97316" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#F97316" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Warm ambient glow -->
+  <circle cx="200" cy="240" r="180" fill="url(#tm-glow)"/>
+
+  <!-- Playful banner/ribbon connecting them -->
+  <path d="M50 230 C80 215, 120 240, 160 225 C190 215, 210 215, 240 225 C280 240, 320 215, 350 230" stroke="url(#tm-ribbon)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M50 230 C80 215, 120 240, 160 225 C190 215, 210 215, 240 225 C280 240, 320 215, 350 230" stroke="#FDBA74" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Small triangular pennants on ribbon -->
+  <path d="M90 225 L95 245 L100 225" fill="#F97316" opacity="0.6"/>
+  <path d="M140 228 L145 248 L150 228" fill="#EA580C" opacity="0.5"/>
+  <path d="M250 228 L255 248 L260 228" fill="#F97316" opacity="0.6"/>
+  <path d="M300 225 L305 245 L310 225" fill="#EA580C" opacity="0.5"/>
+
+  <!-- ===== MONSTER 1 - TALL ONE (left) ===== -->
+  <g transform="translate(85, 100)">
+    <!-- Tall body -->
+    <path d="M-25 80 C-30 40, -20 -10, 0 -40 C20 -10, 30 40, 25 80 C25 110, 20 140, 15 155 L-15 155 C-20 140, -25 110, -25 80 Z" fill="url(#tm-grad1)"/>
+    <!-- Belly -->
+    <ellipse cx="0" cy="80" rx="18" ry="25" fill="#FDBA74" opacity="0.25"/>
+    <!-- Eye - one big cyclops eye -->
+    <circle cx="0" cy="30" r="15" fill="white"/>
+    <circle cx="2" cy="32" r="8" fill="#1a1a2e"/>
+    <circle cx="5" cy="28" r="3" fill="white"/>
+    <!-- Mouth -->
+    <path d="M-10 60 C-5 65, 5 65, 10 60" stroke="#C2410C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Antenna -->
+    <line x1="0" y1="-40" x2="0" y2="-55" stroke="#EA580C" stroke-width="2"/>
+    <circle cx="0" cy="-58" r="4" fill="#F97316"/>
+    <!-- Small arms -->
+    <path d="M-25 70 L-38 60 L-35 55" stroke="#C2410C" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M25 70 L38 60 L35 55" stroke="#C2410C" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <!-- Feet -->
+    <ellipse cx="-10" cy="158" rx="12" ry="6" fill="#C2410C"/>
+    <ellipse cx="10" cy="158" rx="12" ry="6" fill="#C2410C"/>
+  </g>
+
+  <!-- ===== MONSTER 2 - ROUND ONE (center) ===== -->
+  <g transform="translate(200, 155)">
+    <!-- Big round body -->
+    <circle cx="0" cy="40" r="65" fill="url(#tm-grad2)"/>
+    <!-- Belly -->
+    <ellipse cx="0" cy="50" rx="40" ry="35" fill="#FED7AA" opacity="0.2"/>
+    <!-- Two eyes -->
+    <circle cx="-18" cy="20" r="14" fill="white"/>
+    <circle cx="18" cy="20" r="14" fill="white"/>
+    <circle cx="-15" cy="22" r="7" fill="#1a1a2e"/>
+    <circle cx="21" cy="22" r="7" fill="#1a1a2e"/>
+    <circle cx="-12" cy="18" r="2.5" fill="white"/>
+    <circle cx="24" cy="18" r="2.5" fill="white"/>
+    <!-- Wide happy mouth -->
+    <path d="M-22 50 C-15 62, 15 62, 22 50" fill="#C2410C"/>
+    <path d="M-18 52 C-12 58, 12 58, 18 52" fill="#1a1a2e" opacity="0.3"/>
+    <!-- Tiny horns -->
+    <path d="M-20 -20 L-25 -40 L-12 -22" fill="#EA580C"/>
+    <path d="M20 -20 L25 -40 L12 -22" fill="#EA580C"/>
+    <!-- Blush -->
+    <ellipse cx="-35" cy="40" rx="10" ry="5" fill="#FF6B6B" opacity="0.25"/>
+    <ellipse cx="35" cy="40" rx="10" ry="5" fill="#FF6B6B" opacity="0.25"/>
+    <!-- Small stubby arms -->
+    <ellipse cx="-62" cy="50" rx="12" ry="8" fill="#EA580C" transform="rotate(-20, -62, 50)"/>
+    <ellipse cx="62" cy="50" rx="12" ry="8" fill="#EA580C" transform="rotate(20, 62, 50)"/>
+    <!-- Feet -->
+    <ellipse cx="-20" cy="102" rx="18" ry="8" fill="#C2410C"/>
+    <ellipse cx="20" cy="102" rx="18" ry="8" fill="#C2410C"/>
+  </g>
+
+  <!-- ===== MONSTER 3 - SMALL ONE (right) ===== -->
+  <g transform="translate(320, 165)">
+    <!-- Small square-ish body -->
+    <rect x="-28" y="10" width="56" height="70" rx="15" fill="url(#tm-grad3)"/>
+    <!-- Head bump -->
+    <circle cx="0" cy="10" r="30" fill="url(#tm-grad1)"/>
+    <!-- One big eye, one small -->
+    <circle cx="-8" cy="5" r="12" fill="white"/>
+    <circle cx="14" cy="8" r="8" fill="white"/>
+    <circle cx="-6" cy="7" r="6" fill="#1a1a2e"/>
+    <circle cx="15" cy="9" r="4" fill="#1a1a2e"/>
+    <circle cx="-3" cy="3" r="2" fill="white"/>
+    <circle cx="17" cy="6" r="1.5" fill="white"/>
+    <!-- Zigzag mouth -->
+    <path d="M-12 28 L-7 22 L-2 28 L3 22 L8 28 L13 22" stroke="#C2410C" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Single spike on top -->
+    <path d="M-5 -18 L0 -35 L5 -18" fill="#EA580C"/>
+    <!-- Tiny arms reaching up -->
+    <path d="M-28 40 L-40 30" stroke="#C2410C" stroke-width="3" stroke-linecap="round"/>
+    <path d="M28 40 L40 30" stroke="#C2410C" stroke-width="3" stroke-linecap="round"/>
+    <!-- Feet -->
+    <ellipse cx="-12" cy="82" rx="10" ry="5" fill="#C2410C"/>
+    <ellipse cx="12" cy="82" rx="10" ry="5" fill="#C2410C"/>
+  </g>
+
+  <!-- ===== MONSTER 4 - TINY ONE (between center and right) ===== -->
+  <g transform="translate(270, 240)">
+    <!-- Tiny blob body -->
+    <ellipse cx="0" cy="15" rx="18" ry="22" fill="#F97316"/>
+    <!-- Dot eyes -->
+    <circle cx="-5" cy="8" r="4" fill="white"/>
+    <circle cx="7" cy="8" r="4" fill="white"/>
+    <circle cx="-4" cy="9" r="2.5" fill="#1a1a2e"/>
+    <circle cx="8" cy="9" r="2.5" fill="#1a1a2e"/>
+    <!-- Little O mouth -->
+    <circle cx="1" cy="22" r="3" fill="#C2410C"/>
+    <circle cx="1" cy="22" r="1.5" fill="#1a1a2e" opacity="0.3"/>
+    <!-- Two tiny ears -->
+    <circle cx="-12" cy="-2" r="5" fill="#EA580C"/>
+    <circle cx="12" cy="-2" r="5" fill="#EA580C"/>
+  </g>
+
+  <!-- Warm sparkles and decorations -->
+  <circle cx="55" cy="80" r="3" fill="#F97316" opacity="0.4"/>
+  <circle cx="350" cy="90" r="2.5" fill="#EA580C" opacity="0.4"/>
+  <circle cx="45" cy="320" r="2" fill="#F97316" opacity="0.3"/>
+  <circle cx="370" cy="350" r="2" fill="#F97316" opacity="0.3"/>
+
+  <!-- Heart shapes for family energy -->
+  <path d="M175 90 C175 85, 180 80, 185 83 C190 80, 195 85, 195 90 C195 97, 185 104, 185 104 C185 104, 175 97, 175 90 Z" fill="#F97316" opacity="0.35"/>
+  <path d="M50 170 C50 166, 54 162, 57 164 C60 162, 64 166, 64 170 C64 175, 57 180, 57 180 C57 180, 50 175, 50 170 Z" fill="#EA580C" opacity="0.25"/>
+  <path d="M345 135 C345 132, 348 129, 350 131 C352 129, 355 132, 355 135 C355 139, 350 142, 350 142 C350 142, 345 139, 345 135 Z" fill="#F97316" opacity="0.25"/>
+
+  <!-- Star decorations -->
+  <path d="M30 140 L33 132 L36 140 L44 137 L36 140 L39 148 L36 140 L28 143 Z" fill="#FDBA74" opacity="0.4"/>
+  <path d="M375 180 L377 174 L379 180 L385 178 L379 180 L381 186 L379 180 L373 182 Z" fill="#FDBA74" opacity="0.35"/>
+</svg>

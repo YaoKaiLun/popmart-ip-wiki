@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="cry-body" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#93C5FD"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="cry-face" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFDF7"/>
+      <stop offset="100%" stop-color="#FEF3E2"/>
+    </linearGradient>
+    <linearGradient id="cry-cloud" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#BFDBFE"/>
+      <stop offset="100%" stop-color="#93C5FD"/>
+    </linearGradient>
+    <linearGradient id="cry-tear" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <radialGradient id="cry-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#93C5FD" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rainbow-1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.35"/>
+      <stop offset="20%" stop-color="#F97316" stop-opacity="0.3"/>
+      <stop offset="40%" stop-color="#FACC15" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#22C55E" stop-opacity="0.3"/>
+      <stop offset="80%" stop-color="#3B82F6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="tear-glow">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient glow -->
+  <circle cx="200" cy="230" r="180" fill="url(#cry-glow)"/>
+
+  <!-- Rain cloud above -->
+  <g transform="translate(200, 80)">
+    <circle cx="-40" cy="0" r="28" fill="url(#cry-cloud)"/>
+    <circle cx="-15" cy="-15" r="32" fill="url(#cry-cloud)"/>
+    <circle cx="15" cy="-10" r="28" fill="#BFDBFE"/>
+    <circle cx="35" cy="0" r="24" fill="url(#cry-cloud)"/>
+    <circle cx="0" cy="5" r="30" fill="#93C5FD" opacity="0.5"/>
+    <ellipse cx="0" cy="15" rx="55" ry="15" fill="url(#cry-cloud)"/>
+
+    <!-- Cloud shadow/depth -->
+    <circle cx="-10" cy="0" r="25" fill="#60A5FA" opacity="0.1"/>
+
+    <!-- Rain drops from cloud -->
+    <path d="M-30 30 L-30 50 C-30 54, -26 54, -26 50 L-26 42" fill="url(#cry-tear)" opacity="0.4"/>
+    <path d="M-10 35 L-10 58 C-10 62, -6 62, -6 58 L-6 48" fill="url(#cry-tear)" opacity="0.35"/>
+    <path d="M10 30 L10 52 C10 56, 14 56, 14 52 L14 44" fill="url(#cry-tear)" opacity="0.4"/>
+    <path d="M30 35 L30 48 C30 52, 34 52, 34 48 L34 42" fill="url(#cry-tear)" opacity="0.3"/>
+    <path d="M-20 40 L-20 55 C-20 58, -17 58, -17 55 L-17 48" fill="url(#cry-tear)" opacity="0.25"/>
+    <path d="M20 38 L20 52 C20 55, 23 55, 23 52 L23 46" fill="url(#cry-tear)" opacity="0.25"/>
+  </g>
+
+  <!-- === RAINBOW PEEK in top-right corner === -->
+  <g opacity="0.6">
+    <path d="M340 0 A120 120 0 0 1 400 60" stroke="#EF4444" stroke-width="4" fill="none" opacity="0.35"/>
+    <path d="M332 0 A128 128 0 0 1 400 68" stroke="#F97316" stroke-width="4" fill="none" opacity="0.3"/>
+    <path d="M324 0 A136 136 0 0 1 400 76" stroke="#FACC15" stroke-width="4" fill="none" opacity="0.3"/>
+    <path d="M316 0 A144 144 0 0 1 400 84" stroke="#22C55E" stroke-width="4" fill="none" opacity="0.3"/>
+    <path d="M308 0 A152 152 0 0 1 400 92" stroke="#3B82F6" stroke-width="4" fill="none" opacity="0.3"/>
+    <path d="M300 0 A160 160 0 0 1 400 100" stroke="#8B5CF6" stroke-width="4" fill="none" opacity="0.3"/>
+  </g>
+
+  <!-- Sitting body -->
+  <ellipse cx="200" cy="310" rx="55" ry="45" fill="url(#cry-body)"/>
+  <ellipse cx="200" cy="320" rx="35" ry="25" fill="#BFDBFE" opacity="0.15"/>
+
+  <!-- Legs - sitting, spread out -->
+  <ellipse cx="160" cy="345" rx="30" ry="15" fill="#3B82F6" transform="rotate(-15, 160, 345)"/>
+  <ellipse cx="240" cy="345" rx="30" ry="15" fill="#3B82F6" transform="rotate(15, 240, 345)"/>
+
+  <!-- Feet -->
+  <circle cx="135" cy="352" r="12" fill="#60A5FA"/>
+  <circle cx="265" cy="352" r="12" fill="#60A5FA"/>
+
+  <!-- Arms - slightly forward, palms up feeling -->
+  <path d="M150 295 C135 300, 122 315, 120 330" stroke="#60A5FA" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M250 295 C265 300, 278 315, 280 330" stroke="#60A5FA" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <circle cx="120" cy="332" r="7" fill="#93C5FD"/>
+  <circle cx="280" cy="332" r="7" fill="#93C5FD"/>
+
+  <!-- BIG round head -->
+  <circle cx="200" cy="220" r="70" fill="url(#cry-face)"/>
+
+  <!-- Baby hair tuft -->
+  <path d="M195 152 C193 140, 200 130, 205 135 C208 128, 215 132, 212 142 C218 135, 222 140, 215 148 C212 150, 205 152, 200 152 Z" fill="#93C5FD"/>
+
+  <!-- Big round eyes -->
+  <circle cx="178" cy="215" r="18" fill="white"/>
+  <circle cx="222" cy="215" r="18" fill="white"/>
+
+  <!-- Iris -->
+  <circle cx="178" cy="218" r="11" fill="#3B82F6"/>
+  <circle cx="222" cy="218" r="11" fill="#3B82F6"/>
+
+  <!-- Inner iris detail -->
+  <circle cx="178" cy="218" r="7" fill="#1E40AF"/>
+  <circle cx="222" cy="218" r="7" fill="#1E40AF"/>
+
+  <!-- Pupil -->
+  <circle cx="178" cy="218" r="4" fill="#1a1a2e"/>
+  <circle cx="222" cy="218" r="4" fill="#1a1a2e"/>
+
+  <!-- Eye shine -->
+  <circle cx="183" cy="211" r="4" fill="white"/>
+  <circle cx="227" cy="211" r="4" fill="white"/>
+  <circle cx="174" cy="222" r="2" fill="white" opacity="0.5"/>
+  <circle cx="218" cy="222" r="2" fill="white" opacity="0.5"/>
+
+  <!-- Watery eye bottom - tear pools -->
+  <path d="M162 228 C168 233, 188 233, 194 228" fill="#60A5FA" opacity="0.25"/>
+  <path d="M206 228 C212 233, 232 233, 238 228" fill="#60A5FA" opacity="0.25"/>
+
+  <!-- TEARS - large teardrop shapes -->
+  <!-- Left tear stream -->
+  <path d="M170 232 C168 245, 165 260, 168 272 C170 278, 174 278, 175 272 C178 260, 175 245, 172 232 Z" fill="url(#cry-tear)" opacity="0.6"/>
+  <!-- Left tear drop -->
+  <path d="M166 285 C166 280, 170 275, 174 275 C178 275, 182 280, 182 285 C182 292, 174 298, 174 298 C174 298, 166 292, 166 285 Z" fill="url(#cry-tear)" opacity="0.5"/>
+
+  <!-- Right tear stream -->
+  <path d="M228 232 C230 245, 233 260, 230 272 C228 278, 224 278, 223 272 C220 260, 223 245, 226 232 Z" fill="url(#cry-tear)" opacity="0.6"/>
+  <!-- Right tear drop -->
+  <path d="M222 290 C222 285, 226 280, 230 280 C234 280, 238 285, 238 290 C238 297, 230 303, 230 303 C230 303, 222 297, 222 290 Z" fill="url(#cry-tear)" opacity="0.5"/>
+
+  <!-- Extra tear drops falling -->
+  <path d="M158 310 C158 307, 160 304, 162 304 C164 304, 166 307, 166 310 C166 314, 162 317, 162 317 C162 317, 158 314, 158 310 Z" fill="url(#cry-tear)" opacity="0.35"/>
+  <path d="M240 315 C240 312, 242 309, 244 309 C246 309, 248 312, 248 315 C248 319, 244 322, 244 322 C244 322, 240 319, 240 315 Z" fill="url(#cry-tear)" opacity="0.3"/>
+
+  <!-- Eyebrows - worried/sad -->
+  <path d="M164 197 C170 192, 180 191, 190 194" stroke="#93C5FD" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M236 197 C230 192, 220 191, 210 194" stroke="#93C5FD" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Small nose -->
+  <ellipse cx="200" cy="238" rx="3" ry="2" fill="#DEB887" opacity="0.3"/>
+
+  <!-- Wobbly sad mouth -->
+  <path d="M188 252 C192 257, 195 258, 200 258 C205 258, 208 257, 212 252" stroke="#60A5FA" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M192 255 C196 259, 204 259, 208 255" fill="#3B82F6" opacity="0.1"/>
+
+  <!-- Blush despite crying -->
+  <ellipse cx="160" cy="240" rx="10" ry="5" fill="#FCA5A5" opacity="0.2"/>
+  <ellipse cx="240" cy="240" rx="10" ry="5" fill="#FCA5A5" opacity="0.2"/>
+
+  <!-- Floating tear drops in scene -->
+  <path d="M80 180 C80 176, 83 172, 86 172 C89 172, 92 176, 92 180 C92 185, 86 190, 86 190 C86 190, 80 185, 80 180 Z" fill="#93C5FD" opacity="0.2"/>
+  <path d="M320 200 C320 197, 322 194, 324 194 C326 194, 328 197, 328 200 C328 204, 324 207, 324 207 C324 207, 320 204, 320 200 Z" fill="#60A5FA" opacity="0.2"/>
+  <path d="M100 300 C100 298, 101 296, 102 296 C103 296, 104 298, 104 300 C104 303, 102 305, 102 305 C102 305, 100 303, 100 300 Z" fill="#93C5FD" opacity="0.15"/>
+
+  <!-- Sparkle dots -->
+  <circle cx="350" cy="30" r="2" fill="#FACC15" opacity="0.4"/>
+  <circle cx="365" cy="50" r="1.5" fill="#22C55E" opacity="0.3"/>
+  <circle cx="370" cy="15" r="1.5" fill="#EF4444" opacity="0.3"/>
+
+  <!-- Puddle under character -->
+  <ellipse cx="200" cy="370" rx="70" ry="8" fill="#93C5FD" opacity="0.12"/>
+  <ellipse cx="200" cy="372" rx="50" ry="5" fill="#60A5FA" opacity="0.08"/>
+</svg>

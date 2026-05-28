@@ -19,7 +19,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
       {isOpen && (
         <>
           <motion.div
-            className="fixed inset-0 z-50 bg-black/40"
+            className="fixed inset-0 z-50 bg-black/60"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -27,19 +27,19 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
           />
 
           <motion.div
-            className="fixed inset-y-0 right-0 z-50 w-72 bg-white shadow-xl"
+            className="fixed inset-y-0 right-0 z-50 w-72 bg-brand-dark border-l border-white/10 shadow-xl"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
           >
-            <div className="flex h-16 items-center justify-between border-b border-gray-100 px-4">
-              <span className="text-lg font-bold tracking-tight text-gray-900">
+            <div className="flex h-16 items-center justify-between border-b border-white/10 px-4">
+              <span className="text-lg font-bold tracking-tight bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
                 {SITE_NAME}
               </span>
               <button
                 type="button"
-                className="inline-flex items-center justify-center rounded-lg p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                className="inline-flex items-center justify-center rounded-lg p-2 text-white hover:bg-white/10"
                 onClick={onClose}
                 aria-label="关闭导航菜单"
               >
@@ -69,8 +69,8 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                   className={cn(
                     "rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                     pathname === link.href
-                      ? "bg-gray-100 text-gray-900"
-                      : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                      ? "text-brand-pink"
+                      : "text-gray-300 hover:text-white"
                   )}
                 >
                   {link.label}

@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="hiro-body" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="hiro-face" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="hiro-hair" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="hiro-flower-stem" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <radialGradient id="hiro-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#64748B" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#64748B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hiro-rain" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#94A3B8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#CBD5E1" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Subtle ambient glow -->
+  <circle cx="200" cy="230" r="180" fill="url(#hiro-glow)"/>
+
+  <!-- Rain drops - scattered, gentle -->
+  <line x1="80" y1="30" x2="78" y2="55" stroke="url(#hiro-rain)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="120" y1="50" x2="118" y2="78" stroke="url(#hiro-rain)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="155" y1="20" x2="153" y2="48" stroke="url(#hiro-rain)" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="240" y1="35" x2="238" y2="60" stroke="url(#hiro-rain)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="280" y1="55" x2="278" y2="80" stroke="url(#hiro-rain)" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="310" y1="25" x2="308" y2="50" stroke="url(#hiro-rain)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="100" y1="85" x2="98" y2="108" stroke="url(#hiro-rain)" stroke-width="1" stroke-linecap="round"/>
+  <line x1="290" y1="90" x2="288" y2="115" stroke="url(#hiro-rain)" stroke-width="1" stroke-linecap="round"/>
+  <line x1="60" y1="100" x2="58" y2="122" stroke="url(#hiro-rain)" stroke-width="1" stroke-linecap="round"/>
+  <line x1="340" y1="70" x2="338" y2="92" stroke="url(#hiro-rain)" stroke-width="1" stroke-linecap="round"/>
+  <line x1="180" y1="60" x2="178" y2="82" stroke="url(#hiro-rain)" stroke-width="1" stroke-linecap="round"/>
+  <line x1="330" y1="110" x2="328" y2="130" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="70" y1="140" x2="68" y2="158" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round"/>
+
+  <!-- Hair - messy, slightly covering face -->
+  <path d="M140 145 C130 120, 145 90, 170 80 C185 75, 210 72, 230 78 C255 85, 270 110, 265 145 C260 130, 245 105, 220 95 C195 88, 160 95, 140 145 Z" fill="url(#hiro-hair)"/>
+  <!-- Hair strands falling over face -->
+  <path d="M145 140 C142 120, 150 100, 165 90 C155 105, 148 125, 150 145 Z" fill="#334155" opacity="0.6"/>
+  <path d="M155 148 C155 130, 158 110, 172 95 C162 115, 158 135, 160 150 Z" fill="#475569" opacity="0.4"/>
+  <path d="M250 140 C256 115, 250 95, 235 85 C245 100, 252 120, 248 140 Z" fill="#334155" opacity="0.5"/>
+
+  <!-- Head - slightly tilted/hunched -->
+  <ellipse cx="200" cy="165" rx="62" ry="68" fill="url(#hiro-face)"/>
+
+  <!-- Hair bang overlay -->
+  <path d="M142 155 C145 130, 158 115, 175 108 C165 120, 155 138, 152 158 Z" fill="url(#hiro-hair)" opacity="0.8"/>
+
+  <!-- Eyes - downcast, contemplative -->
+  <!-- Left eye - half closed -->
+  <path d="M172 170 C175 164, 183 162, 188 166" stroke="#334155" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="180" cy="170" rx="7" ry="4" fill="#1E293B" opacity="0.4"/>
+
+  <!-- Right eye - half closed -->
+  <path d="M210 168 C213 162, 221 160, 226 164" stroke="#334155" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="218" cy="168" rx="7" ry="4" fill="#1E293B" opacity="0.4"/>
+
+  <!-- Subtle nose -->
+  <path d="M198 185 L200 190 L202 185" stroke="#94A3B8" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- Mouth - thin, neutral -->
+  <path d="M190 202 C195 204, 205 204, 210 202" stroke="#475569" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Neck -->
+  <rect x="190" y="230" width="20" height="18" rx="5" fill="url(#hiro-face)" opacity="0.8"/>
+
+  <!-- Body - slightly hunched posture -->
+  <path d="M155 250 C150 240, 170 232, 200 230 C230 232, 250 240, 245 250 C260 270, 265 300, 260 340 L255 370 L145 370 L140 340 C135 300, 140 270, 155 250 Z" fill="url(#hiro-body)"/>
+
+  <!-- Hoodie/clothing details -->
+  <path d="M160 252 C170 245, 185 240, 200 238 C215 240, 230 245, 240 252" stroke="#475569" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <!-- Pocket -->
+  <rect x="180" y="300" width="40" height="25" rx="5" fill="#475569" opacity="0.2"/>
+
+  <!-- Arms - hanging down, slightly forward (hunched) -->
+  <path d="M155 255 C140 270, 130 300, 128 330 C127 340, 130 350, 135 355" stroke="url(#hiro-body)" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <path d="M245 255 C260 270, 270 300, 272 330 C273 340, 270 350, 265 355" stroke="url(#hiro-body)" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+  <!-- Hands -->
+  <circle cx="135" cy="355" r="8" fill="#64748B"/>
+  <circle cx="265" cy="355" r="8" fill="#64748B"/>
+
+  <!-- Feet -->
+  <ellipse cx="175" cy="373" rx="22" ry="8" fill="#334155"/>
+  <ellipse cx="225" cy="373" rx="22" ry="8" fill="#334155"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="200" cy="378" rx="80" ry="6" fill="#334155" opacity="0.1"/>
+
+  <!-- === THE FLOWER === Growing at his feet -->
+  <!-- Stem -->
+  <path d="M200 378 C198 368, 195 358, 192 345 C190 338, 192 332, 195 328" stroke="url(#hiro-flower-stem)" stroke-width="2" fill="none"/>
+  <!-- Leaf on stem -->
+  <path d="M194 350 C188 345, 183 348, 185 355 C187 350, 191 349, 194 350 Z" fill="#4ADE80" opacity="0.7"/>
+
+  <!-- Flower petals -->
+  <g transform="translate(195, 325)">
+    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="#FDA4AF" opacity="0.8"/>
+    <ellipse cx="7" cy="-3" rx="5" ry="8" fill="#FB7185" opacity="0.7" transform="rotate(72, 7, -3)"/>
+    <ellipse cx="5" cy="6" rx="5" ry="8" fill="#FDA4AF" opacity="0.7" transform="rotate(144, 5, 6)"/>
+    <ellipse cx="-5" cy="6" rx="5" ry="8" fill="#FB7185" opacity="0.7" transform="rotate(216, -5, 6)"/>
+    <ellipse cx="-7" cy="-3" rx="5" ry="8" fill="#FDA4AF" opacity="0.8" transform="rotate(288, -7, -3)"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="4" fill="#FDE68A"/>
+  </g>
+
+  <!-- Very subtle puddle reflection -->
+  <ellipse cx="200" cy="385" rx="40" ry="3" fill="#94A3B8" opacity="0.08"/>
+
+  <!-- Distant rain continuing below -->
+  <line x1="90" y1="160" x2="88" y2="178" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+  <line x1="310" y1="150" x2="308" y2="168" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+  <line x1="50" y1="200" x2="48" y2="215" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round" opacity="0.4"/>
+  <line x1="350" y1="190" x2="348" y2="205" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round" opacity="0.4"/>
+</svg>

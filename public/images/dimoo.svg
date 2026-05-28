@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="dimoo-body" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="dimoo-face" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFF8F0"/>
+      <stop offset="100%" stop-color="#FEECD2"/>
+    </linearGradient>
+    <linearGradient id="dimoo-hat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <radialGradient id="dimoo-glow" cx="0.5" cy="0.45" r="0.5">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="dimoo-cloud" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E0F2FE"/>
+      <stop offset="100%" stop-color="#BAE6FD"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient glow -->
+  <circle cx="200" cy="220" r="180" fill="url(#dimoo-glow)"/>
+
+  <!-- Background clouds -->
+  <g opacity="0.3">
+    <!-- Cloud 1 - top left -->
+    <circle cx="60" cy="80" r="20" fill="url(#dimoo-cloud)"/>
+    <circle cx="80" cy="75" r="25" fill="url(#dimoo-cloud)"/>
+    <circle cx="100" cy="82" r="18" fill="url(#dimoo-cloud)"/>
+    <ellipse cx="80" cy="90" rx="35" ry="12" fill="url(#dimoo-cloud)"/>
+  </g>
+  <g opacity="0.25">
+    <!-- Cloud 2 - top right -->
+    <circle cx="300" cy="60" r="18" fill="url(#dimoo-cloud)"/>
+    <circle cx="320" cy="55" r="22" fill="url(#dimoo-cloud)"/>
+    <circle cx="338" cy="62" r="16" fill="url(#dimoo-cloud)"/>
+    <ellipse cx="318" cy="70" rx="32" ry="10" fill="url(#dimoo-cloud)"/>
+  </g>
+  <g opacity="0.2">
+    <!-- Cloud 3 - middle left -->
+    <circle cx="40" cy="200" r="15" fill="url(#dimoo-cloud)"/>
+    <circle cx="55" cy="195" r="18" fill="url(#dimoo-cloud)"/>
+    <circle cx="70" cy="200" r="13" fill="url(#dimoo-cloud)"/>
+    <ellipse cx="55" cy="207" rx="25" ry="8" fill="url(#dimoo-cloud)"/>
+  </g>
+  <g opacity="0.2">
+    <!-- Cloud 4 - right -->
+    <circle cx="345" cy="230" r="14" fill="url(#dimoo-cloud)"/>
+    <circle cx="360" cy="225" r="17" fill="url(#dimoo-cloud)"/>
+    <ellipse cx="352" cy="235" rx="22" ry="8" fill="url(#dimoo-cloud)"/>
+  </g>
+
+  <!-- Background stars -->
+  <path d="M130 50 L133 42 L136 50 L144 47 L136 50 L139 58 L136 50 L128 53 Z" fill="#38BDF8" opacity="0.4"/>
+  <path d="M350 140 L352 134 L354 140 L360 138 L354 140 L356 146 L354 140 L348 142 Z" fill="#0EA5E9" opacity="0.35"/>
+  <path d="M55 300 L57 295 L59 300 L64 298 L59 300 L61 305 L59 300 L54 302 Z" fill="#38BDF8" opacity="0.3"/>
+  <circle cx="340" cy="310" r="2" fill="#38BDF8" opacity="0.3"/>
+  <circle cx="70" cy="140" r="2.5" fill="#0EA5E9" opacity="0.3"/>
+
+  <!-- Body -->
+  <ellipse cx="200" cy="320" rx="60" ry="55" fill="url(#dimoo-body)"/>
+  <ellipse cx="200" cy="330" rx="40" ry="30" fill="#BAE6FD" opacity="0.2"/>
+
+  <!-- Arms -->
+  <path d="M142 300 C125 305, 115 320, 120 335 C122 330, 128 318, 148 310 Z" fill="#0EA5E9"/>
+  <path d="M258 300 C275 305, 285 320, 280 335 C278 330, 272 318, 252 310 Z" fill="#0EA5E9"/>
+
+  <!-- Collar / neck area -->
+  <ellipse cx="200" cy="275" rx="35" ry="12" fill="#0EA5E9" opacity="0.5"/>
+
+  <!-- BIG round head -->
+  <circle cx="200" cy="190" r="95" fill="url(#dimoo-face)"/>
+
+  <!-- Subtle face contour -->
+  <circle cx="200" cy="195" r="85" fill="white" opacity="0.08"/>
+
+  <!-- Hat/Cap -->
+  <path d="M115 160 C120 110, 160 82, 200 78 C240 82, 280 110, 285 160 C270 145, 240 135, 200 132 C160 135, 130 145, 115 160 Z" fill="url(#dimoo-hat)"/>
+  <!-- Hat brim -->
+  <ellipse cx="200" cy="158" rx="90" ry="14" fill="#0369A1"/>
+  <ellipse cx="200" cy="156" rx="88" ry="12" fill="#0EA5E9"/>
+  <!-- Hat button top -->
+  <circle cx="200" cy="82" r="6" fill="#0369A1"/>
+  <!-- Hat band -->
+  <path d="M125 145 C145 138, 175 133, 200 132 C225 133, 255 138, 275 145" stroke="#BAE6FD" stroke-width="4" fill="none" opacity="0.5"/>
+
+  <!-- Star-shaped eyes - LEFT -->
+  <g transform="translate(168, 200)">
+    <path d="M0 -14 L4 -5 L14 -5 L6 1 L9 11 L0 5 L-9 11 L-6 1 L-14 -5 L-4 -5 Z" fill="#0EA5E9"/>
+    <path d="M0 -8 L2.5 -3 L8 -3 L3.5 1 L5 7 L0 3.5 L-5 7 L-3.5 1 L-8 -3 L-2.5 -3 Z" fill="#0369A1"/>
+    <circle cx="2" cy="-2" r="2" fill="white" opacity="0.7"/>
+  </g>
+
+  <!-- Star-shaped eyes - RIGHT -->
+  <g transform="translate(232, 200)">
+    <path d="M0 -14 L4 -5 L14 -5 L6 1 L9 11 L0 5 L-9 11 L-6 1 L-14 -5 L-4 -5 Z" fill="#0EA5E9"/>
+    <path d="M0 -8 L2.5 -3 L8 -3 L3.5 1 L5 7 L0 3.5 L-5 7 L-3.5 1 L-8 -3 L-2.5 -3 Z" fill="#0369A1"/>
+    <circle cx="2" cy="-2" r="2" fill="white" opacity="0.7"/>
+  </g>
+
+  <!-- Blush -->
+  <ellipse cx="152" cy="228" rx="14" ry="7" fill="#FF69B4" opacity="0.15"/>
+  <ellipse cx="248" cy="228" rx="14" ry="7" fill="#FF69B4" opacity="0.15"/>
+
+  <!-- Nose -->
+  <circle cx="200" cy="225" r="3" fill="#0EA5E9" opacity="0.4"/>
+
+  <!-- Mouth - small, cute -->
+  <path d="M190 242 C195 248, 205 248, 210 242" stroke="#0369A1" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+  <!-- Ears hint -->
+  <circle cx="108" cy="195" r="12" fill="url(#dimoo-face)"/>
+  <circle cx="108" cy="195" r="7" fill="#FEECD2"/>
+  <circle cx="292" cy="195" r="12" fill="url(#dimoo-face)"/>
+  <circle cx="292" cy="195" r="7" fill="#FEECD2"/>
+
+  <!-- Feet -->
+  <ellipse cx="175" cy="372" rx="24" ry="10" fill="#0369A1"/>
+  <ellipse cx="225" cy="372" rx="24" ry="10" fill="#0369A1"/>
+
+  <!-- Dreamy floating stars around character -->
+  <g opacity="0.6">
+    <path d="M90 260 L93 252 L96 260 L104 257 L96 260 L99 268 L96 260 L88 263 Z" fill="#38BDF8"/>
+  </g>
+  <g opacity="0.5">
+    <path d="M310 170 L312 164 L314 170 L320 168 L314 170 L316 176 L314 170 L308 172 Z" fill="#0EA5E9"/>
+  </g>
+  <g opacity="0.45">
+    <path d="M325 290 L327 285 L329 290 L334 288 L329 290 L331 295 L329 290 L324 292 Z" fill="#38BDF8"/>
+  </g>
+
+  <!-- Sparkle dots -->
+  <circle cx="100" cy="130" r="2" fill="#38BDF8" opacity="0.5"/>
+  <circle cx="300" cy="120" r="1.5" fill="#0EA5E9" opacity="0.4"/>
+  <circle cx="80" cy="340" r="2" fill="#38BDF8" opacity="0.3"/>
+  <circle cx="320" cy="350" r="1.5" fill="#0EA5E9" opacity="0.3"/>
+</svg>

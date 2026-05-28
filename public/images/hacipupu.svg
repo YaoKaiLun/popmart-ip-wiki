@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="haci-body" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FACC15"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+    <linearGradient id="haci-face" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFEF5"/>
+      <stop offset="100%" stop-color="#FEF9C3"/>
+    </linearGradient>
+    <linearGradient id="haci-hat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#A16207"/>
+    </linearGradient>
+    <linearGradient id="haci-mountain" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#78716C"/>
+      <stop offset="100%" stop-color="#57534E"/>
+    </linearGradient>
+    <linearGradient id="haci-mountain2" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#A8A29E"/>
+      <stop offset="100%" stop-color="#78716C"/>
+    </linearGradient>
+    <radialGradient id="haci-sun-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FACC15" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#FACC15" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FACC15" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="haci-backpack" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#CA8A04"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sun with rays - background -->
+  <circle cx="200" cy="80" r="100" fill="url(#haci-sun-glow)"/>
+  <circle cx="200" cy="80" r="40" fill="#FACC15" opacity="0.2"/>
+  <circle cx="200" cy="80" r="25" fill="#FACC15" opacity="0.3"/>
+
+  <!-- Sun rays -->
+  <g stroke="#FACC15" stroke-width="2" stroke-linecap="round" opacity="0.3">
+    <line x1="200" y1="30" x2="200" y2="15"/>
+    <line x1="230" y1="35" x2="240" y2="22"/>
+    <line x1="252" y1="52" x2="265" y2="42"/>
+    <line x1="265" y1="80" x2="280" y2="80"/>
+    <line x1="252" y1="108" x2="265" y2="118"/>
+    <line x1="230" y1="125" x2="240" y2="138"/>
+    <line x1="170" y1="35" x2="160" y2="22"/>
+    <line x1="148" y1="52" x2="135" y2="42"/>
+    <line x1="135" y1="80" x2="120" y2="80"/>
+    <line x1="148" y1="108" x2="135" y2="118"/>
+    <line x1="170" y1="125" x2="160" y2="138"/>
+  </g>
+
+  <!-- Distant mountains -->
+  <path d="M0 380 L50 310 L100 350 L160 280 L210 340 L250 290 L310 330 L360 270 L400 320 L400 400 L0 400 Z" fill="url(#haci-mountain)" opacity="0.2"/>
+  <path d="M0 380 L80 330 L140 360 L200 300 L260 350 L340 310 L400 350 L400 400 L0 400 Z" fill="url(#haci-mountain2)" opacity="0.15"/>
+
+  <!-- Snow caps on distant mountains -->
+  <path d="M160 280 L170 290 L150 290 Z" fill="white" opacity="0.2"/>
+  <path d="M360 270 L370 282 L350 282 Z" fill="white" opacity="0.2"/>
+
+  <!-- Main mountain peak where character stands -->
+  <path d="M120 400 L200 260 L280 400 Z" fill="url(#haci-mountain)"/>
+  <path d="M200 260 L215 275 L185 275 Z" fill="white" opacity="0.25"/>
+  <path d="M145 380 L200 280 L255 380 Z" fill="#78716C" opacity="0.3"/>
+
+  <!-- Character standing on peak - dynamic pose -->
+
+  <!-- Backpack (behind body) -->
+  <rect x="218" y="195" width="25" height="30" rx="5" fill="url(#haci-backpack)"/>
+  <path d="M220 195 L240 195" stroke="#92400E" stroke-width="2"/>
+  <path d="M225 195 L225 185 C225 182, 235 182, 235 185 L235 195" stroke="#A16207" stroke-width="2" fill="none"/>
+  <!-- Backpack pocket -->
+  <rect x="224" y="205" width="14" height="10" rx="2" fill="#A16207" opacity="0.5"/>
+
+  <!-- Legs - dynamic stance -->
+  <path d="M190 270 C185 285, 178 300, 172 310" stroke="url(#haci-body)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M210 270 C220 285, 228 295, 235 305" stroke="url(#haci-body)" stroke-width="10" fill="none" stroke-linecap="round"/>
+
+  <!-- Boots -->
+  <ellipse cx="170" cy="313" rx="14" ry="7" fill="#92400E"/>
+  <ellipse cx="237" cy="308" rx="14" ry="7" fill="#92400E"/>
+
+  <!-- Body -->
+  <ellipse cx="200" cy="240" rx="35" ry="40" fill="url(#haci-body)"/>
+  <ellipse cx="200" cy="245" rx="22" ry="25" fill="#FDE68A" opacity="0.2"/>
+
+  <!-- Scarf / bandana -->
+  <path d="M170 210 C175 205, 190 200, 200 200 C210 200, 225 205, 230 210 C228 215, 220 218, 210 218 C205 218, 200 220, 200 225 L200 235" stroke="#EF4444" stroke-width="3" fill="none"/>
+  <path d="M170 210 C180 215, 190 218, 200 218" stroke="#DC2626" stroke-width="2" fill="none" opacity="0.5"/>
+
+  <!-- Head -->
+  <circle cx="200" cy="175" r="45" fill="url(#haci-face)"/>
+
+  <!-- Explorer Hat -->
+  <path d="M155 165 C160 135, 180 118, 200 115 C220 118, 240 135, 245 165" fill="url(#haci-hat)"/>
+  <ellipse cx="200" cy="165" rx="52" ry="10" fill="#A16207"/>
+  <ellipse cx="200" cy="163" rx="50" ry="9" fill="#EAB308"/>
+  <!-- Hat band -->
+  <path d="M158 155 C170 148, 185 144, 200 143 C215 144, 230 148, 242 155" stroke="#CA8A04" stroke-width="4" fill="none"/>
+  <!-- Hat dent -->
+  <path d="M175 135 C185 128, 200 125, 215 128 C225 132, 230 138, 225 142 C215 135, 200 130, 185 133 C178 135, 175 138, 175 135 Z" fill="#CA8A04" opacity="0.3"/>
+
+  <!-- Eyes - determined, bright -->
+  <circle cx="185" cy="175" r="8" fill="white"/>
+  <circle cx="215" cy="175" r="8" fill="white"/>
+  <circle cx="187" cy="176" r="5" fill="#1a1a2e"/>
+  <circle cx="217" cy="176" r="5" fill="#1a1a2e"/>
+  <circle cx="189" cy="173" r="2" fill="white"/>
+  <circle cx="219" cy="173" r="2" fill="white"/>
+
+  <!-- Determined eyebrows -->
+  <path d="M176 164 C180 161, 188 160, 194 162" stroke="#92400E" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M224 164 C220 161, 212 160, 206 162" stroke="#92400E" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- Nose -->
+  <circle cx="200" cy="184" r="2" fill="#CA8A04" opacity="0.4"/>
+
+  <!-- Big confident smile -->
+  <path d="M188 195 C193 202, 207 202, 212 195" fill="#CA8A04" opacity="0.15"/>
+  <path d="M188 195 C193 202, 207 202, 212 195" stroke="#A16207" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Blush -->
+  <ellipse cx="172" cy="190" rx="8" ry="4" fill="#FCA5A5" opacity="0.25"/>
+  <ellipse cx="228" cy="190" rx="8" ry="4" fill="#FCA5A5" opacity="0.25"/>
+
+  <!-- Arms - one raised triumphantly -->
+  <!-- Left arm raised up -->
+  <path d="M170 225 C155 210, 145 190, 140 170" stroke="url(#haci-body)" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- Right arm at side with fist -->
+  <path d="M230 230 C245 240, 250 250, 248 258" stroke="url(#haci-body)" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+  <!-- Hands -->
+  <circle cx="140" cy="168" r="6" fill="#FACC15"/>
+  <circle cx="248" cy="258" r="6" fill="#FACC15"/>
+
+  <!-- Flag in raised hand -->
+  <line x1="140" y1="168" x2="140" y2="130" stroke="#78716C" stroke-width="2"/>
+  <path d="M140 130 L165 138 L140 146 Z" fill="#EF4444" opacity="0.8"/>
+
+  <!-- Energetic motion lines -->
+  <path d="M120 155 L108 148" stroke="#FACC15" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <path d="M125 165 L110 162" stroke="#EAB308" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/>
+  <path d="M118 145 L108 138" stroke="#FACC15" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+
+  <!-- Sparkle effects -->
+  <path d="M270 140 L273 133 L276 140 L283 137 L276 140 L279 147 L276 140 L269 143 Z" fill="#FACC15" opacity="0.5"/>
+  <path d="M100 120 L102 115 L104 120 L109 118 L104 120 L106 125 L104 120 L99 122 Z" fill="#EAB308" opacity="0.4"/>
+  <circle cx="300" cy="200" r="2" fill="#FACC15" opacity="0.4"/>
+  <circle cx="110" cy="250" r="2" fill="#EAB308" opacity="0.3"/>
+
+  <!-- Birds in distance -->
+  <path d="M290 100 C293 96, 297 96, 300 100" stroke="#78716C" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M310 90 C312 87, 315 87, 317 90" stroke="#78716C" stroke-width="1" fill="none" opacity="0.25"/>
+  <path d="M305 105 C307 102, 310 102, 312 105" stroke="#78716C" stroke-width="0.8" fill="none" opacity="0.2"/>
+</svg>

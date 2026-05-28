@@ -25,6 +25,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2016年 Molly 星座系列",
       popularity: "泡泡玛特初代王牌IP",
     },
+    image: "/images/molly.svg",
   },
   {
     slug: "labubu",
@@ -50,6 +51,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2019年 The Monsters 精灵天团系列",
       popularity: "2024-2025年全球最火潮玩IP",
     },
+    image: "/images/labubu.svg",
   },
   {
     slug: "skullpanda",
@@ -75,6 +77,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2020年 SKULLPANDA 密林古堡系列",
       popularity: "核心玩家最爱的艺术向IP",
     },
+    image: "/images/skullpanda.svg",
   },
   {
     slug: "dimoo",
@@ -100,6 +103,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2019年 Dimoo 世界系列",
       popularity: "最受家庭用户喜爱的IP",
     },
+    image: "/images/dimoo.svg",
   },
   {
     slug: "the-monsters",
@@ -125,6 +129,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2018年 The Monsters 嗶嗶系列",
       popularity: "最具世界观深度的IP家族",
     },
+    image: "/images/the-monsters.svg",
   },
   {
     slug: "hirono",
@@ -150,6 +155,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2021年 Hirono 置身事外系列",
       popularity: "文艺青年最爱的情感向IP",
     },
+    image: "/images/hirono.svg",
   },
   {
     slug: "pucky",
@@ -175,6 +181,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2018年 Pucky 精灵森林系列",
       popularity: "女性收藏者最爱的治愈系IP",
     },
+    image: "/images/pucky.svg",
   },
   {
     slug: "hacipupu",
@@ -200,6 +207,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2022年 HACIPUPU 奇妙冒险系列",
       popularity: "泡泡玛特原创新星IP",
     },
+    image: "/images/hacipupu.svg",
   },
   {
     slug: "crybaby",
@@ -225,6 +233,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2022年 Crybaby 哭泣的天空系列",
       popularity: "东南亚市场最受欢迎的IP",
     },
+    image: "/images/crybaby.svg",
   },
 ];
 

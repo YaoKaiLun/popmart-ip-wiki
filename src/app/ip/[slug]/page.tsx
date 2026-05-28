@@ -48,34 +48,34 @@ export default async function IPDetailPage({
     <>
       <IPHeroBanner ip={ip} />
 
-      <div className="max-w-5xl mx-auto px-4 py-16">
+      <div className="max-w-5xl mx-auto px-4 py-16 bg-brand-dark">
         <section className="mb-16">
           <SectionHeading title="IP 故事" align="left" />
-          <div className="prose prose-gray max-w-none">
+          <div className="max-w-none">
             {ip.description.split("\n\n").map((paragraph, i) => (
               <p
                 key={i}
-                className="text-gray-600 leading-relaxed mb-4 text-base"
+                className="text-gray-400 leading-relaxed mb-4 text-base"
               >
                 {paragraph}
               </p>
             ))}
           </div>
           <div className="mt-8 grid grid-cols-3 gap-4">
-            <div className="bg-gray-50 rounded-2xl p-4 text-center">
+            <div className="glass-card rounded-2xl p-4 text-center">
               <p className="text-2xl font-bold" style={{ color: ip.colors.primary }}>
                 {ip.stats.totalSeries}+
               </p>
               <p className="text-xs text-gray-500 mt-1">系列数量</p>
             </div>
-            <div className="bg-gray-50 rounded-2xl p-4 text-center">
-              <p className="text-sm font-bold text-brand-black">
+            <div className="glass-card rounded-2xl p-4 text-center">
+              <p className="text-sm font-bold text-white">
                 {ip.stats.firstRelease}
               </p>
               <p className="text-xs text-gray-500 mt-1">首发系列</p>
             </div>
-            <div className="bg-gray-50 rounded-2xl p-4 text-center">
-              <p className="text-sm font-bold text-brand-black">
+            <div className="glass-card rounded-2xl p-4 text-center">
+              <p className="text-sm font-bold text-white">
                 {ip.stats.popularity}
               </p>
               <p className="text-xs text-gray-500 mt-1">市场地位</p>
@@ -123,8 +123,7 @@ export default async function IPDetailPage({
               <Link
                 key={other.slug}
                 href={`/ip/${other.slug}`}
-                className="group flex items-center gap-3 rounded-2xl p-3 hover:shadow-md transition-all duration-300"
-                style={{ backgroundColor: other.colors.bgLight }}
+                className="group flex items-center gap-3 glass-card rounded-2xl p-3"
               >
                 <GradientAvatar
                   gradient={other.colors.gradient}
@@ -132,10 +131,10 @@ export default async function IPDetailPage({
                   size="sm"
                 />
                 <div className="min-w-0">
-                  <p className="text-sm font-bold text-brand-black truncate">
+                  <p className="text-sm font-bold text-white truncate group-hover:text-pink-400 transition-colors">
                     {other.name}
                   </p>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-xs text-gray-500">
                     {other.designerEn}
                   </p>
                 </div>

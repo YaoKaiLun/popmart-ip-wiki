@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="molly-hair" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF69B4"/>
+      <stop offset="100%" stop-color="#C71585"/>
+    </linearGradient>
+    <linearGradient id="molly-face" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFF0F5"/>
+      <stop offset="100%" stop-color="#FFE4E1"/>
+    </linearGradient>
+    <linearGradient id="molly-crown" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </linearGradient>
+    <radialGradient id="molly-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FF69B4" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FF69B4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="molly-soft">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient glow -->
+  <circle cx="200" cy="210" r="170" fill="url(#molly-glow)"/>
+
+  <!-- Flowing curly hair - back layer -->
+  <path d="M105 160 C95 200, 85 260, 110 320 C120 340, 130 355, 145 360 C130 340, 120 300, 125 250 C128 220, 135 195, 140 180 Z" fill="url(#molly-hair)" opacity="0.7"/>
+  <path d="M295 160 C305 200, 315 260, 290 320 C280 340, 270 355, 255 360 C270 340, 280 300, 275 250 C272 220, 265 195, 260 180 Z" fill="url(#molly-hair)" opacity="0.7"/>
+
+  <!-- More hair volume -->
+  <path d="M120 140 C100 160, 80 220, 95 290 C100 310, 115 340, 135 350 C120 320, 110 280, 112 240 C114 200, 125 170, 135 155 Z" fill="#FF1493" opacity="0.5"/>
+  <path d="M280 140 C300 160, 320 220, 305 290 C300 310, 285 340, 265 350 C280 320, 290 280, 288 240 C286 200, 275 170, 265 155 Z" fill="#FF1493" opacity="0.5"/>
+
+  <!-- Hair curls - left side -->
+  <circle cx="95" cy="280" r="18" fill="#FF69B4" opacity="0.6"/>
+  <circle cx="100" cy="310" r="15" fill="#C71585" opacity="0.5"/>
+  <circle cx="115" cy="335" r="12" fill="#FF1493" opacity="0.5"/>
+
+  <!-- Hair curls - right side -->
+  <circle cx="305" cy="280" r="18" fill="#FF69B4" opacity="0.6"/>
+  <circle cx="300" cy="310" r="15" fill="#C71585" opacity="0.5"/>
+  <circle cx="285" cy="335" r="12" fill="#FF1493" opacity="0.5"/>
+
+  <!-- Main hair shape - top -->
+  <ellipse cx="200" cy="145" rx="95" ry="70" fill="url(#molly-hair)"/>
+  <ellipse cx="165" cy="130" rx="40" ry="50" fill="#FF1493" opacity="0.6"/>
+  <ellipse cx="235" cy="130" rx="40" ry="50" fill="#FF1493" opacity="0.6"/>
+
+  <!-- Head / Face -->
+  <ellipse cx="200" cy="210" rx="75" ry="85" fill="url(#molly-face)"/>
+
+  <!-- Hair bangs overlay -->
+  <path d="M130 160 C140 130, 160 115, 200 112 C240 115, 260 130, 270 160 C260 145, 240 135, 200 132 C160 135, 140 145, 130 160 Z" fill="url(#molly-hair)"/>
+  <path d="M140 165 C148 145, 165 132, 200 130 C235 132, 252 145, 260 165 C250 152, 237 142, 200 140 C163 142, 150 152, 140 165 Z" fill="#C71585" opacity="0.5"/>
+
+  <!-- Eyes - large circular -->
+  <circle cx="170" cy="205" r="20" fill="white"/>
+  <circle cx="230" cy="205" r="20" fill="white"/>
+  <circle cx="172" cy="207" r="12" fill="#2D1B30"/>
+  <circle cx="232" cy="207" r="12" fill="#2D1B30"/>
+  <circle cx="176" cy="200" r="4" fill="white"/>
+  <circle cx="236" cy="200" r="4" fill="white"/>
+  <circle cx="168" cy="210" r="2.5" fill="white" opacity="0.6"/>
+  <circle cx="228" cy="210" r="2.5" fill="white" opacity="0.6"/>
+
+  <!-- Eyelashes -->
+  <path d="M152 195 L147 188" stroke="#2D1B30" stroke-width="2" stroke-linecap="round"/>
+  <path d="M156 191 L153 183" stroke="#2D1B30" stroke-width="2" stroke-linecap="round"/>
+  <path d="M248 195 L253 188" stroke="#2D1B30" stroke-width="2" stroke-linecap="round"/>
+  <path d="M244 191 L247 183" stroke="#2D1B30" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Blush -->
+  <ellipse cx="155" cy="230" rx="14" ry="8" fill="#FF69B4" opacity="0.3"/>
+  <ellipse cx="245" cy="230" rx="14" ry="8" fill="#FF69B4" opacity="0.3"/>
+
+  <!-- Iconic pouty lips -->
+  <path d="M183 248 C188 244, 195 242, 200 243 C205 242, 212 244, 217 248 C214 252, 208 256, 200 257 C192 256, 186 252, 183 248 Z" fill="#FF1493"/>
+  <path d="M183 248 C190 250, 196 249, 200 248 C204 249, 210 250, 217 248" stroke="#C71585" stroke-width="1" fill="none"/>
+  <ellipse cx="200" cy="246" rx="8" ry="2" fill="#FF69B4" opacity="0.5"/>
+
+  <!-- Crown/Tiara -->
+  <path d="M160 108 L170 78 L185 100 L200 68 L215 100 L230 78 L240 108 Z" fill="url(#molly-crown)"/>
+  <path d="M160 108 L240 108" stroke="#FFD700" stroke-width="3"/>
+  <circle cx="200" cy="72" r="4" fill="#FF69B4"/>
+  <circle cx="170" cy="82" r="3" fill="#FF69B4"/>
+  <circle cx="230" cy="82" r="3" fill="#FF69B4"/>
+
+  <!-- Body silhouette hint -->
+  <path d="M155 290 C160 280, 175 275, 200 273 C225 275, 240 280, 245 290 C250 310, 252 340, 248 370 L152 370 C148 340, 150 310, 155 290 Z" fill="#FF69B4" opacity="0.25"/>
+
+  <!-- Stars and sparkles -->
+  <g fill="#FF69B4">
+    <!-- Star 1 -->
+    <path d="M80 120 L84 110 L88 120 L98 116 L88 120 L92 130 L88 120 L78 124 Z" opacity="0.8"/>
+    <!-- Star 2 -->
+    <path d="M310 100 L313 92 L316 100 L324 97 L316 100 L319 108 L316 100 L308 103 Z" opacity="0.7"/>
+    <!-- Star 3 -->
+    <path d="M60 230 L63 222 L66 230 L74 227 L66 230 L69 238 L66 230 L58 233 Z" opacity="0.5"/>
+    <!-- Star 4 -->
+    <path d="M340 210 L343 202 L346 210 L354 207 L346 210 L349 218 L346 210 L338 213 Z" opacity="0.6"/>
+  </g>
+
+  <!-- Sparkle dots -->
+  <circle cx="75" cy="170" r="2.5" fill="#FF69B4" opacity="0.6"/>
+  <circle cx="325" cy="160" r="2" fill="#FF1493" opacity="0.5"/>
+  <circle cx="90" cy="320" r="2" fill="#C71585" opacity="0.4"/>
+  <circle cx="310" cy="300" r="3" fill="#FF69B4" opacity="0.4"/>
+  <circle cx="55" cy="260" r="1.5" fill="#FF1493" opacity="0.5"/>
+  <circle cx="345" cy="260" r="1.5" fill="#FF1493" opacity="0.5"/>
+
+  <!-- Diamond sparkles -->
+  <path d="M330 140 L334 135 L338 140 L334 145 Z" fill="#FF69B4" opacity="0.7"/>
+  <path d="M65 150 L68 146 L71 150 L68 154 Z" fill="#C71585" opacity="0.6"/>
+  <path d="M350 280 L353 276 L356 280 L353 284 Z" fill="#FF1493" opacity="0.4"/>
+
+  <!-- Tiny star near crown -->
+  <path d="M155 85 L157 80 L159 85 L164 83 L159 85 L161 90 L159 85 L154 87 Z" fill="#FFD700" opacity="0.8"/>
+  <path d="M248 90 L250 85 L252 90 L257 88 L252 90 L254 95 L252 90 L247 92 Z" fill="#FFD700" opacity="0.8"/>
+</svg>

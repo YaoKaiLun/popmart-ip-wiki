@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="py-20 px-4">
+    <div className="py-20 px-4 bg-brand-dark noise-bg min-h-screen">
       <div className="max-w-5xl mx-auto">
         <SectionHeading
           title="关于泡泡玛特"
@@ -18,7 +18,7 @@ export default function AboutPage() {
         />
 
         <section className="mb-20">
-          <h2 className="text-2xl font-bold text-brand-black mb-8 text-center">
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">
             发展历程
           </h2>
           <CompanyTimeline />

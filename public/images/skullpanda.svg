@@ -1,137 +1,361 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
   <defs>
-    <linearGradient id="sp-face-left" x1="0" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#F5F0FF"/>
-      <stop offset="100%" stop-color="#EDE9FE"/>
-    </linearGradient>
-    <linearGradient id="sp-skull-right" x1="0.5" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#E8E0F0"/>
-      <stop offset="100%" stop-color="#D4C8E8"/>
-    </linearGradient>
-    <linearGradient id="sp-hair" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#7C3AED"/>
-      <stop offset="100%" stop-color="#4C1D95"/>
-    </linearGradient>
-    <linearGradient id="sp-rose" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#7C3AED"/>
-      <stop offset="50%" stop-color="#6D28D9"/>
-      <stop offset="100%" stop-color="#4C1D95"/>
-    </linearGradient>
-    <radialGradient id="sp-moon-glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#4C1D95" stop-opacity="0"/>
+    <!-- Beautiful side skin -->
+    <radialGradient id="sp-skin" cx="0.4" cy="0.4" r="0.6">
+      <stop offset="0%" stop-color="#FFF5F8"/>
+      <stop offset="40%" stop-color="#F5E8F0"/>
+      <stop offset="80%" stop-color="#EAD8E8"/>
+      <stop offset="100%" stop-color="#DCC8D8"/>
     </radialGradient>
-    <clipPath id="left-half">
-      <rect x="0" y="0" width="200" height="400"/>
+    <!-- Skull side bone -->
+    <radialGradient id="sp-bone" cx="0.6" cy="0.4" r="0.6">
+      <stop offset="0%" stop-color="#E8E0EE"/>
+      <stop offset="40%" stop-color="#D8CDE5"/>
+      <stop offset="80%" stop-color="#C8B8D5"/>
+      <stop offset="100%" stop-color="#B0A0C0"/>
+    </radialGradient>
+    <!-- Hair gradient - dark purple to black -->
+    <linearGradient id="sp-hair" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="30%" stop-color="#5B21B6"/>
+      <stop offset="60%" stop-color="#4C1D95"/>
+      <stop offset="100%" stop-color="#1E0A3C"/>
+    </linearGradient>
+    <!-- Hair highlight -->
+    <linearGradient id="sp-hair-hi" x1="0.3" y1="0" x2="0.7" y2="0.4">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#6D28D9" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Eye iris - with star sparkle -->
+    <radialGradient id="sp-iris" cx="0.45" cy="0.4" r="0.55">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="30%" stop-color="#A855F7"/>
+      <stop offset="60%" stop-color="#8B5CF6"/>
+      <stop offset="85%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#4C1D95"/>
+    </radialGradient>
+    <!-- Skull eye socket glow -->
+    <radialGradient id="sp-socket" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.3"/>
+      <stop offset="40%" stop-color="#4C1D95" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0A0015" stop-opacity="0.9"/>
+    </radialGradient>
+    <!-- Background atmosphere -->
+    <radialGradient id="sp-atmo" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#4C1D95" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#1E0A3C" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Split line glow -->
+    <linearGradient id="sp-split" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#C084FC" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#E879F9" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#C084FC" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Rose petals -->
+    <radialGradient id="sp-rose" cx="0.4" cy="0.35" r="0.6">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#3B0764"/>
+    </radialGradient>
+    <!-- Rose highlight -->
+    <radialGradient id="sp-rose-hi" cx="0.3" cy="0.3" r="0.4">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Lip color -->
+    <linearGradient id="sp-lip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E879F9"/>
+      <stop offset="50%" stop-color="#D946EF"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Moon glow -->
+    <radialGradient id="sp-moon" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#E8E0F8" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#C8B8E8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#A888D0" stop-opacity="0.2"/>
+    </radialGradient>
+    <!-- Body/collar -->
+    <linearGradient id="sp-body" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#4C1D95"/>
+      <stop offset="100%" stop-color="#1E0A3C"/>
+    </linearGradient>
+    <!-- Star in eye -->
+    <radialGradient id="sp-star" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E8D0FF"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Clip paths for split effect -->
+    <clipPath id="clip-left">
+      <path d="M0 0 L200 0 L200 400 L0 400 Z"/>
     </clipPath>
-    <clipPath id="right-half">
-      <rect x="200" y="0" width="200" height="400"/>
+    <clipPath id="clip-right">
+      <path d="M200 0 L400 0 L400 400 L200 400 Z"/>
     </clipPath>
+    <!-- Head shape clip -->
+    <clipPath id="clip-head">
+      <path d="M118 195 C118 140, 152 105, 200 105 C248 105, 282 140, 282 195 C282 255, 250 295, 200 295 C150 295, 118 255, 118 195 Z"/>
+    </clipPath>
+    <!-- Filters -->
+    <filter id="sp-shadow" x="-20%" y="-10%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+      <feOffset dx="0" dy="5" result="offset"/>
+      <feFlood flood-color="#1E0A3C" flood-opacity="0.3" result="color"/>
+      <feComposite in="color" in2="offset" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="sp-glow-f" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+    </filter>
+    <filter id="sp-soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+    <filter id="sp-crack-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+      <feFlood flood-color="#4C1D95" flood-opacity="0.3" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
-  <!-- Moon crescent background -->
-  <circle cx="320" cy="80" r="45" fill="#7C3AED" opacity="0.15"/>
-  <circle cx="335" cy="70" r="38" fill="transparent"/>
-  <path d="M320 35 C350 45, 365 75, 355 110 C370 85, 365 50, 340 35 C330 30, 325 32, 320 35 Z" fill="#4C1D95" opacity="0.08"/>
-  <!-- Moon shape -->
-  <path d="M305 40 A45 45 0 1 1 305 125 A32 32 0 1 0 305 40 Z" fill="#6D28D9" opacity="0.2"/>
+  <!-- Background atmosphere -->
+  <path d="M0 0 L400 0 L400 400 L0 400 Z" fill="url(#sp-atmo)"/>
 
-  <!-- Ambient glow -->
-  <circle cx="200" cy="200" r="180" fill="url(#sp-moon-glow)"/>
-
-  <!-- Hair - back layer -->
-  <path d="M100 150 C90 170, 80 220, 85 280 C87 300, 95 320, 105 335 C95 310, 90 270, 95 230 C98 200, 108 175, 115 160 Z" fill="url(#sp-hair)" opacity="0.6"/>
-  <path d="M300 150 C310 170, 320 220, 315 280 C313 300, 305 320, 295 335 C305 310, 310 270, 305 230 C302 200, 292 175, 285 160 Z" fill="url(#sp-hair)" opacity="0.6"/>
-
-  <!-- Hair main -->
-  <ellipse cx="200" cy="130" rx="100" ry="65" fill="url(#sp-hair)"/>
-  <path d="M110 140 C105 180, 100 220, 108 260 C112 230, 118 195, 125 165 Z" fill="#4C1D95" opacity="0.5"/>
-  <path d="M290 140 C295 180, 300 220, 292 260 C288 230, 282 195, 275 165 Z" fill="#4C1D95" opacity="0.5"/>
-
-  <!-- Head shape - LEFT (beautiful side) -->
-  <g clip-path="url(#left-half)">
-    <ellipse cx="200" cy="200" rx="82" ry="90" fill="url(#sp-face-left)"/>
+  <!-- Crescent moon -->
+  <g>
+    <path d="M310 55 C325 45, 345 50, 352 65 C358 80, 355 100, 342 112 C352 95, 352 72, 340 58 C332 48, 320 48, 310 55 Z" fill="url(#sp-moon)" filter="url(#sp-soft)"/>
+    <path d="M315 58 C328 50, 342 55, 348 68 C353 80, 350 95, 340 105 C348 90, 348 72, 338 62 C330 53, 322 52, 315 58 Z" fill="#E8E0F8" opacity="0.5"/>
   </g>
 
-  <!-- Head shape - RIGHT (skull side) -->
-  <g clip-path="url(#right-half)">
-    <ellipse cx="200" cy="200" rx="82" ry="90" fill="url(#sp-skull-right)"/>
-    <!-- Skull crack lines -->
-    <path d="M220 125 C225 145, 218 160, 230 175" stroke="#B8A0D0" stroke-width="1.5" fill="none" opacity="0.5"/>
-    <path d="M230 175 L235 170" stroke="#B8A0D0" stroke-width="1" fill="none" opacity="0.4"/>
-    <path d="M250 140 C245 155, 252 168, 248 180" stroke="#B8A0D0" stroke-width="1" fill="none" opacity="0.4"/>
+  <!-- Background stars -->
+  <path d="M60 50 C61 47, 63 44, 63 42 C63 44, 65 47, 67 50 C65 50, 63 51, 63 52 C63 51, 61 50, 60 50 Z" fill="#C084FC" opacity="0.4"/>
+  <path d="M340 155 C341 152, 342 150, 342 148 C342 150, 343 152, 344 155 C343 155, 342 156, 342 157 C342 156, 341 155, 340 155 Z" fill="#C084FC" opacity="0.3"/>
+  <path d="M55 165 C56 163, 56 161, 56 160 C56 161, 57 163, 58 165 C57 165, 56 166, 56 166 C56 166, 56 165, 55 165 Z" fill="#A78BFA" opacity="0.35"/>
+  <circle cx="85" cy="85" r="1.2" fill="#C084FC" opacity="0.3"/>
+  <circle cx="350" cy="38" r="1" fill="#E8D0FF" opacity="0.4"/>
+  <circle cx="42" cy="120" r="1" fill="#A78BFA" opacity="0.25"/>
+  <circle cx="365" cy="95" r="0.8" fill="#C084FC" opacity="0.3"/>
+  <circle cx="75" cy="35" r="0.8" fill="#E8D0FF" opacity="0.3"/>
+
+  <!-- Main character group -->
+  <g filter="url(#sp-shadow)">
+
+    <!-- Hair - back flowing layer (left side, elegant) -->
+    <path d="M100 155 C92 175, 82 210, 78 250 C75 280, 78 310, 85 335 C88 345, 94 355, 102 362 C96 348, 88 325, 86 298 C84 270, 88 240, 96 215 C102 195, 110 178, 118 165 C112 160, 106 156, 100 155 Z" fill="url(#sp-hair)"/>
+    <!-- Hair wave detail -->
+    <path d="M88 260 C82 272, 80 290, 82 310 C84 325, 90 340, 98 352 C92 340, 86 320, 85 298 C84 278, 86 265, 90 255 Z" fill="#4C1D95" opacity="0.5"/>
+    <!-- Additional hair strand -->
+    <path d="M95 200 C88 218, 82 240, 80 265 C78 285, 80 305, 86 322 C82 305, 80 282, 82 260 C84 238, 90 218, 98 202 Z" fill="#3B0764" opacity="0.4"/>
+
+    <!-- Hair - back right (shorter, skull side visible) -->
+    <path d="M285 155 C290 165, 295 180, 298 200 C302 225, 300 245, 295 260 C290 248, 288 232, 288 215 C288 198, 290 180, 292 168 C290 162, 287 158, 285 155 Z" fill="url(#sp-hair)" opacity="0.7"/>
+
+    <!-- Head shape - full, then split overlay -->
+    <!-- Beautiful left side -->
+    <g clip-path="url(#clip-left)">
+      <path d="M118 195 C118 140, 152 105, 200 105 C248 105, 282 140, 282 195 C282 255, 250 295, 200 295 C150 295, 118 255, 118 195 Z" fill="url(#sp-skin)"/>
+    </g>
+    <!-- Skull right side -->
+    <g clip-path="url(#clip-right)">
+      <path d="M118 195 C118 140, 152 105, 200 105 C248 105, 282 140, 282 195 C282 255, 250 295, 200 295 C150 295, 118 255, 118 195 Z" fill="url(#sp-bone)"/>
+
+      <!-- Skull crack lines -->
+      <g filter="url(#sp-crack-shadow)">
+        <path d="M210 118 C212 128, 208 140, 215 152 C218 158, 214 168, 220 178" stroke="#A888C0" stroke-width="1.8" fill="none" opacity="0.6"/>
+        <path d="M215 152 C220 148, 225 152, 222 158" stroke="#A888C0" stroke-width="1.2" fill="none" opacity="0.4"/>
+        <path d="M220 178 C225 175, 228 180, 224 184" stroke="#A888C0" stroke-width="1" fill="none" opacity="0.35"/>
+
+        <path d="M240 125 C238 138, 242 150, 238 162 C236 168, 240 175, 237 182" stroke="#B8A0C8" stroke-width="1.2" fill="none" opacity="0.45"/>
+        <path d="M238 162 C242 158, 246 162, 244 166" stroke="#B8A0C8" stroke-width="1" fill="none" opacity="0.3"/>
+
+        <path d="M260 140 C258 150, 262 160, 256 168" stroke="#B8A0C8" stroke-width="1" fill="none" opacity="0.35"/>
+      </g>
+
+      <!-- Skull cheekbone definition -->
+      <path d="M235 228 C245 235, 255 245, 260 258 C265 268, 262 278, 256 282" stroke="#B8A0C8" stroke-width="1" fill="none" opacity="0.3"/>
+      <!-- Skull temporal line -->
+      <path d="M265 165 C270 175, 275 190, 274 205" stroke="#B8A0C8" stroke-width="0.8" fill="none" opacity="0.25"/>
+
+      <!-- Skull jaw definition -->
+      <path d="M220 272 C228 278, 238 280, 248 278 C256 275, 262 268, 265 260" stroke="#B0A0C0" stroke-width="1.2" fill="none" opacity="0.3"/>
+    </g>
+
+    <!-- Split line - glowing divider -->
+    <g>
+      <!-- Glow behind split -->
+      <path d="M197 108 L203 108 L203 292 L197 292 Z" fill="url(#sp-split)" filter="url(#sp-glow-f)" opacity="0.4"/>
+      <!-- Sharp split line -->
+      <path d="M200 110 L200 290" stroke="#C084FC" stroke-width="1.2" opacity="0.6"/>
+      <!-- Split line highlight dots -->
+      <circle cx="200" cy="140" r="1.5" fill="#E879F9" opacity="0.5"/>
+      <circle cx="200" cy="180" r="1.2" fill="#E879F9" opacity="0.4"/>
+      <circle cx="200" cy="220" r="1.5" fill="#E879F9" opacity="0.5"/>
+      <circle cx="200" cy="260" r="1.2" fill="#E879F9" opacity="0.4"/>
+    </g>
+
+    <!-- Hair bangs - sweeping across forehead -->
+    <path d="M120 148 C128 125, 148 110, 175 105 C165 115, 148 130, 135 148 C132 152, 128 155, 125 156 Z" fill="url(#sp-hair)"/>
+    <path d="M128 145 C135 128, 152 114, 178 108 C168 118, 155 132, 142 148 Z" fill="url(#sp-hair-hi)"/>
+    <!-- More bangs layers -->
+    <path d="M135 142 C142 125, 158 112, 188 106 C178 116, 162 130, 148 145 C145 148, 140 150, 138 148 Z" fill="#5B21B6" opacity="0.7"/>
+    <path d="M145 138 C152 122, 168 110, 195 106 C185 115, 170 128, 155 140 Z" fill="#4C1D95" opacity="0.5"/>
+    <!-- Right side wispy hair -->
+    <path d="M270 148 C265 132, 252 118, 232 110 C240 118, 250 132, 258 148 C260 152, 264 155, 268 154 Z" fill="url(#sp-hair)" opacity="0.6"/>
+
+    <!-- === LEFT SIDE: Beautiful face === -->
+    <g clip-path="url(#clip-left)">
+      <!-- Beautiful eye -->
+      <g>
+        <!-- Eye white -->
+        <path d="M142 195 C142 180, 152 170, 168 170 C184 170, 194 180, 194 195 C194 210, 184 220, 168 220 C152 220, 142 210, 142 195 Z" fill="white"/>
+        <!-- Eye shadow at top -->
+        <path d="M144 192 C144 180, 154 172, 168 172 C182 172, 192 180, 192 192 C190 185, 182 180, 168 180 C154 180, 146 185, 144 192 Z" fill="#E8D0F0" opacity="0.3"/>
+        <!-- Iris -->
+        <path d="M152 196 C152 185, 159 177, 168 177 C177 177, 184 185, 184 196 C184 207, 177 215, 168 215 C159 215, 152 207, 152 196 Z" fill="url(#sp-iris)"/>
+        <!-- Pupil -->
+        <path d="M160 197 C160 191, 163 186, 168 186 C173 186, 176 191, 176 197 C176 203, 173 208, 168 208 C163 208, 160 203, 160 197 Z" fill="#1A0020"/>
+
+        <!-- Star sparkle in iris -->
+        <g>
+          <!-- 4-point star -->
+          <path d="M166 192 C167 188, 168 184, 168 182 C168 184, 169 188, 170 192 C172 192, 174 192, 176 192 C174 193, 172 193, 170 193 C169 196, 168 200, 168 202 C168 200, 167 196, 166 193 C164 193, 162 193, 160 192 C162 192, 164 192, 166 192 Z" fill="white" opacity="0.85"/>
+          <!-- Diagonal arms of star -->
+          <path d="M164 188 L168 192 L172 188" stroke="white" stroke-width="0.6" fill="none" opacity="0.5"/>
+          <path d="M164 197 L168 193 L172 197" stroke="white" stroke-width="0.6" fill="none" opacity="0.5"/>
+        </g>
+
+        <!-- Primary eye highlight -->
+        <path d="M158 186 C156 182, 158 179, 162 179 C166 179, 168 182, 166 186 C164 190, 160 190, 158 186 Z" fill="white" opacity="0.7"/>
+        <!-- Secondary highlight -->
+        <path d="M173 206 C172 204, 173 203, 175 203 C177 203, 178 204, 177 206 C176 208, 174 208, 173 206 Z" fill="white" opacity="0.45"/>
+
+        <!-- Eyelashes - elegant, sweeping -->
+        <path d="M145 180 C142 173, 138 168, 134 165" stroke="#2D1030" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M150 175 C148 169, 146 164, 144 160" stroke="#2D1030" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+        <path d="M157 172 C156 167, 155 162, 154 158" stroke="#2D1030" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M165 170 C165 166, 165 162, 166 158" stroke="#2D1030" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+        <!-- Lower lash -->
+        <path d="M150 215 C148 219, 146 222, 144 224" stroke="#2D1030" stroke-width="0.8" stroke-linecap="round" fill="none" opacity="0.35"/>
+      </g>
+
+      <!-- Left eyebrow - elegant arch -->
+      <path d="M140 165 C148 155, 162 152, 178 156" stroke="#3B0764" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+      <!-- Blush on beautiful side -->
+      <path d="M140 232 C136 225, 140 218, 148 218 C156 218, 164 225, 164 232 C164 239, 156 246, 148 246 C140 246, 136 239, 140 232 Z" fill="#FF88BB" opacity="0.15" filter="url(#sp-soft)"/>
+
+      <!-- Nose hint (left side only) -->
+      <path d="M192 240 C194 242, 196 244, 198 244 C200 244, 200 242, 199 240" stroke="#D0B0C8" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+      <!-- Lips - left half, pink -->
+      <path d="M170 262 C175 258, 182 256, 190 255 C195 255, 198 256, 200 258 C198 256, 195 255, 190 255 C182 256, 175 258, 170 262 Z" fill="url(#sp-lip)"/>
+      <path d="M172 262 C176 266, 182 270, 190 272 C195 273, 198 273, 200 272 C198 270, 194 268, 188 266 C182 264, 176 263, 172 262 Z" fill="url(#sp-lip)" opacity="0.8"/>
+      <!-- Lip shine -->
+      <path d="M180 260 C184 258, 188 257, 192 258" stroke="#F0C0E0" stroke-width="1" fill="none" opacity="0.4"/>
+    </g>
+
+    <!-- === RIGHT SIDE: Skull === -->
+    <g clip-path="url(#clip-right)">
+      <!-- Hollow eye socket -->
+      <path d="M210 188 C210 172, 220 160, 235 160 C250 160, 260 172, 260 188 C260 205, 250 218, 235 218 C220 218, 210 205, 210 188 Z" fill="#0A0015"/>
+      <!-- Socket inner glow -->
+      <path d="M215 190 C215 176, 223 166, 235 166 C247 166, 255 176, 255 190 C255 204, 247 214, 235 214 C223 214, 215 204, 215 190 Z" fill="url(#sp-socket)"/>
+      <!-- Faint purple glow inside socket -->
+      <path d="M225 190 C225 182, 229 176, 235 176 C241 176, 245 182, 245 190 C245 198, 241 204, 235 204 C229 204, 225 198, 225 190 Z" fill="#7C3AED" opacity="0.12" filter="url(#sp-glow-f)"/>
+      <!-- Tiny light point deep in socket -->
+      <circle cx="232" cy="186" r="2" fill="#C084FC" opacity="0.3"/>
+
+      <!-- Skull nose hole -->
+      <path d="M205 238 C205 232, 210 228, 216 228 C222 228, 225 232, 225 238 C225 248, 218 252, 212 250 C207 248, 205 244, 205 238 Z" fill="#1A0020" opacity="0.6"/>
+      <!-- Nose septum hint -->
+      <path d="M215 228 L215 250" stroke="#B0A0C0" stroke-width="0.8" fill="none" opacity="0.3"/>
+
+      <!-- Exposed teeth / jaw area -->
+      <g>
+        <!-- Teeth background -->
+        <path d="M205 265 C205 260, 215 256, 235 256 C255 256, 268 260, 268 265 C268 278, 258 288, 235 288 C212 288, 205 278, 205 265 Z" fill="#1A0020" opacity="0.4"/>
+
+        <!-- Individual teeth -->
+        <path d="M208 262 C208 258, 212 256, 216 256 C220 256, 222 258, 222 262 C222 268, 220 272, 216 272 C212 272, 208 268, 208 262 Z" fill="#E8E0EE" opacity="0.8"/>
+        <path d="M221 261 C221 257, 225 255, 229 255 C233 255, 235 257, 235 261 C235 268, 232 272, 229 272 C225 272, 221 268, 221 261 Z" fill="#E8E0EE" opacity="0.85"/>
+        <path d="M234 261 C234 257, 238 255, 242 255 C246 255, 248 257, 248 261 C248 268, 245 272, 242 272 C238 272, 234 268, 234 261 Z" fill="#E8E0EE" opacity="0.8"/>
+        <path d="M247 262 C247 258, 250 256, 254 256 C258 256, 262 258, 262 262 C262 268, 258 272, 254 272 C250 272, 247 268, 247 262 Z" fill="#E8E0EE" opacity="0.75"/>
+
+        <!-- Teeth gaps / lines -->
+        <path d="M222 258 L222 270" stroke="#B0A0C0" stroke-width="0.8" opacity="0.4"/>
+        <path d="M235 257 L235 270" stroke="#B0A0C0" stroke-width="0.8" opacity="0.4"/>
+        <path d="M247 258 L247 270" stroke="#B0A0C0" stroke-width="0.8" opacity="0.4"/>
+
+        <!-- Lower teeth hint -->
+        <path d="M210 275 C210 272, 214 270, 218 270 C222 270, 224 272, 224 275 C224 280, 222 283, 218 283 C214 283, 210 280, 210 275 Z" fill="#D8CDE5" opacity="0.6"/>
+        <path d="M223 274 C223 271, 227 269, 231 269 C235 269, 237 271, 237 274 C237 280, 234 283, 231 283 C227 283, 223 280, 223 274 Z" fill="#D8CDE5" opacity="0.65"/>
+        <path d="M236 274 C236 271, 240 269, 244 269 C248 269, 250 271, 250 274 C250 280, 247 283, 244 283 C240 283, 236 280, 236 274 Z" fill="#D8CDE5" opacity="0.6"/>
+        <path d="M249 275 C249 272, 252 270, 256 270 C260 270, 262 272, 262 275 C262 280, 259 283, 256 283 C252 283, 249 280, 249 275 Z" fill="#D8CDE5" opacity="0.55"/>
+      </g>
+
+      <!-- Right brow bone (skull) -->
+      <path d="M210 158 C218 150, 232 148, 248 152 C255 154, 260 158, 262 162" stroke="#C8B8D5" stroke-width="2" fill="none" opacity="0.4"/>
+    </g>
+
+    <!-- Dark rose at the split line -->
+    <g transform="translate(200, 145)">
+      <!-- Rose outer petals -->
+      <path d="M-2 -15 C4 -20, 12 -18, 14 -12 C16 -6, 12 0, 6 2 C10 -2, 12 -8, 10 -14 C8 -18, 2 -18, -2 -15 Z" fill="url(#sp-rose)"/>
+      <path d="M-14 -10 C-18 -16, -14 -22, -8 -22 C-2 -22, 2 -18, 0 -12 C-2 -16, -6 -20, -10 -18 C-14 -16, -15 -12, -14 -10 Z" fill="url(#sp-rose)"/>
+      <path d="M-12 2 C-18 0, -20 -6, -18 -12 C-16 -8, -14 -4, -10 -2 C-6 0, -2 0, 2 -2 C-2 2, -8 4, -12 2 Z" fill="#6D28D9"/>
+      <path d="M8 -4 C14 -2, 16 4, 12 8 C8 6, 4 2, 2 -2 C0 -6, 2 -8, 4 -8 C6 -8, 8 -6, 8 -4 Z" fill="#5B21B6"/>
+      <path d="M-8 6 C-12 8, -16 6, -16 2 C-14 4, -10 6, -6 5 C-2 4, 0 2, 2 0 C0 4, -4 6, -8 6 Z" fill="#4C1D95"/>
+      <!-- Rose center spiral -->
+      <path d="M-2 -6 C0 -10, 4 -10, 6 -8 C8 -6, 6 -2, 4 -2 C2 -2, 0 -4, 0 -6 C0 -8, 2 -8, 3 -6" stroke="#3B0764" stroke-width="1" fill="none" opacity="0.6"/>
+      <!-- Rose highlight -->
+      <path d="M-6 -16 C-4 -18, -1 -18, 1 -16 C3 -14, 2 -11, 0 -10 C-2 -11, -4 -13, -4 -15 Z" fill="#A78BFA" opacity="0.3"/>
+      <!-- Rose leaf -->
+      <path d="M12 4 C16 2, 20 4, 22 8 C24 12, 22 16, 18 16 C20 12, 20 8, 16 6 Z" fill="#15803D" opacity="0.5"/>
+      <path d="M-16 4 C-20 2, -24 4, -26 8 C-28 12, -26 16, -22 16 C-24 12, -24 8, -20 6 Z" fill="#15803D" opacity="0.4"/>
+    </g>
+
+    <!-- Body / Collar silhouette -->
+    <path d="M148 290 C152 280, 170 272, 200 270 C230 272, 248 280, 252 290 C258 310, 262 335, 262 360 C262 375, 260 388, 258 395 L142 395 C140 388, 138 375, 138 360 C138 335, 142 310, 148 290 Z" fill="url(#sp-body)" opacity="0.3"/>
+
+    <!-- Lace collar detail -->
+    <path d="M155 288 C158 282, 172 276, 200 274 C228 276, 242 282, 245 288 C240 290, 228 292, 200 293 C172 292, 160 290, 155 288 Z" fill="#4C1D95" opacity="0.25"/>
+    <!-- Collar scallops -->
+    <path d="M155 288 C152 292, 148 296, 142 298 C138 294, 140 288, 145 284 C148 281, 152 282, 155 288 Z" fill="#E8D0F0" opacity="0.15"/>
+    <path d="M245 288 C248 292, 252 296, 258 298 C262 294, 260 288, 255 284 C252 281, 248 282, 245 288 Z" fill="#E8D0F0" opacity="0.15"/>
+
   </g>
 
-  <!-- Split line down the middle -->
-  <line x1="200" y1="115" x2="200" y2="290" stroke="#6D28D9" stroke-width="1.5" opacity="0.4"/>
-
-  <!-- LEFT EYE - Star shape (beautiful side) -->
-  <path d="M165 195 L170 180 L175 195 L190 190 L175 195 L180 210 L175 195 L160 200 Z" fill="#7C3AED"/>
-  <circle cx="172" cy="195" r="3" fill="white" opacity="0.7"/>
-
-  <!-- Left eyebrow -->
-  <path d="M148 172 C155 165, 170 163, 182 168" stroke="#4C1D95" stroke-width="2" stroke-linecap="round" fill="none"/>
-
-  <!-- LEFT side - beautiful details -->
-  <ellipse cx="150" cy="225" rx="12" ry="6" fill="#FF69B4" opacity="0.2"/>
-  <!-- Lips left half -->
-  <path d="M175 250 C182 246, 192 245, 200 247" stroke="#C084FC" stroke-width="2" stroke-linecap="round" fill="none"/>
-
-  <!-- RIGHT EYE - Hollow skull eye -->
-  <ellipse cx="232" cy="193" rx="16" ry="18" fill="#1a1a2e" opacity="0.8"/>
-  <ellipse cx="232" cy="193" rx="12" ry="14" fill="#2D1B45"/>
-  <circle cx="228" cy="189" r="3" fill="#4C1D95" opacity="0.4"/>
-
-  <!-- Right side skull nose -->
-  <path d="M208 230 L212 240 L204 240 Z" fill="#2D1B45" opacity="0.4"/>
-
-  <!-- Right side skull teeth hint -->
-  <path d="M210 254 L215 254 M220 254 L225 254 M230 254 L235 254" stroke="#B8A0D0" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-
-  <!-- Skull cheekbone line -->
-  <path d="M240 220 C250 230, 255 240, 252 250" stroke="#B8A0D0" stroke-width="1" fill="none" opacity="0.3"/>
-
-  <!-- Hair bangs -->
-  <path d="M120 145 C135 120, 160 108, 200 105 C180 115, 155 130, 140 155 Z" fill="#7C3AED"/>
-  <path d="M280 145 C265 120, 240 108, 200 105 C220 115, 245 130, 260 155 Z" fill="#6D28D9"/>
-  <path d="M130 150 C145 130, 165 118, 195 115 C175 125, 155 138, 140 155 Z" fill="#4C1D95" opacity="0.4"/>
-
-  <!-- Dark roses - left -->
-  <g transform="translate(60, 300)">
-    <circle cx="0" cy="0" r="14" fill="url(#sp-rose)"/>
-    <path d="M-5 -5 C-2 -12, 5 -12, 7 -5 C10 -8, 12 -2, 7 2 C10 5, 8 12, 2 10 C5 14, -3 14, -5 10 C-10 12, -12 6, -8 2 C-13 0, -12 -5, -5 -5 Z" fill="#6D28D9" opacity="0.6"/>
-    <circle cx="0" cy="0" r="4" fill="#4C1D95" opacity="0.5"/>
+  <!-- Floating dark roses - bottom left -->
+  <g transform="translate(58, 340)">
+    <path d="M0 -10 C4 -14, 10 -12, 10 -6 C10 0, 4 4, 0 2 C-4 4, -10 0, -10 -6 C-10 -12, -4 -14, 0 -10 Z" fill="url(#sp-rose)"/>
+    <path d="M-2 -4 C0 -8, 4 -6, 4 -2 C4 0, 2 2, 0 0 C-2 2, -4 0, -4 -2 C-4 -6, -2 -6, -2 -4 Z" fill="#3B0764" opacity="0.5"/>
+    <path d="M0 8 C-2 6, -4 10, -6 16" stroke="#15803D" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <path d="M-4 12 C-6 10, -10 12, -12 16 C-14 20, -12 22, -8 20 C-10 18, -10 14, -6 12 Z" fill="#15803D" opacity="0.35"/>
   </g>
 
-  <!-- Dark rose - right -->
-  <g transform="translate(340, 310)">
-    <circle cx="0" cy="0" r="12" fill="url(#sp-rose)"/>
-    <path d="M-4 -4 C-2 -10, 4 -10, 6 -4 C8 -6, 10 -2, 6 1 C8 4, 6 10, 2 8 C4 11, -2 11, -4 8 C-8 10, -10 5, -6 1 C-10 0, -10 -4, -4 -4 Z" fill="#6D28D9" opacity="0.6"/>
-    <circle cx="0" cy="0" r="3" fill="#4C1D95" opacity="0.5"/>
+  <!-- Floating dark rose - bottom right -->
+  <g transform="translate(345, 348)">
+    <path d="M0 -8 C3 -11, 8 -10, 8 -5 C8 0, 3 3, 0 2 C-3 3, -8 0, -8 -5 C-8 -10, -3 -11, 0 -8 Z" fill="url(#sp-rose)" opacity="0.7"/>
+    <path d="M-1 -3 C0 -6, 3 -5, 3 -2 C3 0, 1 1, 0 0 Z" fill="#3B0764" opacity="0.4"/>
+    <path d="M0 6 C1 4, 2 8, 4 12" stroke="#15803D" stroke-width="1.2" fill="none" opacity="0.35"/>
   </g>
 
-  <!-- Small rose bud -->
-  <g transform="translate(85, 335)">
-    <circle cx="0" cy="0" r="8" fill="#7C3AED" opacity="0.6"/>
-    <circle cx="0" cy="0" r="3" fill="#4C1D95" opacity="0.4"/>
-  </g>
+  <!-- Ambient purple particles -->
+  <circle cx="50" cy="280" r="2" fill="#7C3AED" opacity="0.2" filter="url(#sp-soft)"/>
+  <circle cx="360" cy="270" r="1.5" fill="#6D28D9" opacity="0.2" filter="url(#sp-soft)"/>
+  <circle cx="40" cy="200" r="1" fill="#A78BFA" opacity="0.15"/>
+  <circle cx="370" cy="200" r="1" fill="#A78BFA" opacity="0.15"/>
 
-  <!-- Thorny stems -->
-  <path d="M60 314 C55 330, 50 350, 48 370" stroke="#15803D" stroke-width="2" fill="none" opacity="0.4"/>
-  <path d="M52 340 L48 335" stroke="#15803D" stroke-width="1.5" fill="none" opacity="0.4"/>
-  <path d="M340 322 C338 340, 342 355, 345 370" stroke="#15803D" stroke-width="2" fill="none" opacity="0.4"/>
-  <path d="M342 345 L346 340" stroke="#15803D" stroke-width="1.5" fill="none" opacity="0.4"/>
-
-  <!-- Body silhouette -->
-  <path d="M150 285 C155 275, 175 268, 200 266 C225 268, 245 275, 250 285 C255 310, 258 345, 255 380 L145 380 C142 345, 145 310, 150 285 Z" fill="#4C1D95" opacity="0.15"/>
-
-  <!-- Small decorative elements -->
-  <circle cx="340" cy="155" r="2" fill="#7C3AED" opacity="0.5"/>
-  <circle cx="60" cy="170" r="2" fill="#6D28D9" opacity="0.4"/>
-  <circle cx="50" cy="260" r="1.5" fill="#7C3AED" opacity="0.3"/>
-  <circle cx="350" cy="250" r="1.5" fill="#6D28D9" opacity="0.3"/>
-
-  <!-- Tiny stars -->
-  <path d="M80 100 L82 95 L84 100 L89 98 L84 100 L86 105 L84 100 L79 102 Z" fill="#C084FC" opacity="0.5"/>
-  <path d="M350 190 L352 185 L354 190 L359 188 L354 190 L356 195 L354 190 L349 192 Z" fill="#C084FC" opacity="0.4"/>
+  <!-- Small sparkle near split line -->
+  <path d="M188 120 C189 116, 190 112, 190 110 C190 112, 191 116, 192 120 C191 120, 190 121, 190 122 C190 121, 189 120, 188 120 Z" fill="#E879F9" opacity="0.5"/>
+  <path d="M212 295 C213 292, 214 289, 214 288 C214 289, 215 292, 216 295 C215 295, 214 296, 214 296 C214 296, 213 295, 212 295 Z" fill="#C084FC" opacity="0.4"/>
 </svg>

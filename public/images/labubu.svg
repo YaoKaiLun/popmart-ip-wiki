@@ -1,125 +1,319 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
   <defs>
-    <linearGradient id="labubu-body" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#22C55E"/>
-      <stop offset="100%" stop-color="#15803D"/>
+    <!-- Body gradient - bright green to forest green -->
+    <linearGradient id="lb-body" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="30%" stop-color="#22C55E"/>
+      <stop offset="70%" stop-color="#16A34A"/>
+      <stop offset="100%" stop-color="#166534"/>
     </linearGradient>
-    <linearGradient id="labubu-ear" x1="0" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#22C55E"/>
-      <stop offset="100%" stop-color="#16A34A"/>
-    </linearGradient>
-    <radialGradient id="labubu-belly" cx="0.5" cy="0.4" r="0.5">
-      <stop offset="0%" stop-color="#86EFAC"/>
-      <stop offset="100%" stop-color="#22C55E"/>
-    </radialGradient>
-    <radialGradient id="labubu-glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.12"/>
+    <!-- Body highlight -->
+    <radialGradient id="lb-body-hi" cx="0.45" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="#86EFAC" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="#22C55E" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="leaf-grad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#16A34A"/>
+    <!-- Belly lighter area -->
+    <radialGradient id="lb-belly" cx="0.5" cy="0.45" r="0.4">
+      <stop offset="0%" stop-color="#BBF7D0" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#86EFAC" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#22C55E" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Ear gradient -->
+    <linearGradient id="lb-ear-l" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <linearGradient id="lb-ear-r" x1="0.7" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <!-- Inner ear -->
+    <linearGradient id="lb-ear-inner" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#BBF7D0"/>
+      <stop offset="100%" stop-color="#86EFAC"/>
+    </linearGradient>
+    <!-- Mouth inside -->
+    <radialGradient id="lb-mouth" cx="0.5" cy="0.6" r="0.5">
+      <stop offset="0%" stop-color="#5C1520"/>
+      <stop offset="60%" stop-color="#3A0A12"/>
+      <stop offset="100%" stop-color="#1A0508"/>
+    </radialGradient>
+    <!-- Tooth gradient -->
+    <linearGradient id="lb-tooth" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F0F0F0"/>
+    </linearGradient>
+    <!-- Background glow -->
+    <radialGradient id="lb-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#22C55E" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#22C55E" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Arm gradient -->
+    <linearGradient id="lb-arm-l" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22C55E"/>
       <stop offset="100%" stop-color="#15803D"/>
     </linearGradient>
+    <linearGradient id="lb-arm-r" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#15803D"/>
+    </linearGradient>
+    <!-- Foot gradient -->
+    <radialGradient id="lb-foot" cx="0.5" cy="0.3" r="0.7">
+      <stop offset="0%" stop-color="#16A34A"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </radialGradient>
+    <!-- Tongue -->
+    <radialGradient id="lb-tongue" cx="0.5" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="#FF8888"/>
+      <stop offset="100%" stop-color="#E05555"/>
+    </radialGradient>
+    <!-- Leaf gradient -->
+    <linearGradient id="lb-leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#15803D"/>
+    </linearGradient>
+    <!-- Mushroom cap -->
+    <radialGradient id="lb-shroom" cx="0.4" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="#FF8888"/>
+      <stop offset="40%" stop-color="#EE5555"/>
+      <stop offset="100%" stop-color="#CC3333"/>
+    </radialGradient>
+    <!-- Filters -->
+    <filter id="lb-shadow" x="-15%" y="-10%" width="130%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+      <feOffset dx="0" dy="5" result="offset"/>
+      <feFlood flood-color="#0A3A1A" flood-opacity="0.2" result="color"/>
+      <feComposite in="color" in2="offset" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="lb-soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+    </filter>
+    <!-- Fur texture filter -->
+    <filter id="lb-fur" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="grey"/>
+      <feBlend in="SourceGraphic" in2="grey" mode="soft-light" result="fur"/>
+    </filter>
   </defs>
 
-  <!-- Ambient glow -->
-  <circle cx="200" cy="230" r="180" fill="url(#labubu-glow)"/>
+  <!-- Background glow -->
+  <path d="M10 10 L390 10 L390 390 L10 390 Z" fill="url(#lb-glow)"/>
 
-  <!-- Decorative leaves - back -->
-  <path d="M55 340 C65 310, 80 300, 95 310 C80 315, 70 330, 55 340 Z" fill="url(#leaf-grad)" opacity="0.4"/>
-  <path d="M345 340 C335 310, 320 300, 305 310 C320 315, 330 330, 345 340 Z" fill="url(#leaf-grad)" opacity="0.4"/>
-  <path d="M40 290 C55 265, 75 260, 85 270 C72 272, 55 280, 40 290 Z" fill="#16A34A" opacity="0.3"/>
-  <path d="M360 290 C345 265, 325 260, 315 270 C328 272, 345 280, 360 290 Z" fill="#16A34A" opacity="0.3"/>
+  <!-- Forest floor elements (behind character) -->
+  <!-- Grass tufts -->
+  <path d="M30 375 C32 360, 35 355, 38 350 C39 355, 40 362, 42 375 Z" fill="#16A34A" opacity="0.3"/>
+  <path d="M38 375 C40 362, 44 358, 48 354 C49 360, 48 368, 50 375 Z" fill="#15803D" opacity="0.25"/>
+  <path d="M352 375 C354 362, 358 356, 362 352 C363 358, 362 366, 364 375 Z" fill="#16A34A" opacity="0.3"/>
+  <path d="M360 375 C361 360, 365 354, 370 350 C370 356, 369 365, 372 375 Z" fill="#15803D" opacity="0.25"/>
 
-  <!-- Small background leaves -->
-  <path d="M70 200 C78 185, 90 182, 95 190 C88 190, 78 194, 70 200 Z" fill="#22C55E" opacity="0.25"/>
-  <path d="M330 180 C322 165, 310 162, 305 170 C312 170, 322 174, 330 180 Z" fill="#22C55E" opacity="0.25"/>
+  <!-- Small mushroom - left side -->
+  <g>
+    <path d="M58 370 C58 355, 60 345, 62 340 C64 345, 66 355, 66 370 Z" fill="#E8D0A8" opacity="0.7"/>
+    <path d="M45 345 C46 335, 52 328, 62 326 C72 328, 78 335, 79 345 C79 350, 72 354, 62 354 C52 354, 45 350, 45 345 Z" fill="url(#lb-shroom)"/>
+    <path d="M52 335 C52 333, 54 332, 56 333 C58 334, 58 336, 56 337 C54 338, 52 337, 52 335 Z" fill="white" opacity="0.6"/>
+    <path d="M66 332 C66 331, 67 330, 68 331 C69 332, 69 333, 68 333 C67 334, 66 333, 66 332 Z" fill="white" opacity="0.5"/>
+    <path d="M58 340 C58 339, 59 339, 60 339 C61 340, 61 341, 60 341 C59 341, 58 341, 58 340 Z" fill="white" opacity="0.4"/>
+  </g>
 
-  <!-- Left Ear - pointy -->
-  <path d="M130 155 L105 60 L155 125 Z" fill="url(#labubu-ear)"/>
-  <path d="M133 148 L115 80 L150 130 Z" fill="#86EFAC" opacity="0.3"/>
+  <!-- Small mushroom - right side -->
+  <g>
+    <path d="M338 374 C338 362, 340 354, 342 350 C344 354, 345 362, 345 374 Z" fill="#E8D0A8" opacity="0.6"/>
+    <path d="M330 355 C331 347, 335 342, 342 340 C349 342, 353 347, 354 355 C354 358, 349 361, 342 361 C335 361, 330 358, 330 355 Z" fill="url(#lb-shroom)"/>
+    <path d="M336 348 C336 347, 337 346, 338 347 C339 348, 339 349, 338 349 C337 350, 336 349, 336 348 Z" fill="white" opacity="0.5"/>
+    <path d="M346 346 C346 345, 347 345, 347 345 C348 346, 348 347, 347 347 C346 347, 346 347, 346 346 Z" fill="white" opacity="0.4"/>
+  </g>
 
-  <!-- Right Ear - pointy -->
-  <path d="M270 155 L295 60 L245 125 Z" fill="url(#labubu-ear)"/>
-  <path d="M267 148 L285 80 L250 130 Z" fill="#86EFAC" opacity="0.3"/>
+  <!-- Main character group -->
+  <g filter="url(#lb-shadow)">
 
-  <!-- Round Body -->
-  <ellipse cx="200" cy="260" rx="110" ry="120" fill="url(#labubu-body)"/>
+    <!-- Left ear - tall pointed -->
+    <path d="M138 148 C132 118, 122 80, 108 42 C106 36, 108 32, 112 34 C118 38, 128 58, 136 82 C142 100, 148 122, 152 142 C148 144, 142 146, 138 148 Z" fill="url(#lb-ear-l)"/>
+    <!-- Left ear inner -->
+    <path d="M140 140 C136 118, 128 88, 118 55 C120 58, 126 72, 132 90 C138 108, 144 128, 148 140 C146 140, 142 140, 140 140 Z" fill="url(#lb-ear-inner)" opacity="0.5"/>
 
-  <!-- Belly highlight -->
-  <ellipse cx="200" cy="275" rx="65" ry="70" fill="url(#labubu-belly)" opacity="0.4"/>
+    <!-- Right ear - tall pointed -->
+    <path d="M262 148 C268 118, 278 80, 292 42 C294 36, 292 32, 288 34 C282 38, 272 58, 264 82 C258 100, 252 122, 248 142 C252 144, 258 146, 262 148 Z" fill="url(#lb-ear-r)"/>
+    <!-- Right ear inner -->
+    <path d="M260 140 C264 118, 272 88, 282 55 C280 58, 274 72, 268 90 C262 108, 256 128, 252 140 C254 140, 258 140, 260 140 Z" fill="url(#lb-ear-inner)" opacity="0.5"/>
 
-  <!-- Head -->
-  <ellipse cx="200" cy="185" rx="85" ry="75" fill="url(#labubu-body)"/>
+    <!-- Body - egg/blob shape, one continuous form -->
+    <path d="M110 200 C108 170, 125 140, 155 130 C170 125, 185 122, 200 122 C215 122, 230 125, 245 130 C275 140, 292 170, 290 200 C292 230, 290 260, 282 285 C275 308, 262 328, 245 342 C232 352, 216 358, 200 358 C184 358, 168 352, 155 342 C138 328, 125 308, 118 285 C110 260, 108 230, 110 200 Z" fill="url(#lb-body)"/>
 
-  <!-- Face highlight -->
-  <ellipse cx="200" cy="178" rx="60" ry="48" fill="#86EFAC" opacity="0.15"/>
+    <!-- Body highlight overlay -->
+    <path d="M110 200 C108 170, 125 140, 155 130 C170 125, 185 122, 200 122 C215 122, 230 125, 245 130 C275 140, 292 170, 290 200 C292 230, 290 260, 282 285 C275 308, 262 328, 245 342 C232 352, 216 358, 200 358 C184 358, 168 352, 155 342 C138 328, 125 308, 118 285 C110 260, 108 230, 110 200 Z" fill="url(#lb-body-hi)"/>
 
-  <!-- Eyes - small and mischievous -->
-  <ellipse cx="170" cy="175" rx="11" ry="12" fill="white"/>
-  <ellipse cx="230" cy="175" rx="11" ry="12" fill="white"/>
-  <circle cx="172" cy="177" r="7" fill="#1a1a2e"/>
-  <circle cx="232" cy="177" r="7" fill="#1a1a2e"/>
-  <circle cx="175" cy="173" r="2.5" fill="white"/>
-  <circle cx="235" cy="173" r="2.5" fill="white"/>
+    <!-- Belly area - lighter -->
+    <path d="M140 210 C138 195, 155 180, 175 175 C185 172, 195 170, 200 170 C205 170, 215 172, 225 175 C245 180, 262 195, 260 210 C262 235, 258 260, 248 280 C240 295, 225 308, 200 308 C175 308, 160 295, 152 280 C142 260, 138 235, 140 210 Z" fill="url(#lb-belly)"/>
 
-  <!-- Eyebrows - mischievous angled -->
-  <path d="M158 160 C163 155, 172 154, 180 157" stroke="#15803D" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-  <path d="M242 160 C237 155, 228 154, 220 157" stroke="#15803D" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Subtle fur texture strokes -->
+    <path d="M125 165 C128 160, 132 158, 135 160" stroke="#4ADE80" stroke-width="1.5" fill="none" opacity="0.3"/>
+    <path d="M265 170 C268 165, 272 162, 276 164" stroke="#4ADE80" stroke-width="1.5" fill="none" opacity="0.3"/>
+    <path d="M115 220 C118 218, 120 215, 122 218" stroke="#16A34A" stroke-width="1" fill="none" opacity="0.25"/>
+    <path d="M278 225 C280 222, 283 220, 285 222" stroke="#16A34A" stroke-width="1" fill="none" opacity="0.25"/>
+    <path d="M130 300 C132 297, 135 295, 138 297" stroke="#166534" stroke-width="1" fill="none" opacity="0.2"/>
+    <path d="M262 305 C264 302, 267 300, 270 302" stroke="#166534" stroke-width="1" fill="none" opacity="0.2"/>
 
-  <!-- ICONIC WIDE GRIN with zigzag teeth -->
-  <path d="M145 205 C160 230, 180 240, 200 240 C220 240, 240 230, 255 205" fill="#1a1a2e"/>
+    <!-- Eyes - small, round, mischievous, close together -->
+    <!-- Left eye -->
+    <g>
+      <path d="M170 172 C170 164, 175 158, 182 158 C189 158, 194 164, 194 172 C194 180, 189 186, 182 186 C175 186, 170 180, 170 172 Z" fill="#0A0A15"/>
+      <!-- Eye highlight primary -->
+      <path d="M176 166 C175 163, 177 161, 180 161 C183 161, 185 163, 184 166 C183 169, 177 169, 176 166 Z" fill="white" opacity="0.85"/>
+      <!-- Eye highlight secondary -->
+      <path d="M186 178 C185 176, 186 175, 188 176 C189 177, 189 179, 188 179 C187 180, 186 179, 186 178 Z" fill="white" opacity="0.5"/>
+    </g>
+    <!-- Right eye -->
+    <g>
+      <path d="M206 172 C206 164, 211 158, 218 158 C225 158, 230 164, 230 172 C230 180, 225 186, 218 186 C211 186, 206 180, 206 172 Z" fill="#0A0A15"/>
+      <path d="M212 166 C211 163, 213 161, 216 161 C219 161, 221 163, 220 166 C219 169, 213 169, 212 166 Z" fill="white" opacity="0.85"/>
+      <path d="M222 178 C221 176, 222 175, 224 176 C225 177, 225 179, 224 179 C223 180, 222 179, 222 178 Z" fill="white" opacity="0.5"/>
+    </g>
 
-  <!-- Upper zigzag teeth -->
-  <path d="M148 207 L158 222 L168 207 L178 222 L188 207 L198 222 L208 207 L218 222 L228 207 L238 222 L248 207 L253 205 C240 228, 220 238, 200 238 C180 238, 160 228, 147 205 Z" fill="white"/>
+    <!-- Mischievous eyebrows -->
+    <path d="M168 155 C172 148, 180 146, 190 150" stroke="#15803D" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M232 155 C228 148, 220 146, 210 150" stroke="#15803D" stroke-width="2.5" stroke-linecap="round" fill="none"/>
 
-  <!-- Lower zigzag teeth -->
-  <path d="M160 228 L168 218 L178 228 L188 218 L198 228 L208 218 L218 228 L228 218 L238 228 C228 236, 215 240, 200 240 C185 240, 172 236, 160 228 Z" fill="white"/>
+    <!-- Nose -->
+    <path d="M196 190 C198 192, 200 193, 202 192 C204 191, 204 189, 202 188" stroke="#15803D" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
 
-  <!-- Tongue hint -->
-  <ellipse cx="200" cy="232" rx="15" ry="8" fill="#FF6B6B" opacity="0.7"/>
+    <!-- ICONIC MASSIVE GRIN - the key feature -->
+    <!-- Mouth opening -->
+    <path d="M132 208 C138 212, 148 218, 158 226 C168 234, 180 242, 200 245 C220 242, 232 234, 242 226 C252 218, 262 212, 268 208 C265 215, 258 228, 248 240 C238 252, 222 260, 200 262 C178 260, 162 252, 152 240 C142 228, 135 215, 132 208 Z" fill="url(#lb-mouth)"/>
 
-  <!-- Nose -->
-  <ellipse cx="200" cy="195" rx="5" ry="3" fill="#15803D" opacity="0.5"/>
+    <!-- Upper teeth - sharp zigzag -->
+    <g fill="url(#lb-tooth)">
+      <!-- Tooth 1 -->
+      <path d="M136 210 C138 210, 140 210, 142 210 L148 228 L154 210 C156 210, 158 210, 158 210 L148 232 Z" />
+      <!-- Tooth 2 -->
+      <path d="M154 210 L164 234 L174 212 L164 238 Z"/>
+      <!-- Tooth 3 -->
+      <path d="M170 212 L180 238 L190 214 L180 242 Z"/>
+      <!-- Tooth 4 (center left) -->
+      <path d="M186 214 L196 242 L200 215 L196 245 Z"/>
+      <!-- Tooth 5 (center right) -->
+      <path d="M200 215 L204 242 L214 214 L204 245 Z"/>
+      <!-- Tooth 6 -->
+      <path d="M210 214 L220 238 L230 212 L220 242 Z"/>
+      <!-- Tooth 7 -->
+      <path d="M226 212 L236 234 L246 210 L236 238 Z"/>
+      <!-- Tooth 8 -->
+      <path d="M242 210 L252 228 L258 210 L264 210 L252 232 Z"/>
+    </g>
 
-  <!-- Blush -->
-  <ellipse cx="152" cy="205" rx="12" ry="6" fill="#FF69B4" opacity="0.2"/>
-  <ellipse cx="248" cy="205" rx="12" ry="6" fill="#FF69B4" opacity="0.2"/>
+    <!-- Upper teeth row - clean sharp triangles -->
+    <g fill="white">
+      <path d="M138 210 L148 230 L158 210 Z"/>
+      <path d="M155 211 L166 234 L177 212 Z"/>
+      <path d="M174 213 L184 238 L194 214 Z"/>
+      <path d="M191 214 L200 240 L209 214 Z"/>
+      <path d="M206 213 L216 238 L226 212 Z"/>
+      <path d="M223 211 L234 234 L245 210 Z"/>
+      <path d="M242 210 L252 228 L262 208 Z"/>
+    </g>
+    <!-- Tooth shadow lines -->
+    <path d="M148 210 L148 228" stroke="#E8E8E8" stroke-width="0.5" opacity="0.5"/>
+    <path d="M166 211 L166 232" stroke="#E8E8E8" stroke-width="0.5" opacity="0.5"/>
+    <path d="M184 213 L184 236" stroke="#E8E8E8" stroke-width="0.5" opacity="0.5"/>
+    <path d="M200 214 L200 238" stroke="#E8E8E8" stroke-width="0.5" opacity="0.5"/>
+    <path d="M216 213 L216 236" stroke="#E8E8E8" stroke-width="0.5" opacity="0.5"/>
+    <path d="M234 211 L234 232" stroke="#E8E8E8" stroke-width="0.5" opacity="0.5"/>
+    <path d="M252 210 L252 226" stroke="#E8E8E8" stroke-width="0.5" opacity="0.5"/>
 
-  <!-- Small arms -->
-  <path d="M100 250 C85 260, 78 280, 85 295 C88 290, 92 280, 105 265 Z" fill="#16A34A"/>
-  <path d="M300 250 C315 260, 322 280, 315 295 C312 290, 308 280, 295 265 Z" fill="#16A34A"/>
+    <!-- Lower teeth - sharp zigzag from bottom up -->
+    <g fill="white">
+      <path d="M150 258 L162 238 L174 256 Z"/>
+      <path d="M170 256 L182 235 L194 254 Z"/>
+      <path d="M190 254 L200 232 L210 254 Z"/>
+      <path d="M206 254 L218 235 L230 256 Z"/>
+      <path d="M226 256 L238 238 L250 258 Z"/>
+    </g>
+    <!-- Lower tooth shadow lines -->
+    <path d="M162 256 L162 240" stroke="#E8E8E8" stroke-width="0.5" opacity="0.4"/>
+    <path d="M182 254 L182 237" stroke="#E8E8E8" stroke-width="0.5" opacity="0.4"/>
+    <path d="M200 252 L200 234" stroke="#E8E8E8" stroke-width="0.5" opacity="0.4"/>
+    <path d="M218 254 L218 237" stroke="#E8E8E8" stroke-width="0.5" opacity="0.4"/>
+    <path d="M238 256 L238 240" stroke="#E8E8E8" stroke-width="0.5" opacity="0.4"/>
 
-  <!-- Tiny hands -->
-  <circle cx="85" cy="295" r="8" fill="#16A34A"/>
-  <circle cx="315" cy="295" r="8" fill="#16A34A"/>
+    <!-- Tongue -->
+    <path d="M185 248 C188 255, 194 260, 200 261 C206 260, 212 255, 215 248 C212 252, 206 256, 200 256 C194 256, 188 252, 185 248 Z" fill="url(#lb-tongue)"/>
 
-  <!-- Feet -->
-  <ellipse cx="165" cy="375" rx="28" ry="14" fill="#15803D"/>
-  <ellipse cx="235" cy="375" rx="28" ry="14" fill="#15803D"/>
+    <!-- Gum line - upper -->
+    <path d="M135 209 C150 212, 170 214, 200 215 C230 214, 250 212, 265 209" stroke="#D04060" stroke-width="2" fill="none" opacity="0.3"/>
+    <!-- Gum line - lower -->
+    <path d="M148 258 C165 255, 180 253, 200 252 C220 253, 235 255, 252 258" stroke="#D04060" stroke-width="1.5" fill="none" opacity="0.25"/>
+
+    <!-- Blush -->
+    <path d="M128 205 C126 200, 128 196, 132 196 C136 196, 142 200, 142 205 C142 210, 138 214, 132 214 C128 214, 126 210, 128 205 Z" fill="#FF88AA" opacity="0.2" filter="url(#lb-soft)"/>
+    <path d="M258 205 C256 200, 258 196, 262 196 C266 196, 272 200, 272 205 C272 210, 268 214, 262 214 C258 214, 256 210, 258 205 Z" fill="#FF88AA" opacity="0.2" filter="url(#lb-soft)"/>
+
+    <!-- Arms - left stubby arm -->
+    <path d="M112 235 C102 240, 90 252, 84 268 C80 278, 80 288, 84 295 C88 300, 94 302, 98 298 C102 294, 100 285, 98 278 C96 270, 98 260, 106 250 C110 245, 112 240, 112 235 Z" fill="url(#lb-arm-l)"/>
+    <!-- Left hand/paw -->
+    <path d="M84 292 C80 288, 78 292, 80 296 C82 300, 86 304, 90 302 C94 300, 96 296, 92 294 C90 292, 86 294, 84 292 Z" fill="#15803D"/>
+    <!-- Paw pads -->
+    <path d="M84 296 C83 294, 84 293, 86 294 C87 295, 87 297, 86 297 C84 298, 84 297, 84 296 Z" fill="#BBF7D0" opacity="0.4"/>
+
+    <!-- Arms - right stubby arm -->
+    <path d="M288 235 C298 240, 310 252, 316 268 C320 278, 320 288, 316 295 C312 300, 306 302, 302 298 C298 294, 300 285, 302 278 C304 270, 302 260, 294 250 C290 245, 288 240, 288 235 Z" fill="url(#lb-arm-r)"/>
+    <!-- Right hand/paw -->
+    <path d="M316 292 C320 288, 322 292, 320 296 C318 300, 314 304, 310 302 C306 300, 304 296, 308 294 C310 292, 314 294, 316 292 Z" fill="#15803D"/>
+    <path d="M316 296 C317 294, 316 293, 314 294 C313 295, 313 297, 314 297 C316 298, 316 297, 316 296 Z" fill="#BBF7D0" opacity="0.4"/>
+
+    <!-- Feet -->
+    <!-- Left foot -->
+    <path d="M155 348 C148 350, 138 355, 132 362 C128 368, 130 374, 138 376 C146 378, 158 376, 168 372 C175 368, 178 362, 175 356 C172 350, 162 348, 155 348 Z" fill="url(#lb-foot)"/>
+    <!-- Left foot toe bumps -->
+    <path d="M135 368 C133 365, 134 362, 137 363 C140 364, 140 368, 138 370 Z" fill="#15803D" opacity="0.5"/>
+    <path d="M142 365 C140 362, 142 360, 145 361 C148 362, 148 366, 145 367 Z" fill="#15803D" opacity="0.4"/>
+
+    <!-- Right foot -->
+    <path d="M245 348 C252 350, 262 355, 268 362 C272 368, 270 374, 262 376 C254 378, 242 376, 232 372 C225 368, 222 362, 225 356 C228 350, 238 348, 245 348 Z" fill="url(#lb-foot)"/>
+    <path d="M265 368 C267 365, 266 362, 263 363 C260 364, 260 368, 262 370 Z" fill="#15803D" opacity="0.5"/>
+    <path d="M258 365 C260 362, 258 360, 255 361 C252 362, 252 366, 255 367 Z" fill="#15803D" opacity="0.4"/>
+
+  </g>
 
   <!-- Decorative forest elements -->
-  <!-- Small mushroom left -->
-  <rect x="60" y="355" width="6" height="15" rx="2" fill="#16A34A" opacity="0.5"/>
-  <ellipse cx="63" cy="355" rx="12" ry="8" fill="#22C55E" opacity="0.5"/>
-  <circle cx="58" cy="353" r="2" fill="#86EFAC" opacity="0.5"/>
-  <circle cx="67" cy="351" r="1.5" fill="#86EFAC" opacity="0.5"/>
+  <!-- Floating leaf - left -->
+  <g transform="rotate(-25, 72, 130)">
+    <path d="M60 135 C62 125, 68 118, 78 115 C82 118, 84 125, 82 132 C80 138, 72 142, 65 140 C62 139, 60 137, 60 135 Z" fill="url(#lb-leaf)" opacity="0.5"/>
+    <path d="M62 134 C66 126, 72 120, 78 118 L72 130 Z" fill="#22C55E" opacity="0.3"/>
+    <!-- Leaf vein -->
+    <path d="M78 118 C72 125, 66 132, 62 138" stroke="#15803D" stroke-width="0.5" fill="none" opacity="0.5"/>
+  </g>
 
-  <!-- Small mushroom right -->
-  <rect x="330" y="360" width="5" height="12" rx="2" fill="#16A34A" opacity="0.5"/>
-  <ellipse cx="332" cy="360" rx="10" ry="7" fill="#22C55E" opacity="0.5"/>
+  <!-- Floating leaf - right -->
+  <g transform="rotate(20, 335, 125)">
+    <path d="M325 130 C327 120, 333 113, 343 110 C347 113, 349 120, 347 127 C345 133, 337 137, 330 135 C327 134, 325 132, 325 130 Z" fill="url(#lb-leaf)" opacity="0.45"/>
+    <path d="M343 113 C337 120, 331 127, 327 133" stroke="#15803D" stroke-width="0.5" fill="none" opacity="0.5"/>
+  </g>
 
-  <!-- Leaf decorations -->
-  <path d="M50 370 C60 355, 72 352, 80 358 C70 358, 58 362, 50 370 Z" fill="#22C55E" opacity="0.35"/>
-  <path d="M350 370 C340 355, 328 352, 320 358 C330 358, 342 362, 350 370 Z" fill="#22C55E" opacity="0.35"/>
+  <!-- Small floating leaf -->
+  <path d="M85 170 C87 164, 92 160, 98 160 C100 162, 100 166, 98 170 C96 174, 90 175, 86 173 Z" fill="#4ADE80" opacity="0.3"/>
 
-  <!-- Small leaves floating -->
-  <path d="M85 130 C90 120, 98 118, 100 125 C95 124, 89 126, 85 130 Z" fill="#22C55E" opacity="0.4" transform="rotate(-20, 92, 125)"/>
-  <path d="M315 120 C310 110, 302 108, 300 115 C305 114, 311 116, 315 120 Z" fill="#22C55E" opacity="0.4" transform="rotate(20, 308, 115)"/>
+  <!-- Tiny flowers -->
+  <g transform="translate(55, 325)" opacity="0.5">
+    <path d="M0 -5 C2 -8, 5 -8, 5 -5 C5 -2, 2 0, 0 0 C-2 0, -5 -2, -5 -5 C-5 -8, -2 -8, 0 -5 Z" fill="#FFD700"/>
+    <path d="M-5 0 C-8 -2, -8 -5, -5 -5 C-2 -5, 0 -2, 0 0 C0 2, -2 5, -5 5 C-8 5, -8 2, -5 0 Z" fill="#FFD700"/>
+    <circle cx="0" cy="0" r="2" fill="#FF8800"/>
+  </g>
+
+  <g transform="translate(348, 320)" opacity="0.4">
+    <path d="M0 -4 C2 -6, 4 -6, 4 -4 C4 -2, 2 0, 0 0 C-2 0, -4 -2, -4 -4 C-4 -6, -2 -6, 0 -4 Z" fill="#E8A0D0"/>
+    <path d="M-4 0 C-6 -2, -6 -4, -4 -4 C-2 -4, 0 -2, 0 0 C0 2, -2 4, -4 4 C-6 4, -6 2, -4 0 Z" fill="#E8A0D0"/>
+    <circle cx="0" cy="0" r="1.5" fill="#FFD700"/>
+  </g>
 
   <!-- Sparkle dots -->
-  <circle cx="120" cy="100" r="2" fill="#86EFAC" opacity="0.6"/>
-  <circle cx="280" cy="95" r="2.5" fill="#86EFAC" opacity="0.5"/>
-  <circle cx="65" cy="250" r="2" fill="#22C55E" opacity="0.4"/>
-  <circle cx="340" cy="240" r="2" fill="#22C55E" opacity="0.4"/>
+  <path d="M120 95 C122 90, 124 86, 124 83 C124 86, 126 90, 128 95 C126 95, 124 96, 124 97 C124 96, 122 95, 120 95 Z" fill="#86EFAC" opacity="0.6"/>
+  <path d="M275 88 C276 84, 278 80, 278 78 C278 80, 280 84, 282 88 C280 88, 278 89, 278 90 C278 89, 276 88, 275 88 Z" fill="#86EFAC" opacity="0.5"/>
+  <circle cx="65" cy="255" r="2" fill="#4ADE80" opacity="0.35"/>
+  <circle cx="340" cy="248" r="2" fill="#4ADE80" opacity="0.3"/>
+  <circle cx="50" cy="185" r="1.5" fill="#86EFAC" opacity="0.3"/>
+  <circle cx="355" cy="175" r="1.5" fill="#86EFAC" opacity="0.3"/>
 </svg>

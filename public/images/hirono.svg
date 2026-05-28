@@ -1,126 +1,305 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
   <defs>
-    <linearGradient id="hiro-body" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#64748B"/>
-      <stop offset="100%" stop-color="#334155"/>
-    </linearGradient>
-    <linearGradient id="hiro-face" x1="0.5" y1="0" x2="0.5" y2="1">
+    <!-- Skin gradient - pale, cool tone -->
+    <radialGradient id="h-skin" cx="0.45" cy="0.38" r="0.55">
       <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="50%" stop-color="#F1F5F9"/>
       <stop offset="100%" stop-color="#E2E8F0"/>
+    </radialGradient>
+    <!-- Hoodie gradient -->
+    <linearGradient id="h-hoodie" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#94A3B8"/>
+      <stop offset="40%" stop-color="#64748B"/>
+      <stop offset="100%" stop-color="#475569"/>
     </linearGradient>
-    <linearGradient id="hiro-hair" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#475569"/>
+    <!-- Hoodie shadow -->
+    <linearGradient id="h-hoodie-shade" x1="0.8" y1="0" x2="0.2" y2="1">
+      <stop offset="0%" stop-color="#334155" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#334155" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Hair gradient -->
+    <linearGradient id="h-hair" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#64748B"/>
+      <stop offset="50%" stop-color="#475569"/>
       <stop offset="100%" stop-color="#1E293B"/>
     </linearGradient>
-    <linearGradient id="hiro-flower-stem" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#4ADE80"/>
-      <stop offset="100%" stop-color="#22C55E"/>
+    <!-- Hair highlight -->
+    <linearGradient id="h-hair-hi" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#94A3B8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#94A3B8" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="hiro-glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#64748B" stop-opacity="0.06"/>
+    <!-- Background atmosphere -->
+    <radialGradient id="h-atmo" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0%" stop-color="#94A3B8" stop-opacity="0.06"/>
       <stop offset="100%" stop-color="#64748B" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="hiro-rain" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%" stop-color="#94A3B8" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#CBD5E1" stop-opacity="0.1"/>
+    <!-- Rain gradient -->
+    <linearGradient id="h-rain" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#94A3B8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#CBD5E1" stop-opacity="0.08"/>
+    </linearGradient>
+    <!-- Rain gradient fine -->
+    <linearGradient id="h-rain-fine" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#94A3B8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#CBD5E1" stop-opacity="0.05"/>
+    </linearGradient>
+    <!-- Flower petal gradient -->
+    <radialGradient id="h-petal" cx="0.4" cy="0.3" r="0.7">
+      <stop offset="0%" stop-color="#FDA4AF"/>
+      <stop offset="60%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#E11D48"/>
+    </radialGradient>
+    <!-- Flower center -->
+    <radialGradient id="h-flower-center" cx="0.4" cy="0.4" r="0.6">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </radialGradient>
+    <!-- Stem gradient -->
+    <linearGradient id="h-stem" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+    <!-- Soft shadow filter -->
+    <filter id="h-shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+      <feOffset dx="0" dy="4" result="shifted"/>
+      <feFlood flood-color="#1E293B" flood-opacity="0.08"/>
+      <feComposite in2="shifted" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Flower glow -->
+    <filter id="h-flower-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Mist filter -->
+    <filter id="h-mist" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <!-- Eye shadow gradient -->
+    <linearGradient id="h-eye-shadow" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#475569" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#475569" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Hoodie pocket -->
+    <linearGradient id="h-pocket" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#475569" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#475569" stop-opacity="0.05"/>
     </linearGradient>
   </defs>
 
-  <!-- Subtle ambient glow -->
-  <circle cx="200" cy="230" r="180" fill="url(#hiro-glow)"/>
+  <!-- Subtle atmospheric background -->
+  <path d="M200 15 C310 15, 385 90, 385 200 C385 310, 310 385, 200 385 C90 385, 15 310, 15 200 C15 90, 90 15, 200 15 Z" fill="url(#h-atmo)"/>
 
-  <!-- Rain drops - scattered, gentle -->
-  <line x1="80" y1="30" x2="78" y2="55" stroke="url(#hiro-rain)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="120" y1="50" x2="118" y2="78" stroke="url(#hiro-rain)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="155" y1="20" x2="153" y2="48" stroke="url(#hiro-rain)" stroke-width="1.2" stroke-linecap="round"/>
-  <line x1="240" y1="35" x2="238" y2="60" stroke="url(#hiro-rain)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="280" y1="55" x2="278" y2="80" stroke="url(#hiro-rain)" stroke-width="1.2" stroke-linecap="round"/>
-  <line x1="310" y1="25" x2="308" y2="50" stroke="url(#hiro-rain)" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="100" y1="85" x2="98" y2="108" stroke="url(#hiro-rain)" stroke-width="1" stroke-linecap="round"/>
-  <line x1="290" y1="90" x2="288" y2="115" stroke="url(#hiro-rain)" stroke-width="1" stroke-linecap="round"/>
-  <line x1="60" y1="100" x2="58" y2="122" stroke="url(#hiro-rain)" stroke-width="1" stroke-linecap="round"/>
-  <line x1="340" y1="70" x2="338" y2="92" stroke="url(#hiro-rain)" stroke-width="1" stroke-linecap="round"/>
-  <line x1="180" y1="60" x2="178" y2="82" stroke="url(#hiro-rain)" stroke-width="1" stroke-linecap="round"/>
-  <line x1="330" y1="110" x2="328" y2="130" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round"/>
-  <line x1="70" y1="140" x2="68" y2="158" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round"/>
-
-  <!-- Hair - messy, slightly covering face -->
-  <path d="M140 145 C130 120, 145 90, 170 80 C185 75, 210 72, 230 78 C255 85, 270 110, 265 145 C260 130, 245 105, 220 95 C195 88, 160 95, 140 145 Z" fill="url(#hiro-hair)"/>
-  <!-- Hair strands falling over face -->
-  <path d="M145 140 C142 120, 150 100, 165 90 C155 105, 148 125, 150 145 Z" fill="#334155" opacity="0.6"/>
-  <path d="M155 148 C155 130, 158 110, 172 95 C162 115, 158 135, 160 150 Z" fill="#475569" opacity="0.4"/>
-  <path d="M250 140 C256 115, 250 95, 235 85 C245 100, 252 120, 248 140 Z" fill="#334155" opacity="0.5"/>
-
-  <!-- Head - slightly tilted/hunched -->
-  <ellipse cx="200" cy="165" rx="62" ry="68" fill="url(#hiro-face)"/>
-
-  <!-- Hair bang overlay -->
-  <path d="M142 155 C145 130, 158 115, 175 108 C165 120, 155 138, 152 158 Z" fill="url(#hiro-hair)" opacity="0.8"/>
-
-  <!-- Eyes - downcast, contemplative -->
-  <!-- Left eye - half closed -->
-  <path d="M172 170 C175 164, 183 162, 188 166" stroke="#334155" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <ellipse cx="180" cy="170" rx="7" ry="4" fill="#1E293B" opacity="0.4"/>
-
-  <!-- Right eye - half closed -->
-  <path d="M210 168 C213 162, 221 160, 226 164" stroke="#334155" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <ellipse cx="218" cy="168" rx="7" ry="4" fill="#1E293B" opacity="0.4"/>
-
-  <!-- Subtle nose -->
-  <path d="M198 185 L200 190 L202 185" stroke="#94A3B8" stroke-width="1" fill="none" opacity="0.5"/>
-
-  <!-- Mouth - thin, neutral -->
-  <path d="M190 202 C195 204, 205 204, 210 202" stroke="#475569" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-
-  <!-- Neck -->
-  <rect x="190" y="230" width="20" height="18" rx="5" fill="url(#hiro-face)" opacity="0.8"/>
-
-  <!-- Body - slightly hunched posture -->
-  <path d="M155 250 C150 240, 170 232, 200 230 C230 232, 250 240, 245 250 C260 270, 265 300, 260 340 L255 370 L145 370 L140 340 C135 300, 140 270, 155 250 Z" fill="url(#hiro-body)"/>
-
-  <!-- Hoodie/clothing details -->
-  <path d="M160 252 C170 245, 185 240, 200 238 C215 240, 230 245, 240 252" stroke="#475569" stroke-width="1.5" fill="none" opacity="0.4"/>
-  <!-- Pocket -->
-  <rect x="180" y="300" width="40" height="25" rx="5" fill="#475569" opacity="0.2"/>
-
-  <!-- Arms - hanging down, slightly forward (hunched) -->
-  <path d="M155 255 C140 270, 130 300, 128 330 C127 340, 130 350, 135 355" stroke="url(#hiro-body)" stroke-width="14" fill="none" stroke-linecap="round"/>
-  <path d="M245 255 C260 270, 270 300, 272 330 C273 340, 270 350, 265 355" stroke="url(#hiro-body)" stroke-width="14" fill="none" stroke-linecap="round"/>
-
-  <!-- Hands -->
-  <circle cx="135" cy="355" r="8" fill="#64748B"/>
-  <circle cx="265" cy="355" r="8" fill="#64748B"/>
-
-  <!-- Feet -->
-  <ellipse cx="175" cy="373" rx="22" ry="8" fill="#334155"/>
-  <ellipse cx="225" cy="373" rx="22" ry="8" fill="#334155"/>
-
-  <!-- Ground shadow -->
-  <ellipse cx="200" cy="378" rx="80" ry="6" fill="#334155" opacity="0.1"/>
-
-  <!-- === THE FLOWER === Growing at his feet -->
-  <!-- Stem -->
-  <path d="M200 378 C198 368, 195 358, 192 345 C190 338, 192 332, 195 328" stroke="url(#hiro-flower-stem)" stroke-width="2" fill="none"/>
-  <!-- Leaf on stem -->
-  <path d="M194 350 C188 345, 183 348, 185 355 C187 350, 191 349, 194 350 Z" fill="#4ADE80" opacity="0.7"/>
-
-  <!-- Flower petals -->
-  <g transform="translate(195, 325)">
-    <ellipse cx="0" cy="-8" rx="5" ry="8" fill="#FDA4AF" opacity="0.8"/>
-    <ellipse cx="7" cy="-3" rx="5" ry="8" fill="#FB7185" opacity="0.7" transform="rotate(72, 7, -3)"/>
-    <ellipse cx="5" cy="6" rx="5" ry="8" fill="#FDA4AF" opacity="0.7" transform="rotate(144, 5, 6)"/>
-    <ellipse cx="-5" cy="6" rx="5" ry="8" fill="#FB7185" opacity="0.7" transform="rotate(216, -5, 6)"/>
-    <ellipse cx="-7" cy="-3" rx="5" ry="8" fill="#FDA4AF" opacity="0.8" transform="rotate(288, -7, -3)"/>
-    <!-- Center -->
-    <circle cx="0" cy="0" r="4" fill="#FDE68A"/>
+  <!-- Mist patches -->
+  <g filter="url(#h-mist)" opacity="0.06">
+    <path d="M30 280 C50 260, 100 270, 120 285 C140 300, 110 320, 70 310 C40 305, 20 295, 30 280 Z" fill="#94A3B8"/>
+  </g>
+  <g filter="url(#h-mist)" opacity="0.05">
+    <path d="M300 300 C320 285, 370 290, 380 305 C390 320, 360 335, 330 325 C310 318, 290 310, 300 300 Z" fill="#94A3B8"/>
+  </g>
+  <g filter="url(#h-mist)" opacity="0.04">
+    <path d="M150 60 C170 50, 230 52, 250 60 C270 70, 240 85, 200 80 C165 76, 140 70, 150 60 Z" fill="#94A3B8"/>
   </g>
 
-  <!-- Very subtle puddle reflection -->
-  <ellipse cx="200" cy="385" rx="40" ry="3" fill="#94A3B8" opacity="0.08"/>
+  <!-- Rain drops - foreground layer -->
+  <g opacity="0.7">
+    <path d="M78 28 C78.5 28, 79 40, 78 52 C77.5 40, 77 28, 78 28 Z" fill="url(#h-rain)"/>
+    <path d="M118 48 C118.5 48, 119 58, 118 72 C117.5 58, 117 48, 118 48 Z" fill="url(#h-rain)"/>
+    <path d="M152 18 C152.5 18, 153 30, 152 44 C151.5 30, 151 18, 152 18 Z" fill="url(#h-rain)"/>
+    <path d="M238 32 C238.5 32, 239 44, 238 58 C237.5 44, 237 32, 238 32 Z" fill="url(#h-rain)"/>
+    <path d="M278 52 C278.5 52, 279 62, 278 76 C277.5 62, 277 52, 278 52 Z" fill="url(#h-rain)"/>
+    <path d="M308 22 C308.5 22, 309 34, 308 48 C307.5 34, 307 22, 308 22 Z" fill="url(#h-rain)"/>
+    <path d="M58 98 C58.5 98, 59 108, 58 120 C57.5 108, 57 98, 58 98 Z" fill="url(#h-rain-fine)"/>
+    <path d="M338 68 C338.5 68, 339 78, 338 90 C337.5 78, 337 68, 338 68 Z" fill="url(#h-rain-fine)"/>
+    <path d="M98 82 C98.5 82, 99 92, 98 104 C97.5 92, 97 82, 98 82 Z" fill="url(#h-rain-fine)"/>
+    <path d="M288 88 C288.5 88, 289 98, 288 110 C287.5 98, 287 88, 288 88 Z" fill="url(#h-rain-fine)"/>
+    <path d="M178 58 C178.5 58, 179 68, 178 80 C177.5 68, 177 58, 178 58 Z" fill="url(#h-rain-fine)"/>
+  </g>
+  <!-- More rain, finer, distant -->
+  <g opacity="0.4">
+    <path d="M68 138 C68.3 138, 68.5 146, 68 155 C67.5 146, 67.7 138, 68 138 Z" fill="url(#h-rain-fine)"/>
+    <path d="M328 108 C328.3 108, 328.5 116, 328 125 C327.5 116, 327.7 108, 328 108 Z" fill="url(#h-rain-fine)"/>
+    <path d="M48 198 C48.3 198, 48.5 206, 48 215 C47.5 206, 47.7 198, 48 198 Z" fill="url(#h-rain-fine)"/>
+    <path d="M352 188 C352.3 188, 352.5 196, 352 205 C351.5 196, 351.7 188, 352 188 Z" fill="url(#h-rain-fine)"/>
+    <path d="M38 258 C38.3 258, 38.5 265, 38 273 C37.5 265, 37.7 258, 38 258 Z" fill="url(#h-rain-fine)"/>
+    <path d="M368 248 C368.3 248, 368.5 255, 368 263 C367.5 255, 367.7 248, 368 248 Z" fill="url(#h-rain-fine)"/>
+    <path d="M85 310 C85.3 310, 85.5 317, 85 324 C84.5 317, 84.7 310, 85 310 Z" fill="url(#h-rain-fine)"/>
+    <path d="M315 300 C315.3 300, 315.5 307, 315 314 C314.5 307, 314.7 300, 315 300 Z" fill="url(#h-rain-fine)"/>
+  </g>
 
-  <!-- Distant rain continuing below -->
-  <line x1="90" y1="160" x2="88" y2="178" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
-  <line x1="310" y1="150" x2="308" y2="168" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
-  <line x1="50" y1="200" x2="48" y2="215" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round" opacity="0.4"/>
-  <line x1="350" y1="190" x2="348" y2="205" stroke="url(#hiro-rain)" stroke-width="0.8" stroke-linecap="round" opacity="0.4"/>
+  <!-- Ground shadow / puddle -->
+  <path d="M110 378 C140 384, 260 384, 290 378 C305 374, 310 382, 200 388 C90 382, 95 374, 110 378 Z" fill="#334155" opacity="0.06"/>
+  <!-- Puddle reflection -->
+  <path d="M160 383 C175 386, 225 386, 240 383 C245 382, 248 384, 200 387 C152 384, 155 382, 160 383 Z" fill="#94A3B8" opacity="0.04"/>
+
+  <!-- === CHARACTER === -->
+  <g filter="url(#h-shadow)">
+
+    <!-- === HAIR - back layer === -->
+    <path d="M138 148 C130 118, 142 85, 165 72 C178 64, 195 60, 212 62 C235 66, 255 80, 265 108 C272 128, 270 150, 268 165 C265 145, 258 118, 245 100 C232 85, 215 76, 200 74 C182 72, 162 82, 150 102 C144 114, 140 130, 138 148 Z" fill="url(#h-hair)"/>
+
+    <!-- === HEAD === -->
+    <!-- Large round head, slightly tilted -->
+    <path d="M138 175 C138 128, 162 98, 200 98 C238 98, 262 128, 262 175 C262 218, 242 245, 200 248 C158 245, 138 218, 138 175 Z" fill="url(#h-skin)"/>
+    <!-- Subtle face contour -->
+    <path d="M148 172 C148 135, 168 110, 200 108 C232 110, 252 135, 252 172 C252 210, 235 232, 200 235 C165 232, 148 210, 148 172 Z" fill="white" opacity="0.06"/>
+
+    <!-- === HAIR - front layers (falling over face) === -->
+    <!-- Main fringe covering right side of face -->
+    <path d="M142 155 C138 125, 148 95, 168 78 C155 100, 148 125, 146 150 C144 170, 146 185, 148 195 C144 185, 142 170, 142 155 Z" fill="url(#h-hair)"/>
+    <!-- Hair strand 1 - long, falling over left eye area -->
+    <path d="M152 160 C150 135, 155 110, 170 92 C160 112, 155 138, 156 162 C156 178, 158 192, 162 200 C158 195, 154 180, 152 160 Z" fill="#475569"/>
+    <!-- Hair strand 2 -->
+    <path d="M160 165 C158 142, 162 118, 175 100 C168 118, 164 140, 164 165 C164 180, 166 192, 170 198 C166 194, 162 182, 160 165 Z" fill="#334155" opacity="0.5"/>
+    <!-- Hair top sweep -->
+    <path d="M145 138 C148 108, 165 82, 192 70 C178 82, 162 105, 155 130 C150 150, 148 168, 150 180 C148 168, 145 152, 145 138 Z" fill="url(#h-hair-hi)"/>
+    <!-- Back hair strands - right side -->
+    <path d="M250 148 C256 120, 250 95, 235 80 C245 95, 252 115, 252 140 C252 158, 250 172, 246 180 C250 170, 252 158, 250 148 Z" fill="#475569" opacity="0.6"/>
+    <path d="M245 152 C250 128, 248 105, 238 88 C246 102, 248 122, 248 145 C248 160, 246 172, 242 178 C246 168, 248 158, 245 152 Z" fill="#334155" opacity="0.4"/>
+
+    <!-- === EYES - downcast, contemplative === -->
+    <!-- Under-eye shadow areas -->
+    <path d="M165 178 C168 172, 180 168, 190 172 C194 174, 194 180, 190 182 C180 186, 168 184, 165 178 Z" fill="url(#h-eye-shadow)"/>
+    <path d="M210 176 C213 170, 225 166, 235 170 C239 172, 239 178, 235 180 C225 184, 213 182, 210 176 Z" fill="url(#h-eye-shadow)"/>
+
+    <!-- Left eye - half-closed, looking down -->
+    <path d="M170 180 C172 175, 178 172, 185 172 C190 172, 194 175, 194 178 C192 180, 186 182, 180 182 C174 182, 170 181, 170 180 Z" fill="white" opacity="0.8"/>
+    <!-- Left iris (partially hidden by drooping lid) -->
+    <path d="M177 178 C178 176, 182 174, 186 176 C188 177, 188 180, 185 181 C181 182, 176 180, 177 178 Z" fill="#334155"/>
+    <!-- Left eyelid line -->
+    <path d="M168 178 C172 172, 180 168, 188 170 C192 172, 196 176, 196 178" stroke="#475569" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Left lower lash line -->
+    <path d="M172 182 C176 184, 184 185, 192 182" stroke="#94A3B8" stroke-width="0.8" fill="none" opacity="0.5"/>
+
+    <!-- Right eye - half-closed, looking down -->
+    <path d="M212 178 C214 173, 220 170, 227 170 C232 170, 236 173, 236 176 C234 178, 228 180, 222 180 C216 180, 212 179, 212 178 Z" fill="white" opacity="0.8"/>
+    <!-- Right iris -->
+    <path d="M219 176 C220 174, 224 172, 228 174 C230 175, 230 178, 227 179 C223 180, 218 178, 219 176 Z" fill="#334155"/>
+    <!-- Right eyelid line -->
+    <path d="M210 176 C214 170, 222 166, 230 168 C234 170, 238 174, 238 176" stroke="#475569" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Right lower lash line -->
+    <path d="M214 180 C218 182, 226 183, 234 180" stroke="#94A3B8" stroke-width="0.8" fill="none" opacity="0.5"/>
+
+    <!-- Subtle eyebrows - slightly furrowed -->
+    <path d="M166 168 C170 164, 178 162, 186 164" stroke="#475569" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.35"/>
+    <path d="M216 166 C222 162, 230 160, 238 162" stroke="#475569" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.35"/>
+
+    <!-- Nose - subtle, delicate -->
+    <path d="M198 200 C198 196, 200 194, 202 194 C204 194, 206 196, 206 200 C206 203, 204 205, 202 206 C200 206, 198 204, 198 200 Z" fill="#CBD5E1" opacity="0.4"/>
+
+    <!-- Mouth - thin, contemplative, neutral-slight-frown -->
+    <path d="M190 218 C194 216, 200 215, 206 216 C210 218, 212 219, 213 220" stroke="#64748B" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Neck area -->
+    <path d="M190 245 C195 248, 205 248, 210 245 L212 258 C208 262, 196 262, 192 258 Z" fill="url(#h-skin)" opacity="0.85"/>
+
+    <!-- === BODY - oversized hoodie, hunched === -->
+    <!-- Main hoodie body -->
+    <path d="M145 260 C138 255, 132 250, 128 252 C118 258, 112 275, 110 295 C108 320, 112 348, 120 365 C125 374, 135 380, 150 382 L250 382 C265 380, 275 374, 280 365 C288 348, 292 320, 290 295 C288 275, 282 258, 272 252 C268 250, 262 255, 255 260 C242 268, 222 275, 200 276 C178 275, 158 268, 145 260 Z" fill="url(#h-hoodie)"/>
+    <!-- Hoodie shading overlay -->
+    <path d="M145 260 C138 255, 132 250, 128 252 C118 258, 112 275, 110 295 C108 320, 112 348, 120 365 C125 374, 135 380, 150 382 L250 382 C265 380, 275 374, 280 365 C288 348, 292 320, 290 295 C288 275, 282 258, 272 252 C268 250, 262 255, 255 260 C242 268, 222 275, 200 276 C178 275, 158 268, 145 260 Z" fill="url(#h-hoodie-shade)"/>
+
+    <!-- Hoodie collar / hood edge -->
+    <path d="M155 256 C165 248, 180 242, 200 240 C220 242, 235 248, 245 256 C238 262, 222 268, 200 270 C178 268, 162 262, 155 256 Z" fill="#94A3B8" opacity="0.5"/>
+    <!-- Hood line detail -->
+    <path d="M160 254 C170 246, 185 240, 200 238 C215 240, 230 246, 240 254" stroke="#475569" stroke-width="1.2" fill="none" opacity="0.3"/>
+
+    <!-- Hoodie wrinkle/fold lines -->
+    <path d="M140 300 C150 295, 165 292, 175 295" stroke="#475569" stroke-width="0.8" fill="none" opacity="0.2"/>
+    <path d="M225 295 C235 292, 250 295, 260 300" stroke="#475569" stroke-width="0.8" fill="none" opacity="0.2"/>
+    <path d="M155 340 C165 335, 175 334, 185 336" stroke="#475569" stroke-width="0.8" fill="none" opacity="0.15"/>
+    <path d="M215 336 C225 334, 235 335, 245 340" stroke="#475569" stroke-width="0.8" fill="none" opacity="0.15"/>
+
+    <!-- Hoodie center line -->
+    <path d="M200 270 C200 300, 200 340, 200 380" stroke="#475569" stroke-width="0.8" opacity="0.15" fill="none"/>
+
+    <!-- Pocket -->
+    <path d="M172 315 C178 312, 190 310, 200 310 C210 310, 222 312, 228 315 C230 318, 230 332, 228 336 C222 340, 210 342, 200 342 C190 342, 178 340, 172 336 C170 332, 170 318, 172 315 Z" fill="url(#h-pocket)"/>
+    <!-- Pocket edge -->
+    <path d="M174 316 C180 313, 192 311, 200 311 C208 311, 220 313, 226 316" stroke="#475569" stroke-width="0.8" fill="none" opacity="0.2"/>
+
+    <!-- === ARMS === -->
+    <!-- Left arm - hanging, slightly forward (hunched posture) -->
+    <path d="M128 258 C118 268, 108 288, 104 310 C100 332, 100 348, 104 358 C106 362, 110 365, 114 364 C118 362, 120 356, 120 348 C120 335, 122 318, 126 302 C130 288, 134 276, 138 268 Z" fill="url(#h-hoodie)"/>
+    <!-- Left arm shadow -->
+    <path d="M128 258 C120 266, 114 282, 110 300 C122 284, 132 272, 138 265 Z" fill="#475569" opacity="0.15"/>
+
+    <!-- Right arm - raised, hand touching chin/face -->
+    <path d="M272 258 C282 266, 288 280, 286 295 C284 308, 274 318, 262 320 C256 320, 252 316, 250 310 C248 302, 252 290, 258 280 C262 272, 268 264, 272 258 Z" fill="url(#h-hoodie)"/>
+    <!-- Right hand near face - thoughtful gesture -->
+    <path d="M245 228 C240 230, 236 236, 234 242 C232 248, 234 254, 238 256 C242 258, 248 256, 252 250 C256 244, 256 236, 252 230 C250 228, 248 226, 245 228 Z" fill="url(#h-skin)" opacity="0.9"/>
+    <!-- Right arm connecting to hand -->
+    <path d="M258 268 C252 262, 246 255, 242 248 C240 244, 238 242, 238 244 C238 250, 244 260, 252 268 Z" fill="url(#h-hoodie)"/>
+    <!-- Right arm shadow -->
+    <path d="M272 258 C278 264, 282 275, 282 288 C276 274, 270 264, 265 260 Z" fill="#475569" opacity="0.12"/>
+
+    <!-- Left hand -->
+    <path d="M102 356 C98 358, 96 362, 98 366 C100 370, 106 372, 112 370 C118 368, 120 364, 118 360 C116 356, 108 354, 102 356 Z" fill="url(#h-skin)" opacity="0.85"/>
+
+    <!-- Feet -->
+    <path d="M155 375 C148 377, 140 380, 138 384 C136 390, 144 394, 160 394 C176 394, 182 390, 180 385 C178 381, 170 377, 165 375 Z" fill="#334155"/>
+    <path d="M235 375 C228 377, 222 380, 220 384 C218 390, 226 394, 242 394 C258 394, 264 390, 262 385 C260 381, 248 377, 242 375 Z" fill="#334155"/>
+
+  </g>
+
+  <!-- === THE FLOWER === -->
+  <g filter="url(#h-flower-glow)">
+    <!-- Stem - growing from ground at his feet -->
+    <path d="M290 382 C288 372, 285 360, 282 348 C280 340, 278 332, 278 326 C278 322, 280 318, 282 316" stroke="url(#h-stem)" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Stem curve detail -->
+    <path d="M282 350 C280 345, 279 338, 279 332" stroke="#16A34A" stroke-width="1" fill="none" opacity="0.4"/>
+
+    <!-- Leaf on stem -->
+    <path d="M280 345 C274 338, 268 336, 264 340 C262 344, 266 350, 272 352 C276 353, 279 350, 280 345 Z" fill="#4ADE80" opacity="0.7"/>
+    <!-- Leaf vein -->
+    <path d="M278 346 C274 342, 270 340, 267 342" stroke="#16A34A" stroke-width="0.6" fill="none" opacity="0.4"/>
+
+    <!-- Second tiny leaf -->
+    <path d="M282 336 C286 330, 292 328, 296 332 C298 336, 294 340, 288 340 C284 340, 282 338, 282 336 Z" fill="#4ADE80" opacity="0.55"/>
+
+    <!-- Flower petals - organic, slightly varied -->
+    <g transform="translate(282, 310)">
+      <!-- Petal 1 - top -->
+      <path d="M0 -6 C-4 -12, -3 -20, 0 -22 C3 -20, 4 -12, 0 -6 Z" fill="url(#h-petal)" opacity="0.85"/>
+      <!-- Petal 2 - top right -->
+      <path d="M4 -2 C10 -6, 18 -4, 20 0 C18 4, 10 4, 4 -2 Z" fill="#FB7185" opacity="0.8"/>
+      <!-- Petal 3 - bottom right -->
+      <path d="M3 4 C8 10, 6 18, 2 20 C-2 18, -2 10, 3 4 Z" fill="url(#h-petal)" opacity="0.75"/>
+      <!-- Petal 4 - bottom left -->
+      <path d="M-3 4 C-8 10, -6 18, -2 20 C2 18, 2 10, -3 4 Z" fill="#FB7185" opacity="0.7"/>
+      <!-- Petal 5 - top left -->
+      <path d="M-4 -2 C-10 -6, -18 -4, -20 0 C-18 4, -10 4, -4 -2 Z" fill="url(#h-petal)" opacity="0.8"/>
+      <!-- Center -->
+      <path d="M-4 0 C-4 -3, -2 -5, 0 -5 C2 -5, 4 -3, 4 0 C4 3, 2 5, 0 5 C-2 5, -4 3, -4 0 Z" fill="url(#h-flower-center)"/>
+      <!-- Center detail -->
+      <path d="M-1 -2 C0 -3, 2 -2, 2 -1 C2 0, 0 1, -1 0 Z" fill="white" opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- Subtle warm glow around flower -->
+  <g filter="url(#h-mist)" opacity="0.08">
+    <path d="M270 300 C275 290, 290 288, 298 295 C305 302, 300 318, 290 322 C280 325, 268 318, 270 300 Z" fill="#FDA4AF"/>
+  </g>
+
+  <!-- Additional distant rain behind character -->
+  <g opacity="0.25">
+    <path d="M88 155 C88.3 155, 88.5 163, 88 172 C87.5 163, 87.7 155, 88 155 Z" fill="url(#h-rain-fine)"/>
+    <path d="M312 148 C312.3 148, 312.5 156, 312 165 C311.5 156, 311.7 148, 312 148 Z" fill="url(#h-rain-fine)"/>
+    <path d="M48 210 C48.3 210, 48.5 217, 48 225 C47.5 217, 47.7 210, 48 210 Z" fill="url(#h-rain-fine)"/>
+    <path d="M358 200 C358.3 200, 358.5 207, 358 215 C357.5 207, 357.7 200, 358 200 Z" fill="url(#h-rain-fine)"/>
+    <path d="M72 280 C72.3 280, 72.5 286, 72 293 C71.5 286, 71.7 280, 72 280 Z" fill="url(#h-rain-fine)"/>
+    <path d="M338 275 C338.3 275, 338.5 281, 338 288 C337.5 281, 337.7 275, 338 275 Z" fill="url(#h-rain-fine)"/>
+  </g>
+
+  <!-- Rain ripple at ground (very subtle) -->
+  <path d="M140 386 C142 384, 148 384, 150 386 C148 388, 142 388, 140 386 Z" fill="#94A3B8" opacity="0.06"/>
+  <path d="M250 388 C252 386, 256 386, 258 388 C256 390, 252 390, 250 388 Z" fill="#94A3B8" opacity="0.05"/>
+  <path d="M80 390 C82 388, 85 388, 87 390 C85 392, 82 392, 80 390 Z" fill="#94A3B8" opacity="0.04"/>
 </svg>

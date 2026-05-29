@@ -37,14 +37,6 @@ export const ALL_TIMELINES: TimelineEvent[] = [
   { id: "dimoo-5", ipSlug: "dimoo", year: 2022, title: "太空旅行系列", description: "Dimoo 飞向太空，科幻主题系列展现了无限想象力。", category: "release" },
   { id: "dimoo-6", ipSlug: "dimoo", year: 2023, title: "与迪士尼联名", description: "Dimoo × 迪士尼联名系列引发抢购，跨界合作提升了品牌影响力。", category: "collaboration", highlight: true },
 
-  // The Monsters
-  { id: "tm-1", ipSlug: "the-monsters", year: 2012, title: "The Monsters 宇宙诞生", description: "龙家升开始创作 The Monsters 系列角色，构建了一个以北欧森林为背景的精灵世界。", category: "origin", highlight: true },
-  { id: "tm-2", ipSlug: "the-monsters", year: 2018, title: "签约泡泡玛特", description: "The Monsters 精灵天团正式加入泡泡玛特，以盲盒形式推出首个系列。", category: "collaboration", highlight: true },
-  { id: "tm-3", ipSlug: "the-monsters", year: 2019, title: "家族成员亮相", description: "LABUBU、ZIMOMO、TYCOCO、PATO、SPOOKY 等核心角色陆续推出专属款式。", category: "release" },
-  { id: "tm-4", ipSlug: "the-monsters", year: 2020, title: "美食系列首发", description: "精灵天团以美食为主题的系列广受好评，温馨有趣的设计拉近了与收藏者的距离。", category: "release" },
-  { id: "tm-5", ipSlug: "the-monsters", year: 2022, title: "家族最受欢迎IP群体", description: "The Monsters 成为泡泡玛特旗下角色最丰富、世界观最完整的IP家族。", category: "milestone", highlight: true },
-  { id: "tm-6", ipSlug: "the-monsters", year: 2024, title: "受益于 LABUBU 热潮", description: "LABUBU 的爆红带动整个精灵天团家族的关注度和销量大幅提升。", category: "viral", highlight: true },
-
   // Hirono
   { id: "hirono-1", ipSlug: "hirono", year: 2021, title: "Hirono 诞生", description: "设计师 Lang 创作了 Hirono 小野，一个带有忧郁气质的少年形象，填补了潮玩市场中情感向产品的空白。", category: "origin", highlight: true },
   { id: "hirono-2", ipSlug: "hirono", year: 2021, title: "置身事外系列首发", description: "首个系列以'旁观者'视角展现现代人的孤独感，引起都市青年的强烈共鸣。", category: "release", highlight: true },

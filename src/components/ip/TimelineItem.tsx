@@ -57,7 +57,7 @@ export function TimelineItem({
         >
           <div
             className={`
-              glass-card rounded-2xl p-5
+              glass-subtle rounded-2xl p-5
               ${event.highlight ? `border-l-4 ${borderColor}` : ""}
             `}
           >

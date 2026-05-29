@@ -1,15 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
+import { NAV_LINKS } from "@/lib/constants";
+import { ALL_IPS } from "@/data/ips";
 import { cn } from "@/lib/utils";
 
 interface MobileNavProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
+const navVariants = {
+  hidden: { opacity: 0, y: 8 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.15 + i * 0.05, duration: 0.3 },
+  }),
+};
 
 export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const pathname = usePathname();
@@ -18,28 +29,32 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
     <AnimatePresence>
       {isOpen && (
         <>
+          {/* Backdrop */}
           <motion.div
-            className="fixed inset-0 z-50 bg-black/60"
+            className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
             onClick={onClose}
           />
 
+          {/* Panel */}
           <motion.div
-            className="fixed inset-y-0 right-0 z-50 w-72 bg-brand-dark border-l border-white/10 shadow-xl"
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 z-50 bg-brand-dark flex flex-col"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            <div className="flex h-16 items-center justify-between border-b border-white/10 px-4">
-              <span className="text-lg font-bold tracking-tight bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-                {SITE_NAME}
+            {/* Header */}
+            <div className="flex h-14 items-center justify-between px-6">
+              <span className="text-sm font-bold text-white/90">
+                导航
               </span>
               <button
                 type="button"
-                className="inline-flex items-center justify-center rounded-lg p-2 text-white hover:bg-white/10"
+                className="inline-flex items-center justify-center p-2 text-white/50 hover:text-white transition-colors"
                 onClick={onClose}
                 aria-label="关闭导航菜单"
               >
@@ -49,7 +64,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="h-6 w-6"
+                  className="h-5 w-5"
                 >
                   <path
                     strokeLinecap="round"
@@ -60,23 +75,67 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
               </button>
             </div>
 
-            <nav className="flex flex-col gap-1 p-4">
-              {NAV_LINKS.map((link) => (
-                <Link
+            {/* Nav links */}
+            <nav className="flex flex-col px-6 mt-8">
+              {NAV_LINKS.map((link, i) => (
+                <motion.div
                   key={link.href}
-                  href={link.href}
-                  onClick={onClose}
-                  className={cn(
-                    "rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
-                    pathname === link.href
-                      ? "text-brand-pink"
-                      : "text-gray-300 hover:text-white"
-                  )}
+                  custom={i}
+                  variants={navVariants}
+                  initial="hidden"
+                  animate="visible"
                 >
-                  {link.label}
-                </Link>
+                  <Link
+                    href={link.href}
+                    onClick={onClose}
+                    className={cn(
+                      "block py-3.5 text-xl font-bold tracking-tight transition-colors border-b border-white/5",
+                      pathname === link.href
+                        ? "text-white"
+                        : "text-white/25 hover:text-white/60"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
             </nav>
+
+            {/* IP quick access */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="mt-auto px-6 pb-10"
+            >
+              <p className="magazine-subtitle mb-4">热门 IP</p>
+              <div className="grid grid-cols-4 gap-3">
+                {ALL_IPS.slice(0, 4).map((ip) => (
+                  <Link
+                    key={ip.slug}
+                    href={`/ip/${ip.slug}`}
+                    onClick={onClose}
+                    className="group flex flex-col items-center gap-2"
+                  >
+                    <div
+                      className="relative w-14 h-14 rounded-2xl overflow-hidden"
+                      style={{ background: ip.colors.gradient }}
+                    >
+                      <Image
+                        src={ip.image}
+                        alt={ip.name}
+                        width={80}
+                        height={80}
+                        className="w-full h-full object-contain p-1 group-hover:scale-110 transition-transform"
+                      />
+                    </div>
+                    <span className="text-[10px] text-white/30 group-hover:text-white/60 transition-colors truncate w-full text-center">
+                      {ip.name}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
           </motion.div>
         </>
       )}

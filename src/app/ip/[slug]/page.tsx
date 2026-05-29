@@ -48,7 +48,7 @@ export default async function IPDetailPage({
     <>
       <IPHeroBanner ip={ip} />
 
-      <div className="max-w-5xl mx-auto px-4 py-16 bg-brand-dark">
+      <div className="max-w-6xl mx-auto px-6 py-16 lg:px-16 lg:py-24 bg-brand-dark">
         <section className="mb-16">
           <SectionHeading title="IP 故事" align="left" />
           <div className="max-w-none">
@@ -62,19 +62,19 @@ export default async function IPDetailPage({
             ))}
           </div>
           <div className="mt-8 grid grid-cols-3 gap-4">
-            <div className="glass-card rounded-2xl p-4 text-center">
+            <div className="glass-subtle rounded-2xl p-4 text-center">
               <p className="text-2xl font-bold" style={{ color: ip.colors.primary }}>
                 {ip.stats.totalSeries}+
               </p>
               <p className="text-xs text-gray-500 mt-1">系列数量</p>
             </div>
-            <div className="glass-card rounded-2xl p-4 text-center">
+            <div className="glass-subtle rounded-2xl p-4 text-center">
               <p className="text-sm font-bold text-white">
                 {ip.stats.firstRelease}
               </p>
               <p className="text-xs text-gray-500 mt-1">首发系列</p>
             </div>
-            <div className="glass-card rounded-2xl p-4 text-center">
+            <div className="glass-subtle rounded-2xl p-4 text-center">
               <p className="text-sm font-bold text-white">
                 {ip.stats.popularity}
               </p>
@@ -123,7 +123,7 @@ export default async function IPDetailPage({
               <Link
                 key={other.slug}
                 href={`/ip/${other.slug}`}
-                className="group flex items-center gap-3 glass-card rounded-2xl p-3"
+                className="group flex items-center gap-3 glass-subtle rounded-2xl p-3"
               >
                 <GradientAvatar
                   gradient={other.colors.gradient}

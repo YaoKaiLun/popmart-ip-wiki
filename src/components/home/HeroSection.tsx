@@ -1,143 +1,166 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence, type PanInfo } from "framer-motion";
 import { ALL_IPS } from "@/data/ips";
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: "easeOut" as const },
-  },
-};
+const SWIPE_THRESHOLD = 50;
 
 export function HeroSection() {
-  const doubled = [...ALL_IPS, ...ALL_IPS];
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const ip = ALL_IPS[current];
+
+  const paginate = useCallback(
+    (dir: number) => {
+      setDirection(dir);
+      setCurrent((prev) => {
+        const next = prev + dir;
+        if (next < 0) return ALL_IPS.length - 1;
+        if (next >= ALL_IPS.length) return 0;
+        return next;
+      });
+    },
+    []
+  );
+
+  function handleDragEnd(_: unknown, info: PanInfo) {
+    if (info.offset.x < -SWIPE_THRESHOLD) paginate(1);
+    else if (info.offset.x > SWIPE_THRESHOLD) paginate(-1);
+  }
+
+  const slideVariants = {
+    enter: (d: number) => ({ x: d > 0 ? "40%" : "-40%", opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (d: number) => ({ x: d > 0 ? "-40%" : "40%", opacity: 0 }),
+  };
 
   return (
-    <section className="noise-bg relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-brand-dark">
+    <section className="relative flex flex-col bg-brand-dark overflow-hidden select-none" style={{ height: '100dvh', minHeight: '100vh' }}>
+      {/* Background glow */}
       <motion.div
-        className="absolute inset-0 z-0"
+        key={`bg-${ip.slug}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 0.8 }}
+        className="absolute inset-0 pointer-events-none"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-transparent to-brand-dark" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-purple-600/10 blur-[120px]" />
-        <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] rounded-full bg-pink-600/10 blur-[100px]" />
-        <div className="absolute bottom-1/3 right-1/4 w-[350px] h-[350px] rounded-full bg-blue-600/10 blur-[100px]" />
+        <div
+          className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] lg:w-[700px] lg:h-[700px] rounded-full blur-[120px] opacity-[0.12]"
+          style={{ background: ip.colors.primary }}
+        />
       </motion.div>
 
-      <div className="relative z-10 w-full overflow-hidden py-8">
-        <div className="flex animate-marquee w-max gap-6">
-          {doubled.map((ip, i) => (
-            <div
-              key={`${ip.slug}-${i}`}
-              className="flex-shrink-0 w-[120px] h-[120px] rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm"
+      {/* Mobile: stacked layout / Desktop: side-by-side */}
+      <div className="relative flex-1 min-h-0 flex flex-col lg:flex-row lg:items-center lg:max-w-7xl lg:mx-auto lg:w-full lg:px-16">
+        {/* IP image */}
+        <div className="relative flex-1 min-h-0 flex items-center justify-center pt-16 lg:pt-0 lg:flex-1">
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.div
+              key={ip.slug}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.15}
+              onDragEnd={handleDragEnd}
+              className="absolute inset-0 flex items-center justify-center cursor-grab active:cursor-grabbing lg:relative lg:inset-auto"
             >
-              <Image
-                src={ip.image}
-                alt={ip.name}
-                width={120}
-                height={120}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[480px] lg:h-[480px] xl:w-[540px] xl:h-[540px]">
+                <Image
+                  src={ip.image}
+                  alt={ip.name}
+                  fill
+                  priority
+                  className="object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
+                />
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Text info */}
+        <div className="relative z-10 px-6 pb-8 lg:pb-0 lg:px-0 lg:flex-1 lg:max-w-lg">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`text-${ip.slug}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+            >
+              <p className="magazine-subtitle mb-4">
+                {String(current + 1).padStart(2, "0")} / {String(ALL_IPS.length).padStart(2, "0")}
+              </p>
+
+              <h1 className="magazine-title text-5xl sm:text-6xl lg:text-8xl text-white mb-3">
+                {ip.name}
+              </h1>
+
+              <div className="divider-accent mb-5" />
+
+              <p className="text-sm sm:text-base lg:text-lg text-white/50 mb-1 max-w-md">
+                {ip.tagline}
+              </p>
+
+              <p className="text-xs lg:text-sm text-white/30 mb-6 lg:mb-8">
+                {ip.designerEn} · {ip.year}
+              </p>
+
+              <Link
+                href={`/ip/${ip.slug}`}
+                className="inline-flex items-center gap-2 text-sm lg:text-base font-medium text-white/80 hover:text-white transition-colors"
+              >
+                <span>了解更多</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+
+              {/* Dot indicators */}
+              <div className="flex items-center gap-1.5 mt-8 lg:mt-12">
+                {ALL_IPS.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => {
+                      setDirection(i > current ? 1 : -1);
+                      setCurrent(i);
+                    }}
+                    className={`dot ${i === current ? "dot-active" : ""}`}
+                    aria-label={`切换到 ${ALL_IPS[i].name}`}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
 
-      <motion.div
-        className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-8"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
+      {/* Desktop side arrows */}
+      <button
+        onClick={() => paginate(-1)}
+        className="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 items-center justify-center text-white/20 hover:text-white/60 transition-colors"
+        aria-label="上一个"
       >
-        <motion.div variants={itemVariants} className="relative">
-          <h1
-            aria-hidden="true"
-            className="absolute inset-0 text-4xl md:text-6xl lg:text-7xl font-black text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text blur-2xl opacity-60 select-none"
-          >
-            探索泡泡玛特的
-            <br />
-            奇妙世界
-          </h1>
-          <h1 className="relative text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
-            探索泡泡玛特的
-            <br />
-            <span className="text-stroke text-6xl md:text-7xl lg:text-8xl">
-              奇妙世界
-            </span>
-          </h1>
-        </motion.div>
-
-        <motion.div
-          variants={itemVariants}
-          className="mt-8 mx-auto h-[2px] w-48 md:w-64 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-full animate-pulse"
-        />
-
-        <motion.p
-          variants={itemVariants}
-          className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
-        >
-          深入了解9大核心IP的故事线、角色与发展历程
-        </motion.p>
-
-        <motion.div
-          variants={itemVariants}
-          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <Link
-            href="#ip-showcase"
-            className="glass-card px-8 py-4 font-bold text-white rounded-full hover:scale-105 transition-all duration-300 text-lg bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-blue-500/20 border border-white/10"
-          >
-            浏览IP图鉴
-          </Link>
-          <Link
-            href="/characters"
-            className="glass-card px-8 py-4 font-bold text-white rounded-full hover:scale-105 transition-all duration-300 text-lg border border-white/10"
-          >
-            角色百科
-          </Link>
-        </motion.div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        onClick={() => paginate(1)}
+        className="hidden lg:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 items-center justify-center text-white/20 hover:text-white/60 transition-colors"
+        aria-label="下一个"
       >
-        <div className="animate-bounce">
-          <svg
-            className="w-8 h-8 text-gray-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </div>
-      </motion.div>
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
     </section>
   );
 }

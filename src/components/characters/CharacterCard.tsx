@@ -20,7 +20,7 @@ export function CharacterCard({
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.3, delay: index * 0.03 }}
       whileHover={{ y: -4 }}
-      className="glass-card rounded-2xl p-5 group"
+      className="glass-subtle rounded-2xl p-5 group"
     >
       <div className="flex items-start gap-4 mb-3">
         <GradientAvatar

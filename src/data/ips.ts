@@ -25,7 +25,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2016年 Molly 星座系列",
       popularity: "泡泡玛特初代王牌IP",
     },
-    image: "/images/molly.svg",
+    image: "/images/ips/molly.png",
   },
   {
     slug: "labubu",
@@ -51,7 +51,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2019年 The Monsters 精灵天团系列",
       popularity: "2024-2025年全球最火潮玩IP",
     },
-    image: "/images/labubu.svg",
+    image: "/images/ips/labubu.png",
   },
   {
     slug: "skullpanda",
@@ -77,7 +77,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2020年 SKULLPANDA 密林古堡系列",
       popularity: "核心玩家最爱的艺术向IP",
     },
-    image: "/images/skullpanda.svg",
+    image: "/images/ips/skullpanda.png",
   },
   {
     slug: "dimoo",
@@ -103,33 +103,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2019年 Dimoo 世界系列",
       popularity: "最受家庭用户喜爱的IP",
     },
-    image: "/images/dimoo.svg",
-  },
-  {
-    slug: "the-monsters",
-    name: "The Monsters 精灵天团",
-    nameEn: "The Monsters",
-    designer: "龙家升（Kasing Lung）",
-    designerEn: "Kasing Lung",
-    year: 2012,
-    popmartYear: 2018,
-    description:
-      "The Monsters（精灵天团）是龙家升创作的一组可爱又有个性的怪兽角色群体，灵感来源于北欧神话和童话故事。这个大家庭包括 LABUBU、ZIMOMO、TYCOCO、PATO 等多个深受喜爱的角色，每个角色都有自己独特的性格和故事。\n\n精灵天团的世界观建立在一片神秘的森林之中，这里住着各种各样的精灵和怪兽。他们有的调皮捣蛋，有的温柔可亲，但都有一个共同点——用最真诚的方式表达着对生活的热爱。\n\n作为泡泡玛特的核心IP矩阵之一，The Monsters 系列凭借丰富的角色群体和温暖的世界观，成功构建了一个让收藏者深度参与和情感连接的潮玩宇宙。",
-    tagline: "北欧森林里的精灵家族，温暖而奇妙",
-    personality: ["家族", "温暖", "北欧", "奇幻"],
-    colors: {
-      primary: "#F97316",
-      secondary: "#FDBA74",
-      accent: "#C2410C",
-      gradient: "linear-gradient(135deg, #F97316 0%, #EA580C 50%, #C2410C 100%)",
-      bgLight: "#FFF7ED",
-    },
-    stats: {
-      totalSeries: 35,
-      firstRelease: "2018年 The Monsters 嗶嗶系列",
-      popularity: "最具世界观深度的IP家族",
-    },
-    image: "/images/the-monsters.svg",
+    image: "/images/ips/dimoo.png",
   },
   {
     slug: "hirono",
@@ -155,7 +129,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2021年 Hirono 置身事外系列",
       popularity: "文艺青年最爱的情感向IP",
     },
-    image: "/images/hirono.svg",
+    image: "/images/ips/hirono.png",
   },
   {
     slug: "pucky",
@@ -181,7 +155,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2018年 Pucky 精灵森林系列",
       popularity: "女性收藏者最爱的治愈系IP",
     },
-    image: "/images/pucky.svg",
+    image: "/images/ips/pucky.png",
   },
   {
     slug: "hacipupu",
@@ -207,7 +181,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2022年 HACIPUPU 奇妙冒险系列",
       popularity: "泡泡玛特原创新星IP",
     },
-    image: "/images/hacipupu.svg",
+    image: "/images/ips/hacipupu.png",
   },
   {
     slug: "crybaby",
@@ -233,7 +207,7 @@ export const ALL_IPS: IP[] = [
       firstRelease: "2022年 Crybaby 哭泣的天空系列",
       popularity: "东南亚市场最受欢迎的IP",
     },
-    image: "/images/crybaby.svg",
+    image: "/images/ips/crybaby.png",
   },
 ];
 

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="py-20 px-4 bg-brand-dark noise-bg min-h-screen">
+    <div className="py-20 px-4 bg-brand-dark min-h-screen">
       <div className="max-w-5xl mx-auto">
         <SectionHeading
           title="关于泡泡玛特"

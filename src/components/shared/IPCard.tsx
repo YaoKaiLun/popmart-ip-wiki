@@ -1,99 +1,66 @@
 "use client";
 
-import { useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { IP } from "@/data/types";
-import { Badge } from "./Badge";
 
 export function IPCard({ ip, index = 0 }: { ip: IP; index?: number }) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
-  const [glare, setGlare] = useState({ x: 50, y: 50 });
-
-  function handleMouseMove(e: React.MouseEvent) {
-    const card = cardRef.current;
-    if (!card) return;
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
-    setTilt({ x: (y - 0.5) * -12, y: (x - 0.5) * 12 });
-    setGlare({ x: x * 100, y: y * 100 });
-  }
-
-  function handleMouseLeave() {
-    setTilt({ x: 0, y: 0 });
-    setGlare({ x: 50, y: 50 });
-  }
-
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.08 }}
-      className="perspective-1000"
+      transition={{ duration: 0.5, delay: index * 0.06 }}
     >
-      <Link href={`/ip/${ip.slug}`}>
-        <div
-          ref={cardRef}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          className="group relative rounded-2xl overflow-hidden cursor-pointer preserve-3d transition-shadow duration-500 shadow-neu hover:shadow-neu-hover"
-          style={{
-            transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-            transition: "transform 0.15s ease-out",
-          }}
-        >
-          <div className="relative h-72 overflow-hidden">
-            <div
-              className="absolute inset-0"
-              style={{ background: ip.colors.gradient }}
-            />
+      <Link href={`/ip/${ip.slug}`} className="group block">
+        <div className="flex gap-5 items-center py-6 border-b border-white/5 hover:border-white/10 transition-colors">
+          {/* Image */}
+          <div
+            className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden shrink-0"
+            style={{ background: ip.colors.gradient }}
+          >
             <Image
               src={ip.image}
               alt={ip.name}
-              width={400}
-              height={400}
-              className="relative z-10 w-full h-full object-contain p-6 drop-shadow-2xl group-hover:scale-110 transition-transform duration-500"
-            />
-            <div
-              className="absolute inset-0 z-20 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              style={{
-                background: `radial-gradient(circle at ${glare.x}% ${glare.y}%, rgba(255,255,255,0.2) 0%, transparent 60%)`,
-              }}
+              width={200}
+              height={200}
+              className="w-full h-full object-contain p-2 group-hover:scale-110 transition-transform duration-500"
             />
           </div>
 
-          <div className="relative z-10 bg-brand-dark p-5 border-t border-white/5">
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="text-lg font-bold text-white">{ip.name}</h3>
-              <span className="text-xs text-gray-500">{ip.year}</span>
+          {/* Text */}
+          <div className="flex-1 min-w-0">
+            <div className="flex items-baseline gap-2 mb-1">
+              <h3 className="text-lg font-bold text-white group-hover:text-white/80 transition-colors">
+                {ip.name}
+              </h3>
+              <span className="text-xs text-white/20">{ip.year}</span>
             </div>
-            <p className="text-sm text-gray-400 mb-3 line-clamp-1">
+            <p className="text-sm text-white/40 line-clamp-1 mb-2">
               {ip.tagline}
             </p>
-            <div className="flex items-center justify-between">
-              <div className="flex gap-1.5">
-                {ip.personality.slice(0, 2).map((tag) => (
-                  <Badge
-                    key={tag}
-                    text={tag}
-                    className="bg-white/5 text-gray-400 text-xs border border-white/10"
-                  />
-                ))}
-              </div>
-              <span
-                className="text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ color: ip.colors.primary }}
-              >
-                探索 →
-              </span>
+            <div className="flex gap-2">
+              {ip.personality.slice(0, 3).map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs text-white/25 tracking-wide"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
 
-          <div className="gradient-border absolute inset-0 rounded-2xl pointer-events-none" />
+          {/* Arrow */}
+          <svg
+            className="w-4 h-4 text-white/10 group-hover:text-white/40 transition-colors shrink-0"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+          </svg>
         </div>
       </Link>
     </motion.div>

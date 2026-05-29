@@ -26,7 +26,7 @@ export function CharacterGallery({
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: i * 0.05 }}
           whileHover={{ y: -4 }}
-          className="glass-card rounded-2xl p-5 group"
+          className="glass-subtle rounded-2xl p-5 group"
         >
           <div className="flex items-center gap-4 mb-4">
             <GradientAvatar

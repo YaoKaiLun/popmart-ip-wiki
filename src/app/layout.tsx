@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_SC } from "next/font/google";
+import { Inter, Noto_Sans_SC, Space_Grotesk } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
@@ -13,6 +13,12 @@ const notoSansSC = Noto_Sans_SC({
   variable: "--font-noto-sans-sc",
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -48,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="zh-CN"
-      className={`${inter.variable} ${notoSansSC.variable} h-full antialiased`}
+      className={`${inter.variable} ${notoSansSC.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
         <Header />

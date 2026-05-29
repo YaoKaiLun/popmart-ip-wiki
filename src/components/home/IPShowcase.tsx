@@ -1,17 +1,16 @@
 import { ALL_IPS } from "@/data/ips";
 import { IPCard } from "@/components/shared/IPCard";
-import { SectionHeading } from "@/components/shared/SectionHeading";
 
 export function IPShowcase() {
   return (
-    <section id="ip-showcase" className="py-20 px-4 bg-brand-dark noise-bg">
-      <div className="max-w-7xl mx-auto">
-        <SectionHeading
-          title="热门IP图鉴"
-          subtitle="点击任意IP卡片，探索它背后的故事与角色"
-        />
+    <section id="ip-showcase" className="px-6 py-16 md:px-12 md:py-24 bg-brand-dark">
+      <div className="max-w-6xl mx-auto">
+        <p className="magazine-subtitle mb-2">Collection</p>
+        <h2 className="magazine-title text-3xl sm:text-4xl lg:text-5xl text-white mb-10 lg:mb-14">
+          全部 IP
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-x-16">
           {ALL_IPS.map((ip, index) => (
             <IPCard key={ip.slug} ip={ip} index={index} />
           ))}

@@ -15,7 +15,7 @@ export default function CharactersPage() {
   }, [activeIP]);
 
   return (
-    <div className="py-20 px-4 bg-brand-dark noise-bg min-h-screen">
+    <div className="py-20 px-4 bg-brand-dark min-h-screen">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="角色百科"

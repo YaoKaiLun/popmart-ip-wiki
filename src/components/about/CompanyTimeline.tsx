@@ -50,7 +50,7 @@ function EventContent({
 }) {
   return (
     <div
-      className={`glass-card rounded-2xl p-5 ${
+      className={`glass-subtle rounded-2xl p-5 ${
         event.highlight ? "border-l-4 border-pink-500/50" : ""
       }`}
     >

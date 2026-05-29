@@ -19,20 +19,14 @@ export function SectionHeading({
         className
       )}
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-white">
+      <h2 className="magazine-title text-3xl sm:text-4xl text-white mb-3">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-3 text-lg text-gray-500 max-w-2xl mx-auto">
+        <p className="text-sm text-white/30 max-w-xl mx-auto">
           {subtitle}
         </p>
       )}
-      <div
-        className={cn(
-          "mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-pink-500 to-purple-500",
-          align === "center" && "mx-auto"
-        )}
-      />
     </div>
   );
 }

@@ -23,11 +23,6 @@ export const ALL_SERIES: Series[] = [
   { id: "dimoo-aquarium", ipSlug: "dimoo", name: "Dimoo 水族馆", nameEn: "Dimoo Aquarium", year: 2021, description: "化身海洋生物的 Dimoo，在梦幻水底世界中畅游。", pieceCount: 12, theme: "海洋" },
   { id: "dimoo-space", ipSlug: "dimoo", name: "Dimoo 太空旅行", nameEn: "Dimoo Space Travel", year: 2022, description: "穿上宇航服探索银河系的冒险系列。", pieceCount: 12, theme: "太空" },
 
-  // The Monsters
-  { id: "tm-toys", ipSlug: "the-monsters", name: "The Monsters 玩具派对", nameEn: "The Monsters Toy Party", year: 2019, description: "精灵天团的玩具主题派对，每个角色都有独特的玩具装扮。", pieceCount: 9, theme: "玩具" },
-  { id: "tm-candy", ipSlug: "the-monsters", name: "The Monsters 糖果系列", nameEn: "The Monsters Candy", year: 2020, description: "以糖果为主题的甜蜜系列。", pieceCount: 9, theme: "糖果" },
-  { id: "tm-camp", ipSlug: "the-monsters", name: "The Monsters 露营系列", nameEn: "The Monsters Camping", year: 2021, description: "精灵们的野外露营冒险故事。", pieceCount: 9, theme: "露营" },
-
   // Hirono
   { id: "hirono-outsider", ipSlug: "hirono", name: "Hirono 置身事外", nameEn: "Hirono The Outsider", year: 2021, description: "以'旁观者'为主题的首个系列，展现现代人的孤独与思索。", pieceCount: 7, theme: "孤独" },
   { id: "hirono-reshape", ipSlug: "hirono", name: "Hirono 重塑", nameEn: "Hirono Reshape", year: 2022, description: "讲述内心蜕变与成长的系列。", pieceCount: 7, theme: "成长" },

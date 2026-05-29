@@ -6,7 +6,7 @@ export const COMPANY_TIMELINE: CompanyEvent[] = [
   { year: 2015, title: "引入盲盒模式", description: "参考日本扭蛋文化，开始探索盲盒（Mystery Box）销售模式。" },
   { year: 2016, title: "签约 Molly，开启潮玩时代", description: "与 Kenny Wong 签署独家合作协议，推出 Molly 星座盲盒系列，一炮而红。这一年被视为中国潮玩元年。", highlight: true },
   { year: 2017, title: "盲盒经济爆发", description: "Molly 系列持续火爆，年销量突破百万。公司开始大规模签约设计师，构建IP矩阵。" },
-  { year: 2018, title: "IP矩阵扩张", description: "引入 Pucky、The Monsters 等多个IP，开设大量线下门店和机器人商店。" },
+  { year: 2018, title: "IP矩阵扩张", description: "引入 Pucky、LABUBU 等多个IP，开设大量线下门店和机器人商店。" },
   { year: 2019, title: "全面提速", description: "门店数量突破100家，推出 Dimoo、LABUBU 等新IP，MEGA 珍藏系列首发。" },
   { year: 2020, title: "港交所上市", description: "12月11日，泡泡玛特在香港交易所主板上市，股票代码9992.HK，成为'潮玩第一股'。上市首日市值突破千亿港元。", highlight: true },
   { year: 2021, title: "国际化元年", description: "开始布局海外市场，在韩国、日本、新加坡等地开设门店。推出 SKULLPANDA、Hirono 等新生代IP。" },

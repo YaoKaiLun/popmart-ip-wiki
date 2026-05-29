@@ -163,52 +163,6 @@ export const ALL_CHARACTERS: Character[] = [
     avatarGradient: "linear-gradient(135deg, #0EA5E9, #0369A1)",
   },
 
-  // The Monsters
-  {
-    id: "zimomo",
-    name: "ZIMOMO",
-    nameEn: "ZIMOMO",
-    ipSlug: "the-monsters",
-    description: "精灵天团中最温柔的成员，粉红色的身体和害羞的表情让人忍不住想要保护她。",
-    traits: ["害羞", "温柔", "粉色"],
-    debutYear: 2018,
-    debutSeries: "The Monsters 精灵天团",
-    avatarGradient: "linear-gradient(135deg, #FB923C, #F97316)",
-  },
-  {
-    id: "tycoco",
-    name: "TYCOCO",
-    nameEn: "TYCOCO",
-    ipSlug: "the-monsters",
-    description: "骷髅形象的精灵，酷酷的外表下藏着一颗热情的心，是乐队的灵魂成员。",
-    traits: ["骷髅", "酷炫", "热情"],
-    debutYear: 2018,
-    debutSeries: "The Monsters 精灵天团",
-    avatarGradient: "linear-gradient(135deg, #FDBA74, #F97316)",
-  },
-  {
-    id: "pato",
-    name: "PATO",
-    nameEn: "PATO",
-    ipSlug: "the-monsters",
-    description: "蓝色的小恐龙精灵，天真无邪又有点迷糊，是团队中最搞笑的存在。",
-    traits: ["天真", "搞笑", "蓝色"],
-    debutYear: 2018,
-    debutSeries: "The Monsters 精灵天团",
-    avatarGradient: "linear-gradient(135deg, #F97316, #EA580C)",
-  },
-  {
-    id: "spooky",
-    name: "SPOOKY",
-    nameEn: "SPOOKY",
-    ipSlug: "the-monsters",
-    description: "幽灵造型的精灵成员，虽然外形有点吓人但其实最胆小，反差萌十足。",
-    traits: ["幽灵", "胆小", "反差"],
-    debutYear: 2018,
-    debutSeries: "The Monsters 精灵天团",
-    avatarGradient: "linear-gradient(135deg, #EA580C, #C2410C)",
-  },
-
   // Hirono
   {
     id: "hirono-outsider",

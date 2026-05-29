@@ -21,7 +21,7 @@ export function SeriesShowcase({ series }: { series: Series[] }) {
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: i * 0.05 }}
           whileHover={{ y: -4 }}
-          className="glass-card rounded-2xl p-5 min-w-[260px] snap-start md:min-w-0 group"
+          className="glass-subtle rounded-2xl p-5 min-w-[260px] snap-start md:min-w-0 group"
         >
           <div className="flex items-center justify-between mb-3">
             <h3 className="text-base font-bold text-white">{s.name}</h3>
